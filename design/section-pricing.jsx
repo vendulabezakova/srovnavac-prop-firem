@@ -579,7 +579,7 @@ function DetailPanel({ firm, reasons }) {
   };
 
   return (
-    <div className="detail-panel">
+    <div className="detail-panel ch-row ch-row-compact is-best">
 
       <div className="detail-group">
         <div className="detail-h">Trading podmínky (per firma)</div>
