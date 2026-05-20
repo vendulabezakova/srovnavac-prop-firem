@@ -1,0 +1,1 @@
+# Srovnávač prop firem
