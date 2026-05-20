@@ -1398,9 +1398,27 @@ image-slot[id="hero-face"] {
 }
 .ac-chip {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 12px; border-radius: 999px; font-size: 13px;
+  padding: 6px 8px 6px 12px; border-radius: 999px; font-size: 13px;
   background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
   color: rgba(255,255,255,.88);
+}
+.ac-chip-clear {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px; padding: 0; margin-left: 2px;
+  background: rgba(255,255,255,.08);
+  border: 0; border-radius: 999px;
+  color: rgba(255,255,255,.6);
+  cursor: pointer;
+  transition: background .12s, color .12s;
+  font-family: inherit;
+}
+.ac-chip-clear:hover {
+  background: rgba(248,21,179,.6);
+  color: #fff;
+}
+.ac-chip-clear:focus-visible {
+  outline: 2px solid var(--mkt-pink);
+  outline-offset: 2px;
 }
 .ac-chip-hot {
   background: linear-gradient(90deg, rgba(248,21,179,.28), rgba(107,3,229,.18));

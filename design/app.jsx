@@ -60,6 +60,14 @@ function App() {
     }
     setQuizOpen(false);
   }
+  // Zruší jednu konkrétní odpověď (X na priority chipu). Smaže klíč,
+  // přepočítá scoring a persistuje do localStorage.
+  function handleClearAnswer(id) {
+    const next = { ...(answers || {}) };
+    delete next[id];
+    window.saveQuiz(next);
+    setAnswers(next);
+  }
 
   function handleReviewsClick(firmId) {
     setReviewsFirm(firmId);
@@ -131,6 +139,7 @@ function App() {
                   onEditQuiz={handleEditQuiz}
                   onTopIds={setTopIds}
                   onReviewsClick={handleReviewsClick}
+                  onClearAnswer={handleClearAnswer}
                 />
                 <SectionReviews
                   topIds={topIds}

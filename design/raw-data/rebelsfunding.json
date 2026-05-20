@@ -1,0 +1,1375 @@
+{
+  "id": "rebelsfunding",
+  "name": "RebelsFunding",
+  "url": "https://www.rebelsfunding.com/",
+  "isFk": false,
+  "comment": "Slovakia-based proprietary trading firm (RIFM, s.r.o., Bratislava) launched in 2023, offering five evaluation programs (Copper, Bronze, Silver, Gold, Diamond) on its proprietary RF-Trader platform with no time limits and 12-hour payout cycles.",
+  "yearsInOperation": 3,
+  "hasMobileApp": false,
+  "languages": ["en"],
+  "restrictedCountries": ["IR", "KP", "SY", "PK"],
+  "platforms": ["RF-Trader", "TradingView"],
+  "paymentMethods": ["Credit Card", "Crypto", "Bank Transfer", "Rise"],
+  "education": {
+    "hasEducationForBeginners": true,
+    "features": ["Blog with trader interviews and strategy guides", "FAQ section", "RF-Trader platform manual", "Trading instruments guide", "Discord community", "Free trial accounts"]
+  },
+  "popularity": {
+    "scoreFormula": {
+      "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+      "inputs": {
+        "TP_score": 0.88,
+        "pct_1star": 0.13,
+        "reddit_score": 0.65,
+        "reddit_score_note": "Estimated from community aggregators and review sites - majority positive sentiment with multiple payout proofs, but some complaints about account terminations after passing challenges. Direct Reddit scraping unavailable.",
+        "red_flag_penalty": 0,
+        "red_flag_penalty_note": "No documented regulator warnings (CFTC/FCA/ASIC), no pattern of unpaid payouts in last 12 months, firm has physical office in Bratislava and CEO engages publicly. Scam Detector medium trust score (58.4) and some isolated termination complaints are not sufficient evidence for penalty."
+      },
+      "rawScore": 70.0,
+      "maxScore": 245.0,
+      "normalizedScore": 28.6
+    },
+    "overallPopularityScore": 28.6,
+    "trustpilot": {
+      "score": 4.4,
+      "reviewCount": 2300,
+      "pct1star": 0.13,
+      "lastUpdated": "2026-05",
+      "topPositiveThemes": ["fast payouts (12-48h)", "responsive support", "clear rules", "no consistency rule"],
+      "topNegativeThemes": ["account termination after passing", "EA restrictions strict", "platform-only RF-Trader (no MT4/MT5)"],
+      "verifiedPayoutProof": true,
+      "firmRespondsToReviews": true
+    },
+    "redFlagPenalty": {
+      "value": 0,
+      "reason": ""
+    },
+    "supportLevel": "Good",
+    "payoutStats": {
+      "totalPaidOut": "$3M+",
+      "avgPayoutUSD": null,
+      "highestPayoutUSD": null,
+      "approvalRate": null,
+      "avgApprovalTime": "12-48 hours"
+    }
+  },
+  "currentCampaigns": [
+    {
+      "name": "30% OFF on Your First Challenge",
+      "discountPercentage": 30,
+      "description": "Promotional discount displayed on homepage for new traders' first challenge purchase."
+    }
+  ],
+  "challenges": [
+    {
+      "challengeId": "rebelsfunding-copper-5k",
+      "name": "RF Copper $5,000",
+      "primary": {
+        "steps": 4,
+        "capitalUSD": 5000,
+        "priceUSD": 25,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 4, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-copper-10k",
+      "name": "RF Copper $10,000",
+      "primary": {
+        "steps": 4,
+        "capitalUSD": 10000,
+        "priceUSD": 49,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 4, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-copper-25k",
+      "name": "RF Copper $25,000",
+      "primary": {
+        "steps": 4,
+        "capitalUSD": 25000,
+        "priceUSD": 119,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 4, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-copper-50k",
+      "name": "RF Copper $50,000",
+      "primary": {
+        "steps": 4,
+        "capitalUSD": 50000,
+        "priceUSD": 229,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 4, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-copper-100k",
+      "name": "RF Copper $100,000",
+      "primary": {
+        "steps": 4,
+        "capitalUSD": 100000,
+        "priceUSD": 399,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 4, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-copper-200k",
+      "name": "RF Copper $200,000",
+      "primary": {
+        "steps": 4,
+        "capitalUSD": 200000,
+        "priceUSD": 649,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 4, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-copper-320k",
+      "name": "RF Copper $320,000",
+      "primary": {
+        "steps": 4,
+        "capitalUSD": 320000,
+        "priceUSD": 890,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 4, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-bronze-5k",
+      "name": "RF Bronze $5,000",
+      "primary": {
+        "steps": 3,
+        "capitalUSD": 5000,
+        "priceUSD": 40,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-bronze-10k",
+      "name": "RF Bronze $10,000",
+      "primary": {
+        "steps": 3,
+        "capitalUSD": 10000,
+        "priceUSD": 70,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-bronze-25k",
+      "name": "RF Bronze $25,000",
+      "primary": {
+        "steps": 3,
+        "capitalUSD": 25000,
+        "priceUSD": 150,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-bronze-50k",
+      "name": "RF Bronze $50,000",
+      "primary": {
+        "steps": 3,
+        "capitalUSD": 50000,
+        "priceUSD": 280,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-bronze-100k",
+      "name": "RF Bronze $100,000",
+      "primary": {
+        "steps": 3,
+        "capitalUSD": 100000,
+        "priceUSD": 480,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-bronze-160k",
+      "name": "RF Bronze $160,000",
+      "primary": {
+        "steps": 3,
+        "capitalUSD": 160000,
+        "priceUSD": 660,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 3, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-silver-2-5k",
+      "name": "RF Silver $2,500",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 2500,
+        "priceUSD": 35,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-silver-5k",
+      "name": "RF Silver $5,000",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 5000,
+        "priceUSD": 55,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-silver-10k",
+      "name": "RF Silver $10,000",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 10000,
+        "priceUSD": 85,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-silver-25k",
+      "name": "RF Silver $25,000",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 25000,
+        "priceUSD": 155,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-silver-40k",
+      "name": "RF Silver $40,000",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 40000,
+        "priceUSD": 230,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-gold-2-5k",
+      "name": "RF Gold $2,500",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 2500,
+        "priceUSD": 50,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-gold-5k",
+      "name": "RF Gold $5,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 5000,
+        "priceUSD": 75,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-gold-10k",
+      "name": "RF Gold $10,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 10000,
+        "priceUSD": 110,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-gold-25k",
+      "name": "RF Gold $25,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 25000,
+        "priceUSD": 190,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-gold-40k",
+      "name": "RF Gold $40,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 40000,
+        "priceUSD": 280,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-diamond-1k",
+      "name": "RF Diamond $1,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 1000,
+        "priceUSD": 50,
+        "profitSplitPercentage": 75,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 0, "maxDrawdownPercentage": 5}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-diamond-5k",
+      "name": "RF Diamond $5,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 5000,
+        "priceUSD": 100,
+        "profitSplitPercentage": 75,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 0, "maxDrawdownPercentage": 5}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-diamond-10k",
+      "name": "RF Diamond $10,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 10000,
+        "priceUSD": 150,
+        "profitSplitPercentage": 75,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 0, "maxDrawdownPercentage": 5}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-diamond-25k",
+      "name": "RF Diamond $25,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 25000,
+        "priceUSD": 250,
+        "profitSplitPercentage": 75,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 0, "maxDrawdownPercentage": 5}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-diamond-50k",
+      "name": "RF Diamond $50,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 50000,
+        "priceUSD": 350,
+        "profitSplitPercentage": 75,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 0, "maxDrawdownPercentage": 5}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-diamond-100k",
+      "name": "RF Diamond $100,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 100000,
+        "priceUSD": 500,
+        "profitSplitPercentage": 75,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 0, "maxDrawdownPercentage": 5}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-diamond-200k",
+      "name": "RF Diamond $200,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 200000,
+        "priceUSD": 700,
+        "profitSplitPercentage": 75,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 0, "maxDrawdownPercentage": 5}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "rebelsfunding-diamond-320k",
+      "name": "RF Diamond $320,000",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 320000,
+        "priceUSD": 890,
+        "profitSplitPercentage": 75,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 12,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 0, "maxDrawdownPercentage": 5}
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 999,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:200",
+        "commissionFreeInstruments": {
+          "forex": null,
+          "indices": null,
+          "gold": null,
+          "oil": null,
+          "crypto": null,
+          "note": "Commission structure not publicly disclosed in detail"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    }
+  ],
+  "lastUpdated": "2026-05"
+}

@@ -1,0 +1,576 @@
+{
+  "id": "the5ers",
+  "name": "The5ers",
+  "url": "https://the5ers.com",
+  "isFk": false,
+  "comment": "Israel-based proprietary trading firm founded in 2016, offering multiple evaluation paths (Hyper Growth 1-step, High Stakes 2-step, Bootcamp 3-step) with scaling up to $4M and profit splits from 80% to 100%.",
+  "yearsInOperation": 10,
+  "hasMobileApp": null,
+  "languages": ["en", "es"],
+  "restrictedCountries": ["US", "AF", "BY", "BI", "CF", "CU", "CG", "CD", "ER", "GN", "GW", "IQ", "IR", "IL", "LA", "LB", "LR", "LY", "MM", "KP", "PS", "PG", "RU", "SO", "SS", "SD", "SY", "VU", "VE", "YE"],
+  "platforms": ["MT5", "cTrader"],
+  "paymentMethods": ["Credit Card", "Crypto", "Bank Transfer", "Rise"],
+  "education": {
+    "hasEducationForBeginners": true,
+    "features": ["Academy with classes and courses", "Webinars", "Weekly sessions with trading experts", "Blog and educational materials", "Performance coaching", "Discord community"]
+  },
+  "popularity": {
+    "scoreFormula": {
+      "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+      "inputs": {
+        "TP_score": 0.96,
+        "pct_1star": 0.04,
+        "reddit_score": 0.75,
+        "reddit_score_note": "Estimated from community aggregators and review snapshots — majority-positive sentiment with frequent payout proofs ($43M+ verified paid out); direct Reddit scraping unavailable.",
+        "red_flag_penalty": 0,
+        "red_flag_penalty_note": "No documented regulator warnings, no widespread unpaid-payout pattern, firm responds to reviews and discloses payout stats."
+      },
+      "rawScore": 77.4,
+      "maxScore": 245.0,
+      "normalizedScore": 31.6
+    },
+    "overallPopularityScore": 31.6,
+    "trustpilot": {
+      "score": 4.8,
+      "reviewCount": 26867,
+      "pct1star": 0.04,
+      "lastUpdated": "2026-05",
+      "topPositiveThemes": ["fast reliable payouts", "responsive 24/7 support", "transparent rules", "quality Bootcamp program"],
+      "topNegativeThemes": ["account termination disputes", "occasional execution issues"],
+      "verifiedPayoutProof": true,
+      "firmRespondsToReviews": true
+    },
+    "redFlagPenalty": {
+      "value": 0,
+      "reason": ""
+    },
+    "supportLevel": "Excellent",
+    "payoutStats": {
+      "totalPaidOut": "$43M+",
+      "avgPayoutUSD": null,
+      "highestPayoutUSD": 36005,
+      "approvalRate": null,
+      "avgApprovalTime": "16 days"
+    }
+  },
+  "currentCampaigns": [
+    "10-year anniversary celebration",
+    "Hyper Growth bonuses from $15 to $50 hub credits per account"
+  ],
+  "challenges": [
+    {
+      "challengeId": "the5ers-hypergrowth-5k",
+      "name": "Hyper Growth $5K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 5000,
+        "priceUSD": 260,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 72,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:30",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Commission structure not publicly itemized per instrument"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "the5ers-hypergrowth-10k",
+      "name": "Hyper Growth $10K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 10000,
+        "priceUSD": 450,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 72,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:30",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Commission structure not publicly itemized per instrument"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "the5ers-hypergrowth-20k",
+      "name": "Hyper Growth $20K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 20000,
+        "priceUSD": 850,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 72,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:30",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Commission structure not publicly itemized per instrument"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "the5ers-highstakes-5k",
+      "name": "High Stakes $5K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 5000,
+        "priceUSD": 39,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 72,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 5,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Commission structure not publicly itemized per instrument"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "the5ers-highstakes-10k",
+      "name": "High Stakes $10K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 10000,
+        "priceUSD": 78,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 72,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 5,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Commission structure not publicly itemized per instrument"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "the5ers-highstakes-20k",
+      "name": "High Stakes $20K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 20000,
+        "priceUSD": 165,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 72,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 5,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Commission structure not publicly itemized per instrument"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "the5ers-highstakes-60k",
+      "name": "High Stakes $60K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 60000,
+        "priceUSD": 329,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 72,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 5,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Commission structure not publicly itemized per instrument"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "the5ers-highstakes-100k",
+      "name": "High Stakes $100K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 100000,
+        "priceUSD": 545,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 72,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 5,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Commission structure not publicly itemized per instrument"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "the5ers-bootcamp-100k",
+      "name": "Bootcamp $100K",
+      "primary": {
+        "steps": 3,
+        "capitalUSD": 100000,
+        "priceUSD": 281,
+        "profitSplitPercentage": 50,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 72,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 0,
+            "maxDrawdownPercentage": 5
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 0,
+            "maxDrawdownPercentage": 5
+          },
+          {
+            "phaseNumber": 3,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 0,
+            "maxDrawdownPercentage": 4
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:10",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Commission structure not publicly itemized per instrument"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "the5ers-bootcamp-250k",
+      "name": "Bootcamp $250K",
+      "primary": {
+        "steps": 3,
+        "capitalUSD": 250000,
+        "priceUSD": 530,
+        "profitSplitPercentage": 50,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 72,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 0,
+            "maxDrawdownPercentage": 5
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 0,
+            "maxDrawdownPercentage": 5
+          },
+          {
+            "phaseNumber": 3,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 0,
+            "maxDrawdownPercentage": 4
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:10",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Commission structure not publicly itemized per instrument"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    }
+  ]
+}
