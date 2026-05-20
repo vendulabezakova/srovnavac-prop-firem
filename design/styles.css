@@ -56,7 +56,7 @@ body {
 
 /* Highlighted firm row */
 .row-highlight {
-  background: linear-gradient(90deg, rgba(107,3,229,.22), rgba(248,21,179,.12));
+  background: #2B0064;
   box-shadow:
     inset 0 0 0 1px rgba(248,21,179,.35),
     0 0 40px -10px rgba(248,21,179,.45);
@@ -113,7 +113,7 @@ input[type="range"].weight-slider::-moz-range-thumb {
 .cmp-table tr td:last-child  { border-right: 1px solid rgba(255,255,255,.06); border-radius: 0 14px 14px 0; }
 
 .cmp-table tr.row-highlight td {
-  background: linear-gradient(90deg, rgba(107,3,229,.22), rgba(248,21,179,.12));
+  background: #2B0064;
   border-top-color: rgba(248,21,179,.35);
   border-bottom-color: rgba(248,21,179,.35);
 }
@@ -276,8 +276,8 @@ input[type="range"].weight-slider::-moz-range-thumb {
 .cmp-wide tbody td.col-num   { text-align: right; font-variant-numeric: tabular-nums; }
 .cmp-wide tbody td.col-exp   { text-align: center; padding-right: 14px; padding-left: 4px; }
 
-.cmp-wide tbody tr.row-hl td { background: linear-gradient(90deg, rgba(107,3,229,.30), rgba(248,21,179,.16) 60%, rgba(43,0,100,.95) 100%); }
-.cmp-wide tbody tr.row-hl td.col-firm { background: linear-gradient(90deg, rgba(107,3,229,.45), rgba(107,3,229,.30)); box-shadow: inset 3px 0 0 var(--mkt-pink); }
+.cmp-wide tbody tr.row-hl td { background: #2B0064; }
+.cmp-wide tbody tr.row-hl td.col-firm { background: #2B0064; box-shadow: inset 3px 0 0 var(--mkt-pink); }
 
 .cmp-wide tbody tr.row-detail td {
   padding: 0; border-top: 0; background: rgba(43,0,100,.45);
@@ -573,7 +573,7 @@ image-slot[id="hero-face"] {
 .cmp-firm-table tbody td.col-exp { text-align: center; padding-right: 14px; padding-left: 4px; }
 
 .cmp-firm-table tbody tr.firm-row.is-top td {
-  background: linear-gradient(90deg, rgba(107,3,229,.26), rgba(248,21,179,.14) 60%, rgba(43,0,100,.92) 100%);
+  background: #2B0064;
 }
 /* col-num cells: žádný gradient, jen tmavě fialová (i v is-top řádku) */
 .cmp-firm-table tbody tr.firm-row td.col-num,
@@ -1431,11 +1431,11 @@ image-slot[id="hero-face"] {
 
 /* Top-shoda row */
 .cmp-wide tbody tr.row-top td {
-  background: linear-gradient(90deg, rgba(107,3,229,.26), rgba(248,21,179,.14) 60%, rgba(43,0,100,.92) 100%);
+  background: #2B0064;
 }
 .cmp-wide tbody tr.row-top td.col-rank,
 .cmp-wide tbody tr.row-top td.col-firm {
-  background: linear-gradient(90deg, rgba(107,3,229,.42), rgba(107,3,229,.28));
+  background: #2B0064;
   box-shadow: inset 3px 0 0 var(--mkt-pink);
 }
 
