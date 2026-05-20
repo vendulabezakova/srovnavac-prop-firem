@@ -483,7 +483,7 @@ image-slot[id="hero-face"] {
 }
 .hero-testimonial {
   position: absolute;
-  right: -40px; bottom: 20px;
+  right: -80px; bottom: -24px;
   width: 280px;
   padding: 16px 18px;
   background: linear-gradient(180deg, rgba(43,0,100,.95), rgba(19,0,46,.92));
