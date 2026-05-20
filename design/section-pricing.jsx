@@ -10,7 +10,6 @@ function SectionPricing({ accountSize, onAccountSize, answers, onEditQuiz, onTop
   const [showAll, setShowAll] = React.useState(false);
   const [filterAssets, setFilterAssets] = React.useState('all');
   const [filterSteps, setFilterSteps] = React.useState('all');
-  const [expandedFirms, setExpandedFirms] = React.useState({});
 
   // Filter challenges first → firms which still have ≥1 matching challenge
   const firmsWithMatching = React.useMemo(() => {
@@ -61,21 +60,6 @@ function SectionPricing({ accountSize, onAccountSize, answers, onEditQuiz, onTop
   const allMatchingChallenges = React.useMemo(() => {
     return firmsWithMatching.flatMap((x) => x.matching);
   }, [firmsWithMatching]);
-
-  const chLeaders = React.useMemo(() => {
-    if (!allMatchingChallenges.length) return {};
-    const lowerIs = (key) => Math.min(...allMatchingChallenges.map((c) => c[key]).filter((v) => v != null && v > 0));
-    const higherIs = (key) => Math.max(...allMatchingChallenges.map((c) => c[key]).filter((v) => v != null && v > 0));
-    return {
-      profitTargetP1: lowerIs('profitTargetP1'),
-      profitTargetP2: lowerIs('profitTargetP2'),
-      maxDailyDD: higherIs('maxDailyDD'),
-      maxOverallDD: higherIs('maxOverallDD'),
-      payoutSplit: higherIs('payoutSplit'),
-      payoutHours: lowerIs('payoutHours'),
-      price: Math.min(...allMatchingChallenges.map((c) => window.priceFor(c, accountSize)).filter((v) => v != null && v > 0))
-    };
-  }, [allMatchingChallenges, accountSize]);
 
   const answerChips = React.useMemo(() => {
     const map = {
@@ -292,45 +276,6 @@ function SectionPricing({ accountSize, onAccountSize, answers, onEditQuiz, onTop
                       </td>
                     </tr>
 
-                    {/* Challenge sub-rows — max 2 visible, then expand button */}
-                    {(() => {
-                      const isExpanded = !!expandedFirms[f.id];
-                      const visibleChs = isExpanded ? row.matching : row.matching.slice(0, 2);
-                      const hiddenChs = row.matching.length - 2;
-                      return (
-                        <React.Fragment>
-                          {visibleChs.map((ch, chIdx) =>
-                            <tr key={'ch-' + chIdx} className="challenge-row">
-                              <td colSpan={8}>
-                                <ChallengeRow
-                                  firm={f}
-                                  challenge={ch}
-                                  accountSize={accountSize}
-                                  chLeaders={chLeaders}
-                                  isBest={row.bestChallenge === ch} />
-                              </td>
-                            </tr>
-                          )}
-                          {hiddenChs > 0 && (
-                            <tr className="challenge-row ch-expand-row">
-                              <td colSpan={8}>
-                                <button
-                                  className="ch-expand-btn"
-                                  type="button"
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    setExpandedFirms({ ...expandedFirms, [f.id]: !isExpanded });
-                                  }}>
-                                  {isExpanded
-                                    ? <>Sbalit výzvy <span className="chev">↑</span></>
-                                    : <>Zobrazit zbylé {hiddenChs} {hiddenChs === 1 ? 'výzvu' : hiddenChs < 5 ? 'výzvy' : 'výzev'} u {f.name} <span className="chev">↓</span></>}
-                                </button>
-                              </td>
-                            </tr>
-                          )}
-                        </React.Fragment>
-                      );
-                    })()}
 
                     {isOpen &&
                       <tr className="row-detail">
@@ -367,73 +312,6 @@ function SectionPricing({ accountSize, onAccountSize, answers, onEditQuiz, onTop
       </div>
     </section>);
 
-}
-
-
-// ── Challenge sub-row — kompaktní jednořádkový layout ──────────────────────
-function ChallengeRow({ firm, challenge, accountSize, chLeaders, isBest }) {
-  const price = window.priceFor(challenge, accountSize);
-  const ch = challenge;
-  const leader = (key, val) => val != null && val === chLeaders[key];
-
-  const targetText = ch.profitTargetP1 == null
-    ? '—'
-    : ch.profitTargetP2 != null
-      ? <><span className={leader('profitTargetP1', ch.profitTargetP1) ? 'leader' : ''}>{ch.profitTargetP1}%</span> <span style={{ color: 'rgba(255,255,255,.4)' }}>/</span> <span className={leader('profitTargetP2', ch.profitTargetP2) ? 'leader' : ''}>{ch.profitTargetP2}%</span></>
-      : <span className={leader('profitTargetP1', ch.profitTargetP1) ? 'leader' : ''}>{ch.profitTargetP1}%</span>;
-
-  return (
-    <div className={'ch-row ch-row-compact' + (isBest ? ' is-best' : '')}>
-      <div className="ch-arrow" aria-hidden="true">↳</div>
-
-      <div className="ch-id">
-        <div className="ch-name">
-          {ch.name}
-          {isBest && <span className="ch-best-tag">nejlepší shoda</span>}
-        </div>
-        <div className="ch-assets">
-          {(ch.assets || []).map((a) => <span key={a} className="ch-asset">{a}</span>)}
-        </div>
-      </div>
-
-      <div className="ch-params">
-        <span className="ch-p">
-          <span className="cp-l">P. target</span>
-          <span className="cp-v">{targetText}</span>
-        </span>
-        <span className="ch-p">
-          <span className="cp-l">Daily loss</span>
-          <span className="cp-v">{ch.maxDailyDD === 0 ? '—' : <span className={leader('maxDailyDD', ch.maxDailyDD) ? 'leader' : ''}>{ch.maxDailyDD}%</span>}</span>
-        </span>
-        <span className="ch-p">
-          <span className="cp-l">Max loss</span>
-          <span className="cp-v"><span className={leader('maxOverallDD', ch.maxOverallDD) ? 'leader' : ''}>{ch.maxOverallDD}%</span></span>
-        </span>
-        <span className="ch-p ch-p-hi">
-          <span className="cp-l">Split</span>
-          <span className="cp-v"><span className={leader('payoutSplit', ch.payoutSplit) ? 'leader' : ''}>{ch.payoutSplit}%</span></span>
-        </span>
-        <span className="ch-p">
-          <span className="cp-l">Frequency</span>
-          <span className="cp-v">{ch.payoutFreq}</span>
-        </span>
-        <span className="ch-p">
-          <span className="cp-l">Speed</span>
-          <span className="cp-v" title={ch.payoutRaw}><span className={leader('payoutHours', ch.payoutHours) ? 'leader' : ''}>{window.formatPayoutSpeed(ch)}</span></span>
-        </span>
-      </div>
-
-      <div className="ch-pricetag">
-        <span className="ch-size-badge">${accountSize / 1000}K účet</span>
-        <span className={'ch-price-num' + (leader('price', price) ? ' leader' : '')}>${price?.toLocaleString('cs-CZ')}</span>
-      </div>
-    </div>);
-
-}
-
-function ChField({ label, value, highlight }) {
-  // legacy — neused
-  return null;
 }
 
 
@@ -587,7 +465,7 @@ function DetailPanel({ firm, reasons }) {
   };
 
   return (
-    <div className="detail-panel ch-row ch-row-compact is-best">
+    <div className="detail-panel">
 
       <div className="detail-group">
         <div className="detail-h">Trading podmínky (per firma)</div>
