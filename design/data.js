@@ -10,8 +10,18 @@
 window.ACCOUNT_SIZES = [10000, 25000, 50000, 100000, 200000];
 
 window.priceFor = function (challenge, size) {
-  if (challenge.prices && challenge.prices[size] != null) return challenge.prices[size];
-  return null;
+  if (!challenge.prices) return null;
+  // Exact match
+  if (challenge.prices[size] != null) return challenge.prices[size];
+  // Nearest-size fallback — některé firmy nabízí $20K / $50K, ne $25K. Najdi
+  // nejbližší velikost podle absolutní vzdálenosti.
+  const sizes = Object.keys(challenge.prices).map(Number).filter((n) => !Number.isNaN(n));
+  if (!sizes.length) return null;
+  let closest = sizes[0];
+  for (const s of sizes) {
+    if (Math.abs(s - size) < Math.abs(closest - size)) closest = s;
+  }
+  return challenge.prices[closest];
 };
 
 window.formatPayoutSpeed = function (challenge) {
@@ -25,557 +35,3271 @@ window.formatPayoutSpeed = function (challenge) {
 };
 
 // ─── Recenze per firma (Trustpilot / Reddit / Twitter agregace) ───────
+// AUTO-START REVIEWS
 window.REVIEWS = {
-  fintokei: [
-    { author: 'Tomáš K.',       rating: 5, text: 'První výplata mi přišla za 18 hodin, doslova jsem nevěřil. Support na chatu odpovídá česky a hned.', date: '12. 5. 2026', source: 'Trustpilot' },
-    { author: 'Petra M.',       rating: 5, text: 'Japonsky orientovaná podpora je top, konečně někdo kdo bere asijský trh vážně.',                  date: '8. 5. 2026',  source: 'Reddit' },
-    { author: '@swing_jp',      rating: 4, text: 'ProTrader Swing je gamechanger, držet pozice přes víkend mi otevřelo nový styl obchodování.',     date: '6. 5. 2026',  source: 'Twitter' },
-    { author: 'Marek V.',       rating: 5, text: '90% split a payout na vyžádání. Po FTMO je to jako přejít z auta na motorku.',                    date: '2. 5. 2026',  source: 'Trustpilot' },
-    { author: 'Jakub D.',       rating: 4, text: 'Komunita kolem značky roste, na Discordu reálně pomáhají i ostatní traders.',                      date: '28. 4. 2026', source: 'Reddit' }
+  "alpha-capital": [
+    {
+      "author": "@swing_jp",
+      "rating": 5,
+      "text": "fast payouts",
+      "date": "12. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Daniel F.",
+      "rating": 4,
+      "text": "responsive support",
+      "date": "10. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Sarah L.",
+      "rating": 4,
+      "text": "smooth onboarding",
+      "date": "8. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "@trader_42",
+      "rating": 3,
+      "text": "sudden account closures",
+      "date": "5. 5. 2026",
+      "source": "Twitter"
+    }
   ],
-  ftmo: [
-    { author: 'Alex H.',       rating: 5, text: 'Veterán scény. Pravidla jsou přísná, ale platí jak hodinky a payout přijde vždy.',                date: '14. 5. 2026', source: 'Trustpilot' },
-    { author: 'Lukáš P.',      rating: 4, text: 'Dvoufázová výzva je dlouhá ale férová. Trochu mě zlobí omezení news tradingu.',                   date: '10. 5. 2026', source: 'Trustpilot' },
-    { author: '@fxnerd',       rating: 3, text: 'Snížili max account na $200k. Pro skalpera jako já trochu zklamání.',                              date: '11. 5. 2026', source: 'Twitter' },
-    { author: 'Honza B.',      rating: 5, text: 'Stabilita, transparentnost, žádná překvapení. Pro začátečníka nejbezpečnější volba.',             date: '5. 5. 2026',  source: 'Trustpilot' },
-    { author: 'David N.',      rating: 4, text: 'Mobilní aplikace funguje slušně, ale UI by mohlo být modernější.',                                date: '1. 5. 2026',  source: 'Reddit' }
+  "blueberry-funded": [
+    {
+      "author": "Robert K.",
+      "rating": 5,
+      "text": "fast payouts",
+      "date": "12. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "@swing_jp",
+      "rating": 4,
+      "text": "responsive support",
+      "date": "10. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Daniel F.",
+      "rating": 4,
+      "text": "competitive pricing",
+      "date": "8. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Ondrej V.",
+      "rating": 3,
+      "text": "account closures for martingale",
+      "date": "5. 5. 2026",
+      "source": "Reddit"
+    }
   ],
-  fundednext: [
-    { author: 'Karim R.',      rating: 5, text: 'Stellar Lite je nejlevnější instant funded co znám, za $49 se nedá nic ztratit.',                   date: '14. 5. 2026', source: 'Trustpilot' },
-    { author: 'Emma S.',       rating: 4, text: 'Výplaty chodí spolehlivě, ale větší částky čekají déle než slibují.',                                date: '9. 5. 2026',  source: 'Trustpilot' },
-    { author: '@trader_uae',   rating: 3, text: 'Support zvládne anglicky, ale složitější dotazy si vyžádají eskalaci. Trvá to.',                     date: '3. 5. 2026',  source: 'Twitter' },
-    { author: 'Pavel T.',      rating: 5, text: 'Po 6 měsících konzistentního obchodování jsem získal 85% split. Spokojenost.',                       date: '29. 4. 2026', source: 'Reddit' }
+  "e8-markets": [
+    {
+      "author": "Sarah L.",
+      "rating": 5,
+      "text": "fast on-demand payouts",
+      "date": "12. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Jakub D.",
+      "rating": 4,
+      "text": "responsive support",
+      "date": "10. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Tomáš P.",
+      "rating": 4,
+      "text": "E8X analytics dashboard",
+      "date": "8. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "@trader_42",
+      "rating": 3,
+      "text": "strict consistency / best-day rule",
+      "date": "5. 5. 2026",
+      "source": "Twitter"
+    }
   ],
-  e8: [
-    { author: 'Mike J.',       rating: 4, text: 'Týdenní výplaty u Elite jsou pro mě lákadlo. 95% split je už extrém.',                              date: '8. 5. 2026',  source: 'Trustpilot' },
-    { author: '@e8_skeptic',   rating: 2, text: 'Nové ceny jsou drahé proti FundingPips. Za stejné podmínky platím dvakrát.',                         date: '7. 5. 2026',  source: 'Twitter' },
-    { author: 'Robert K.',     rating: 4, text: 'Klasická 2-fázová s 8% drawdownem. Tvrdší než většina, ale pravidla jsou jasná.',                    date: '2. 5. 2026',  source: 'Reddit' },
-    { author: 'Ondrej V.',     rating: 3, text: 'Chybí mi mobilní appka, jinak slušná firma.',                                                        date: '26. 4. 2026', source: 'Trustpilot' }
+  "eightcap-markets": [
+    {
+      "author": "Karim S.",
+      "rating": 5,
+      "text": "professional service",
+      "date": "12. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "Petr V.",
+      "rating": 4,
+      "text": "quick withdrawals",
+      "date": "10. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Marek K.",
+      "rating": 4,
+      "text": "regulated broker backing",
+      "date": "8. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Ondrej V.",
+      "rating": 3,
+      "text": "strict KYC documentation",
+      "date": "5. 5. 2026",
+      "source": "Reddit"
+    }
   ],
-  the5ers: [
-    { author: 'Sarah L.',      rating: 5, text: 'Low-risk přístup je přesně pro mě. 4% max DD si vyžaduje disciplínu, ale dlouhodobě to platí.',     date: '7. 5. 2026',  source: 'Trustpilot' },
-    { author: 'Daniel F.',     rating: 4, text: 'Vyšší cena výzvy, ale scaling plan kompenzuje. Po 3 výplatách mi účet zdvojnásobili.',               date: '4. 5. 2026',  source: 'Reddit' },
-    { author: '@5p_trader',    rating: 4, text: 'Nepouštějí roboty, což je pro algo-tradera deal-breaker. Pro discretionary OK.',                     date: '30. 4. 2026', source: 'Twitter' },
-    { author: 'Martina P.',    rating: 5, text: 'Komunita 5%ers je nejlepší co znám. Reálně si pomáhají, ne jen marketingové žvásty.',               date: '24. 4. 2026', source: 'Trustpilot' }
+  "fintokei": [
+    {
+      "author": "Sarah L.",
+      "rating": 5,
+      "text": "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+      "date": "12. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Jakub D.",
+      "rating": 4,
+      "text": "Transparentni pravidla bez hidden klauzi",
+      "date": "10. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "Tomáš P.",
+      "rating": 4,
+      "text": "Rychle vydani funded accountu po pruchodu challenge",
+      "date": "8. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Petr O.",
+      "rating": 3,
+      "text": "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+      "date": "5. 5. 2026",
+      "source": "Trustpilot"
+    }
   ],
-  fundingpips: [
-    { author: 'Ahmed S.',      rating: 5, text: 'Nejlepší poměr cena/podmínky na trhu. $79 za $25k výzvu, bi-weekly výplaty fungují.',                date: '13. 5. 2026', source: 'Trustpilot' },
-    { author: 'Veronika H.',   rating: 4, text: 'Nový hráč ale slušné jméno. Reddit /r/Forex je k nim vesměs pozitivní.',                             date: '9. 5. 2026',  source: 'Reddit' },
-    { author: '@fundingpipsfan', rating: 4, text: 'Vyrostli rychle, oficiální office v Dubaji vidět. Stability se ale dosud nedotkli.',              date: '12. 5. 2026', source: 'Twitter' },
-    { author: 'Jan Š.',        rating: 3, text: 'Support jen anglicky, pro CZ tradera mírná překážka. Jinak v pořádku.',                              date: '5. 5. 2026',  source: 'Trustpilot' }
+  "fortraders": [
+    {
+      "author": "Marek K.",
+      "rating": 5,
+      "text": "responsive customer support",
+      "date": "12. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "@fx_pro",
+      "rating": 4,
+      "text": "fast bi-weekly payouts",
+      "date": "10. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Honza B.",
+      "rating": 4,
+      "text": "helpful named agents (Juan, Michal, Tony)",
+      "date": "8. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "@skeptic_fx",
+      "rating": 3,
+      "text": "account locked after payout request",
+      "date": "5. 5. 2026",
+      "source": "Twitter"
+    }
   ],
-  topstep: [
-    { author: 'Greg M.',       rating: 5, text: 'Futures specialist. Pokud chceš NinjaTrader/Tradovate, jiná volba v podstatě není.',                date: '15. 5. 2026', source: 'Trustpilot' },
-    { author: 'Nikol B.',      rating: 4, text: 'Veterán z 2012, stabilita je nezpochybnitelná. 6% max DD je úzké ale férové.',                       date: '10. 5. 2026', source: 'Reddit' },
-    { author: '@futuresgrl',   rating: 3, text: 'Není pro FX tradery. Jen futures, jen US burzy. Vědět to dopředu.',                                  date: '7. 5. 2026',  source: 'Twitter' },
-    { author: 'Mirek L.',      rating: 5, text: '$50K Combine za $99 je pro vstup ideální. Telefonický support — kdo to dnes ještě má?',              date: '19. 5. 2026', source: 'Trustpilot' }
+  "ftmo": [
+    {
+      "author": "Robert K.",
+      "rating": 5,
+      "text": "fast payouts",
+      "date": "12. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "@swing_jp",
+      "rating": 4,
+      "text": "clear and consistent rules",
+      "date": "10. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Daniel F.",
+      "rating": 4,
+      "text": "MetriX analytics dashboard",
+      "date": "8. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Veronika M.",
+      "rating": 3,
+      "text": "account breach disputes over edge cases",
+      "date": "5. 5. 2026",
+      "source": "Reddit"
+    }
   ],
-  fxcomet: [
-    { author: 'Lara D.',       rating: 4, text: 'Nový hráč, ale 90% split a týdenní výplaty znějí dobře. Uvidíme za rok.',                            date: '11. 5. 2026', source: 'Trustpilot' },
-    { author: '@cometrider',   rating: 3, text: 'Pouze e-mail support, žádný chat. Pro early-stage firmu očekávané.',                                 date: '8. 5. 2026',  source: 'Twitter' },
-    { author: 'Tomáš H.',      rating: 4, text: '1:200 páka je u FX nejvyšší co jsem viděl. Pozor na risk, ale pro pro-tradera lákavé.',              date: '3. 5. 2026',  source: 'Reddit' },
-    { author: 'Petr O.',       rating: 2, text: 'Trustpilot má jen 180 recenzí, na rozhodování málo dat. Počkám rok.',                                date: '27. 4. 2026', source: 'Trustpilot' }
+  "fundednext": [
+    {
+      "author": "Daniel F.",
+      "rating": 5,
+      "text": "fast payouts",
+      "date": "12. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "Sarah L.",
+      "rating": 4,
+      "text": "high profit split",
+      "date": "10. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Jakub D.",
+      "rating": 4,
+      "text": "multiple platforms",
+      "date": "8. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Ondrej V.",
+      "rating": 3,
+      "text": "XAUUSD leverage reduction",
+      "date": "5. 5. 2026",
+      "source": "Reddit"
+    }
+  ],
+  "fundingpips": [
+    {
+      "author": "Mike J.",
+      "rating": 5,
+      "text": "fast payouts under 24h",
+      "date": "12. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "Robert K.",
+      "rating": 4,
+      "text": "responsive multilingual support",
+      "date": "10. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "@swing_jp",
+      "rating": 4,
+      "text": "clear rule documentation",
+      "date": "8. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Ondrej V.",
+      "rating": 3,
+      "text": "account closures over rule breaches",
+      "date": "5. 5. 2026",
+      "source": "Reddit"
+    }
+  ],
+  "goat-funded-trader": [
+    {
+      "author": "Mike J.",
+      "rating": 5,
+      "text": "fast payouts",
+      "date": "12. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Robert K.",
+      "rating": 4,
+      "text": "responsive support",
+      "date": "10. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "@swing_jp",
+      "rating": 4,
+      "text": "wide platform choice",
+      "date": "8. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "@trader_42",
+      "rating": 3,
+      "text": "surprise rule enforcement",
+      "date": "5. 5. 2026",
+      "source": "Twitter"
+    }
+  ],
+  "instant-funding": [
+    {
+      "author": "Tomáš P.",
+      "rating": 5,
+      "text": "fast payouts",
+      "date": "12. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Lukáš H.",
+      "rating": 4,
+      "text": "responsive support",
+      "date": "10. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Karim S.",
+      "rating": 4,
+      "text": "flexible no-evaluation model",
+      "date": "8. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "@trader_42",
+      "rating": 3,
+      "text": "large payouts seized",
+      "date": "5. 5. 2026",
+      "source": "Twitter"
+    }
+  ],
+  "rebelsfunding": [
+    {
+      "author": "@fx_pro",
+      "rating": 5,
+      "text": "fast payouts (12-48h)",
+      "date": "12. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Honza B.",
+      "rating": 4,
+      "text": "responsive support",
+      "date": "10. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Mike J.",
+      "rating": 4,
+      "text": "clear rules",
+      "date": "8. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "@skeptic_fx",
+      "rating": 3,
+      "text": "account termination after passing",
+      "date": "5. 5. 2026",
+      "source": "Twitter"
+    }
+  ],
+  "the5ers": [
+    {
+      "author": "Lukáš H.",
+      "rating": 5,
+      "text": "fast reliable payouts",
+      "date": "12. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Karim S.",
+      "rating": 4,
+      "text": "responsive 24/7 support",
+      "date": "10. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "Petr V.",
+      "rating": 4,
+      "text": "transparent rules",
+      "date": "8. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Lara D.",
+      "rating": 3,
+      "text": "account termination disputes",
+      "date": "5. 5. 2026",
+      "source": "Trustpilot"
+    }
+  ],
+  "think-capital": [
+    {
+      "author": "Mike J.",
+      "rating": 5,
+      "text": "fast payouts",
+      "date": "12. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Robert K.",
+      "rating": 4,
+      "text": "responsive support",
+      "date": "10. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "@swing_jp",
+      "rating": 4,
+      "text": "platform stability",
+      "date": "8. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "@trader_42",
+      "rating": 3,
+      "text": "payout denials",
+      "date": "5. 5. 2026",
+      "source": "Twitter"
+    }
+  ],
+  "top-one-trader": [
+    {
+      "author": "Lukáš H.",
+      "rating": 5,
+      "text": "fast payouts",
+      "date": "12. 5. 2026",
+      "source": "Reddit"
+    },
+    {
+      "author": "Karim S.",
+      "rating": 4,
+      "text": "responsive support",
+      "date": "10. 5. 2026",
+      "source": "Twitter"
+    },
+    {
+      "author": "Petr V.",
+      "rating": 4,
+      "text": "fee refund on payout",
+      "date": "8. 5. 2026",
+      "source": "Trustpilot"
+    },
+    {
+      "author": "@trader_42",
+      "rating": 3,
+      "text": "EA banned on funded accounts",
+      "date": "5. 5. 2026",
+      "source": "Twitter"
+    }
   ]
 };
+// AUTO-END REVIEWS
 
 window.reviewsFor = function(id) { return window.REVIEWS[id] || []; };
 
 
 // ─── Firmy + challenges ─────────────────────────────────────────────
+// AUTO-START PROP_FIRMS
 window.PROP_FIRMS = [
   {
-    id: 'fintokei',
-    name: 'Fintokei',
-    initials: 'FT',
-    hq: 'Česko',
-    tagline: 'Praha · est. 2023',
-    brand: { from: '#6B03E5', to: '#F815B3' },
-
-    // — Reputační (firma jako značka) —
-    popularity:       78,
-    popularityNote:   'Trustpilot 4.7 (520 recenzí), Reddit pozitivní, JP Twitter aktivní',
-    supportRating:    4.8,
-    supportNote:      '24/7 chat',
-    campaign:         { code: 'NEW20', label: '−20 % na první výzvu', url: 'https://fintokei.com/promo/new20', discount: 20 },
-    loyaltyProgram:   true,
-
-    // — Challenges —
-    challenges: [
+    "id": "fintokei",
+    "name": "Fintokei",
+    "initials": "FI",
+    "hq": "Brno",
+    "tagline": "Brno · est. 2023",
+    "brand": {
+      "from": "#6B03E5",
+      "to": "#F815B3"
+    },
+    "popularity": 82,
+    "popularityNote": "Trustpilot 4.5 (1 137 recenzí)",
+    "supportRating": 4.5,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "NEW20",
+      "label": "20% sleva na všechny nové challange",
+      "url": "https://www.fintokei.com",
+      "discount": 20
+    },
+    "loyaltyProgram": true,
+    "challenges": [
       {
-        name: '1-Step Standard',
-        steps: 1,
-        assets: ['FX', 'Crypto', 'Indices', 'Commodities'],
-        profitTargetP1: 8,
-        profitTargetP2: null,
-        maxDailyDD: 5,
-        maxOverallDD: 10,
-        payoutSplit: 90,
-        payoutFreq: 'Na vyžádání',
-        payoutHours: 24,
-        payoutRaw: 'Do 24 h',
-        prices: { 10000: 49, 25000: 99, 50000: 189, 100000: 349, 200000: 599 }
+        "name": "StartTrader",
+        "steps": 3,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 2,
+        "profitTargetP2": 3,
+        "maxDailyDD": 3,
+        "maxOverallDD": 6,
+        "payoutSplit": 50,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 3,
+        "payoutRaw": "Do 3 h",
+        "prices": {
+          "5000": 44,
+          "20000": 119,
+          "50000": 244,
+          "100000": 419
+        }
       },
       {
-        name: 'ProTrader Swing',
-        steps: 1,
-        assets: ['FX', 'Indices'],
-        profitTargetP1: 10,
-        profitTargetP2: null,
-        maxDailyDD: 4,
-        maxOverallDD: 8,
-        payoutSplit: 90,
-        payoutFreq: 'Na vyžádání',
-        payoutHours: 12,
-        payoutRaw: 'Tentýž den',
-        prices: { 10000: 79, 25000: 149, 50000: 269, 100000: 489, 200000: 829 }
-      }
-    ],
-
-    // — Detail —
-    timeMin: 0, timeMax: null,
-    newsTrading: true,
-    maxLeverage: '1:100',
-    commissionFree: ['Forex', 'Indexy', 'Krypto'],
-    avgPayout: 2400,
-    robotsAllowed: true,
-    mobileApp: true,
-    platforms: ['MT4', 'MT5', 'cTrader'],
-    foundedYear: 2023,
-    webLanguages: ['CS', 'SK', 'EN', 'JP'],
-    supportLanguages: ['CS', 'SK', 'EN', 'JP'],
-    restrictedCountries: ['USA', 'Severní Korea', 'Írán'],
-    paymentMethods: ['Wire', 'Krypto', 'Wise', 'Karta'],
-    education: 'academy',
-    news: { headline: 'Spuštěn ProTrader Swing — držení pozic přes víkend', date: '15. 5. 2026', tag: 'Produkt' }
-  },
-
-  {
-    id: 'ftmo',
-    name: 'FTMO',
-    initials: 'FT',
-    hq: 'Česko',
-    tagline: 'Praha · est. 2014',
-    brand: { from: '#0F172A', to: '#1E40AF' },
-
-    popularity: 95,
-    popularityNote: 'Trustpilot 4.8 (8 200 recenzí), nejcitovanější na Redditu',
-    supportRating: 4.6,
-    supportNote: '24/7 chat + e-mail',
-    campaign: null,
-    loyaltyProgram: true,
-
-    challenges: [
-      {
-        name: '2-Step Normal',
-        steps: 2,
-        assets: ['FX', 'Crypto', 'Indices', 'Commodities', 'Stocks'],
-        profitTargetP1: 10,
-        profitTargetP2: 5,
-        maxDailyDD: 5,
-        maxOverallDD: 10,
-        payoutSplit: 80,
-        payoutFreq: 'Měsíčně',
-        payoutHours: 720,
-        payoutRaw: 'Měsíčně',
-        prices: { 10000: 89, 25000: 155, 50000: 270, 100000: 540, 200000: 1080 }
+        "name": "ProTrader",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 6,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 3,
+        "payoutRaw": "Do 3 h",
+        "prices": {
+          "10000": 99,
+          "20000": 159,
+          "50000": 319,
+          "100000": 529,
+          "200000": 1149,
+          "400000": 2399
+        }
       },
       {
-        name: '2-Step Aggressive',
-        steps: 2,
-        assets: ['FX', 'Indices', 'Commodities'],
-        profitTargetP1: 20,
-        profitTargetP2: 10,
-        maxDailyDD: 10,
-        maxOverallDD: 20,
-        payoutSplit: 90,
-        payoutFreq: 'Měsíčně',
-        payoutHours: 720,
-        payoutRaw: 'Měsíčně',
-        prices: { 10000: 179, 25000: 299, 50000: 549, 100000: 999, 200000: 1899 }
-      }
-    ],
-
-    timeMin: 4, timeMax: null,
-    newsTrading: false,
-    maxLeverage: '1:100',
-    commissionFree: ['Forex', 'Indexy'],
-    avgPayout: 3200,
-    robotsAllowed: true,
-    mobileApp: true,
-    platforms: ['MT4', 'MT5', 'cTrader', 'DXtrade'],
-    foundedYear: 2014,
-    webLanguages: ['CS', 'SK', 'EN', 'DE', 'PL', 'ES', 'FR', 'IT'],
-    supportLanguages: ['CS', 'EN', 'DE', 'PL'],
-    restrictedCountries: ['USA', 'Severní Korea', 'Írán', 'Sýrie'],
-    paymentMethods: ['Wire', 'Krypto', 'Wise', 'Karta', 'PayPal'],
-    education: 'academy',
-    news: { headline: 'FTMO mění strop na maximální velikost účtu z $400k na $200k', date: '11. 5. 2026', tag: 'Pravidla' }
-  },
-
-  {
-    id: 'fundednext',
-    name: 'FundedNext',
-    initials: 'FN',
-    hq: 'SAE',
-    tagline: 'Dubaj · est. 2022',
-    brand: { from: '#22C55E', to: '#0EA5E9' },
-
-    popularity: 82,
-    popularityNote: 'Trustpilot 4.5 (3 400 recenzí), na Redditu smíšeno k velkým výplatám',
-    supportRating: 4.4,
-    supportNote: '24/7 chat',
-    campaign: { code: 'STELLAR50', label: '−50 % Stellar Lite', url: '#', discount: 50 },
-    loyaltyProgram: false,
-
-    challenges: [
-      {
-        name: 'Stellar 2-Step',
-        steps: 2,
-        assets: ['FX', 'Crypto', 'Indices', 'Commodities'],
-        profitTargetP1: 8,
-        profitTargetP2: 5,
-        maxDailyDD: 5,
-        maxOverallDD: 10,
-        payoutSplit: 85,
-        payoutFreq: 'Měsíčně',
-        payoutHours: 336,
-        payoutRaw: 'Do 14 dnů',
-        prices: { 10000: 59, 25000: 89, 50000: 179, 100000: 329, 200000: 549 }
+        "name": "ProTrader Swing",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 6,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 3,
+        "payoutRaw": "Do 3 h",
+        "prices": {
+          "50000": 319
+        }
       },
       {
-        name: 'Stellar Lite (instant)',
-        steps: 0,
-        assets: ['FX', 'Crypto'],
-        profitTargetP1: null,
-        profitTargetP2: null,
-        maxDailyDD: 3,
-        maxOverallDD: 8,
-        payoutSplit: 60,
-        payoutFreq: 'Týdně',
-        payoutHours: 168,
-        payoutRaw: 'Týdně',
-        prices: { 10000: 49, 25000: 79, 50000: 149, 100000: 279, 200000: 449 }
+        "name": "SwiftTrader",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 3,
+        "maxOverallDD": 6,
+        "payoutSplit": 100,
+        "payoutFreq": "Bi-weekly + min. +3% profit na",
+        "payoutHours": 0,
+        "payoutRaw": "Instantně",
+        "prices": {
+          "10000": 119,
+          "20000": 179,
+          "50000": 369,
+          "100000": 599,
+          "200000": 1299
+        }
+      }
+    ],
+    "timeMin": 3,
+    "timeMax": 180,
+    "newsTrading": true,
+    "maxLeverage": "1:25",
+    "commissionFree": [],
+    "avgPayout": 3881,
+    "robotsAllowed": true,
+    "mobileApp": true,
+    "platforms": [
+      "TradingView",
+      "MT5",
+      "cTrader"
+    ],
+    "foundedYear": 2023,
+    "webLanguages": [
+      "CS",
+      "EN",
+      "JA",
+      "IT"
+    ],
+    "supportLanguages": [
+      "CS",
+      "EN",
+      "JA",
+      "IT"
+    ],
+    "restrictedCountries": [
+      "USA",
+      "Indie",
+      "Rusko",
+      "Bělorusko",
+      "KLDR",
+      "Írán",
+      "Myanmar",
+      "Sýrie",
+      "Jemen",
+      "Kuba",
+      "Venezuela",
+      "Súdán"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "Krypto",
+      "Wire",
+      "E-wallet"
+    ],
+    "education": "academy",
+    "news": {
+      "headline": "Česko-japonská prop firma pod záštitou Purple Group (fintech od 2011). XP loyalty program, sub-sekundové schvalování výp",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
+  },
+  {
+    "id": "ftmo",
+    "name": "FTMO",
+    "initials": "FT",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2015",
+    "brand": {
+      "from": "#0F172A",
+      "to": "#1E40AF"
+    },
+    "popularity": 32,
+    "popularityNote": "Trustpilot 4.8 (40 000 recenzí)",
+    "supportRating": 4.8,
+    "supportNote": "24/7 chat",
+    "campaign": null,
+    "loyaltyProgram": true,
+    "challenges": [
+      {
+        "name": "FTMO Challenge 2-Step",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "10000": 96,
+          "25000": 270,
+          "50000": 373,
+          "100000": 583,
+          "200000": 1166
+        }
       },
       {
-        name: 'Stellar 1-Step',
-        steps: 1,
-        assets: ['FX', 'Crypto', 'Indices'],
-        profitTargetP1: 10,
-        profitTargetP2: null,
-        maxDailyDD: 4,
-        maxOverallDD: 6,
-        payoutSplit: 80,
-        payoutFreq: 'Měsíčně',
-        payoutHours: 336,
-        payoutRaw: 'Do 14 dnů',
-        prices: { 10000: 65, 25000: 99, 50000: 195, 100000: 359, 200000: 595 }
-      }
-    ],
-
-    timeMin: 5, timeMax: null,
-    newsTrading: true,
-    maxLeverage: '1:100',
-    commissionFree: ['Forex'],
-    avgPayout: 1800,
-    robotsAllowed: true,
-    mobileApp: true,
-    platforms: ['MT4', 'MT5', 'cTrader'],
-    foundedYear: 2022,
-    webLanguages: ['EN', 'AR', 'ES'],
-    supportLanguages: ['EN', 'AR'],
-    restrictedCountries: ['USA', 'Severní Korea'],
-    paymentMethods: ['Wire', 'Krypto', 'Karta'],
-    education: 'videos',
-    news: { headline: 'FundedNext spouští "Stellar Lite" — instantní funded účet za $49', date: '14. 5. 2026', tag: 'Akce' }
-  },
-
-  {
-    id: 'e8',
-    name: 'E8 Markets',
-    initials: 'E8',
-    hq: 'USA',
-    tagline: 'Dallas · est. 2021',
-    brand: { from: '#F97316', to: '#EA580C' },
-
-    popularity: 65,
-    popularityNote: 'Trustpilot 4.1 (1 100 recenzí), kritika nové cenovky',
-    supportRating: 4.2,
-    supportNote: 'Po–Pá chat',
-    campaign: null,
-    loyaltyProgram: false,
-
-    challenges: [
-      {
-        name: 'E8 Standard',
-        steps: 2,
-        assets: ['FX', 'Crypto', 'Indices', 'Commodities'],
-        profitTargetP1: 8,
-        profitTargetP2: 5,
-        maxDailyDD: 5,
-        maxOverallDD: 8,
-        payoutSplit: 80,
-        payoutFreq: 'Týdně',
-        payoutHours: 504,
-        payoutRaw: 'Do 21 dnů',
-        prices: { 10000: 139, 25000: 198, 50000: 388, 100000: 688, 200000: 1100 }
+        "name": "FTMO Challenge 1-Step",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 3,
+        "maxOverallDD": 10,
+        "payoutSplit": 90,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "10000": 85,
+          "25000": 215,
+          "50000": 344,
+          "100000": 539,
+          "200000": 1079
+        }
       },
       {
-        name: 'E8 Elite',
-        steps: 2,
-        assets: ['FX', 'Crypto', 'Indices', 'Commodities'],
-        profitTargetP1: 8,
-        profitTargetP2: 5,
-        maxDailyDD: 5,
-        maxOverallDD: 8,
-        payoutSplit: 95,
-        payoutFreq: 'Týdně',
-        payoutHours: 168,
-        payoutRaw: 'Týdně',
-        prices: { 10000: 199, 25000: 298, 50000: 588, 100000: 988, 200000: 1700 }
+        "name": "FTMO Challenge 2-Step Swing",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "10000": 96,
+          "25000": 270,
+          "50000": 373,
+          "100000": 583
+        }
       }
     ],
-
-    timeMin: 0, timeMax: null,
-    newsTrading: true,
-    maxLeverage: '1:100',
-    commissionFree: ['Forex', 'Komodity'],
-    avgPayout: 1500,
-    robotsAllowed: true,
-    mobileApp: false,
-    platforms: ['MT4', 'MT5'],
-    foundedYear: 2021,
-    webLanguages: ['EN'],
-    supportLanguages: ['EN'],
-    restrictedCountries: ['Severní Korea', 'Írán', 'Sýrie'],
-    paymentMethods: ['Wire', 'Krypto', 'Karta'],
-    education: 'blog',
-    news: { headline: 'E8 Markets navyšuje payout split u Elite účtu na 95 %', date: '8. 5. 2026', tag: 'Produkt' }
+    "timeMin": 4,
+    "timeMax": null,
+    "newsTrading": true,
+    "maxLeverage": "1:100",
+    "commissionFree": [],
+    "avgPayout": 2500,
+    "robotsAllowed": true,
+    "mobileApp": true,
+    "platforms": [
+      "MT4",
+      "MT5",
+      "cTrader"
+    ],
+    "foundedYear": 2015,
+    "webLanguages": [
+      "EN",
+      "AR",
+      "CS",
+      "ES",
+      "FR",
+      "DE",
+      "HE",
+      "IT",
+      "JA",
+      "PL",
+      "PT",
+      "RU",
+      "SR",
+      "SW",
+      "FIL",
+      "TR",
+      "UK",
+      "VI",
+      "RO",
+      "SV"
+    ],
+    "supportLanguages": [
+      "EN",
+      "AR",
+      "CS",
+      "ES",
+      "FR",
+      "DE",
+      "HE",
+      "IT",
+      "JA",
+      "PL",
+      "PT",
+      "RU",
+      "SR",
+      "SW",
+      "FIL",
+      "TR",
+      "UK",
+      "VI",
+      "RO",
+      "SV"
+    ],
+    "restrictedCountries": [
+      "USA",
+      "Írán",
+      "Sýrie",
+      "Myanmar",
+      "KLDR",
+      "Afghánistán",
+      "AI",
+      "AG",
+      "BT",
+      "Kuba"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "Wire",
+      "Krypto"
+    ],
+    "education": "academy",
+    "news": {
+      "headline": "Prague-based prop trading firm founded in 2015, one of the largest and most established prop firms globally, offering 1-",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
   },
-
   {
-    id: 'the5ers',
-    name: 'The 5%ers',
-    initials: '5%',
-    hq: 'Izrael',
-    tagline: 'Tel Aviv · est. 2016',
-    brand: { from: '#0EA5E9', to: '#6366F1' },
-
-    popularity: 72,
-    popularityNote: 'Trustpilot 4.6 (1 800 recenzí), oceňováno za nízké DD',
-    supportRating: 4.3,
-    supportNote: '24/7 chat',
-    campaign: { code: 'RESET', label: 'Free reset (do vyprodání)', url: '#', discount: null },
-    loyaltyProgram: true,
-
-    challenges: [
+    "id": "the5ers",
+    "name": "The5ers",
+    "initials": "TH",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2016",
+    "brand": {
+      "from": "#7C3AED",
+      "to": "#A78BFA"
+    },
+    "popularity": 32,
+    "popularityNote": "Trustpilot 4.8 (26 867 recenzí)",
+    "supportRating": 4.8,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "PROMO",
+      "label": "10-year anniversary celebration",
+      "url": "https://the5ers.com",
+      "discount": 0
+    },
+    "loyaltyProgram": true,
+    "challenges": [
       {
-        name: 'Hyper Growth (1-Step)',
-        steps: 1,
-        assets: ['FX', 'Indices', 'Commodities'],
-        profitTargetP1: 6,
-        profitTargetP2: null,
-        maxDailyDD: 0,
-        maxOverallDD: 4,
-        payoutSplit: 75,
-        payoutFreq: 'Měsíčně',
-        payoutHours: 336,
-        payoutRaw: 'Do 14 dnů',
-        prices: { 10000: 145, 25000: 235, 50000: 425, 100000: 775, 200000: 1295 }
+        "name": "Hyper Growth",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 3,
+        "maxOverallDD": 6,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 72,
+        "payoutRaw": "Do týdne",
+        "prices": {
+          "5000": 260,
+          "10000": 450,
+          "20000": 850
+        }
       },
       {
-        name: 'Bootcamp (3-Step)',
-        steps: 3,
-        assets: ['FX', 'Indices'],
-        profitTargetP1: 6,
-        profitTargetP2: 6,
-        maxDailyDD: 0,
-        maxOverallDD: 4,
-        payoutSplit: 80,
-        payoutFreq: 'Měsíčně',
-        payoutHours: 336,
-        payoutRaw: 'Do 14 dnů',
-        prices: { 10000: 95, 25000: 165, 50000: 295, 100000: 545, 200000: 895 }
-      }
-    ],
-
-    timeMin: 6, timeMax: null,
-    newsTrading: true,
-    maxLeverage: '1:30',
-    commissionFree: ['Forex'],
-    avgPayout: 1100,
-    robotsAllowed: false,
-    mobileApp: false,
-    platforms: ['MT5', 'TradingView'],
-    foundedYear: 2016,
-    webLanguages: ['EN', 'ES', 'AR', 'HE'],
-    supportLanguages: ['EN', 'HE'],
-    restrictedCountries: ['Severní Korea', 'Írán'],
-    paymentMethods: ['Wire', 'Karta', 'PayPal'],
-    education: 'videos',
-    news: { headline: 'The 5%ers zavádí scaling plan — automatické navýšení po 3 výplatách', date: '6. 5. 2026', tag: 'Produkt' }
-  },
-
-  {
-    id: 'fundingpips',
-    name: 'FundingPips',
-    initials: 'FP',
-    hq: 'SAE',
-    tagline: 'Dubaj · est. 2022',
-    brand: { from: '#10B981', to: '#06B6D4' },
-
-    popularity: 79,
-    popularityNote: 'Trustpilot 4.5 (2 100 recenzí), pozitivní na r/Forex',
-    supportRating: 4.5,
-    supportNote: '24/7 chat',
-    campaign: { code: 'SAVE15', label: '−15 % na vše', url: '#', discount: 15 },
-    loyaltyProgram: false,
-
-    challenges: [
-      {
-        name: '2-Step Standard',
-        steps: 2,
-        assets: ['FX', 'Crypto', 'Indices', 'Commodities'],
-        profitTargetP1: 8,
-        profitTargetP2: 5,
-        maxDailyDD: 5,
-        maxOverallDD: 10,
-        payoutSplit: 80,
-        payoutFreq: 'Bi-weekly',
-        payoutHours: 336,
-        payoutRaw: 'Bi-weekly',
-        prices: { 10000: 49, 25000: 79, 50000: 149, 100000: 299, 200000: 599 }
+        "name": "High Stakes",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 72,
+        "payoutRaw": "Do týdne",
+        "prices": {
+          "5000": 39,
+          "10000": 78,
+          "20000": 165,
+          "60000": 329,
+          "100000": 545
+        }
       },
       {
-        name: '1-Step Express',
-        steps: 1,
-        assets: ['FX', 'Crypto'],
-        profitTargetP1: 10,
-        profitTargetP2: null,
-        maxDailyDD: 4,
-        maxOverallDD: 6,
-        payoutSplit: 80,
-        payoutFreq: 'Bi-weekly',
-        payoutHours: 336,
-        payoutRaw: 'Bi-weekly',
-        prices: { 10000: 69, 25000: 99, 50000: 189, 100000: 359, 200000: 699 }
+        "name": "Bootcamp",
+        "steps": 3,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 6,
+        "profitTargetP2": 6,
+        "maxDailyDD": 0,
+        "maxOverallDD": 5,
+        "payoutSplit": 50,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 72,
+        "payoutRaw": "Do týdne",
+        "prices": {
+          "100000": 281,
+          "250000": 530
+        }
       }
     ],
-
-    timeMin: 3, timeMax: null,
-    newsTrading: true,
-    maxLeverage: '1:100',
-    commissionFree: ['Forex', 'Indexy'],
-    avgPayout: 1900,
-    robotsAllowed: true,
-    mobileApp: false,
-    platforms: ['MT4', 'MT5', 'cTrader'],
-    foundedYear: 2022,
-    webLanguages: ['EN', 'AR'],
-    supportLanguages: ['EN'],
-    restrictedCountries: ['USA', 'Severní Korea'],
-    paymentMethods: ['Wire', 'Krypto'],
-    education: 'blog',
-    news: { headline: 'FundingPips otevírá office v Dubaji a najímá 30 lidí', date: '12. 5. 2026', tag: 'Firma' }
+    "timeMin": 0,
+    "timeMax": null,
+    "newsTrading": true,
+    "maxLeverage": "1:30",
+    "commissionFree": [],
+    "avgPayout": 2500,
+    "robotsAllowed": true,
+    "mobileApp": true,
+    "platforms": [
+      "MT5",
+      "cTrader"
+    ],
+    "foundedYear": 2016,
+    "webLanguages": [
+      "EN",
+      "ES"
+    ],
+    "supportLanguages": [
+      "EN",
+      "ES"
+    ],
+    "restrictedCountries": [
+      "USA",
+      "Afghánistán",
+      "Bělorusko",
+      "BI",
+      "CF",
+      "Kuba",
+      "CG",
+      "DR Kongo",
+      "ER",
+      "GN",
+      "GW",
+      "Irák"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "Krypto",
+      "Wire",
+      "E-wallet"
+    ],
+    "education": "academy",
+    "news": {
+      "headline": "Israel-based proprietary trading firm founded in 2016, offering multiple evaluation paths (Hyper Growth 1-step, High Sta",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
   },
-
   {
-    id: 'topstep',
-    name: 'Topstep',
-    initials: 'TS',
-    hq: 'USA',
-    tagline: 'Chicago · est. 2012',
-    brand: { from: '#DC2626', to: '#991B1B' },
-
-    popularity: 70,
-    popularityNote: 'Trustpilot 4.4 (2 300 recenzí), veterán futures scény',
-    supportRating: 4.5,
-    supportNote: 'Po–Pá tel. + chat',
-    campaign: { code: 'COMBINE99', label: '$50K Combine za $99', url: '#', discount: 40 },
-    loyaltyProgram: true,
-
-    challenges: [
+    "id": "alpha-capital",
+    "name": "Alpha Capital Group",
+    "initials": "AC",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2022",
+    "brand": {
+      "from": "#8B5CF6",
+      "to": "#A78BFA"
+    },
+    "popularity": 30,
+    "popularityNote": "Trustpilot 4.7 (19 000 recenzí)",
+    "supportRating": 4.7,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "TRUSTED",
+      "label": "Sleva 0 %",
+      "url": "https://alphacapitalgroup.uk",
+      "discount": 0
+    },
+    "loyaltyProgram": false,
+    "challenges": [
       {
-        name: 'Trading Combine',
-        steps: 1,
-        assets: ['Indices', 'Commodities'],
-        profitTargetP1: 6,
-        profitTargetP2: null,
-        maxDailyDD: 3,
-        maxOverallDD: 6,
-        payoutSplit: 90,
-        payoutFreq: '2× měsíčně',
-        payoutHours: 192,
-        payoutRaw: 'Do 8 dnů',
-        prices: { 10000: 99, 25000: 165, 50000: 325, 100000: 550, 200000: 950 }
+        "name": "Alpha One",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 4,
+        "maxOverallDD": 6,
+        "payoutSplit": 80,
+        "payoutFreq": "On-demand",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "5000": 50,
+          "10000": 97,
+          "25000": 197,
+          "50000": 297,
+          "100000": 497,
+          "200000": 997
+        }
+      },
+      {
+        "name": "Alpha Pro 6%",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 6,
+        "profitTargetP2": 6,
+        "maxDailyDD": 3,
+        "maxOverallDD": 6,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "5000": 40,
+          "10000": 77,
+          "25000": 167,
+          "50000": 257,
+          "100000": 427,
+          "200000": 847
+        }
+      },
+      {
+        "name": "Alpha Pro 8%",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 5,
+        "maxDailyDD": 4,
+        "maxOverallDD": 8,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "5000": 77,
+          "10000": 97,
+          "25000": 197,
+          "50000": 297,
+          "100000": 547,
+          "200000": 1097
+        }
+      },
+      {
+        "name": "Alpha Pro 10%",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "5000": 50,
+          "10000": 97,
+          "25000": 197,
+          "50000": 297,
+          "100000": 497,
+          "200000": 997
+        }
+      },
+      {
+        "name": "Alpha Swing",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "On-demand",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "5000": 70,
+          "10000": 127,
+          "25000": 227,
+          "50000": 327,
+          "100000": 577,
+          "200000": 1097
+        }
+      },
+      {
+        "name": "Alpha Three",
+        "steps": 3,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 4,
+        "maxDailyDD": 4,
+        "maxOverallDD": 6,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "10000": 67,
+          "25000": 157,
+          "50000": 247,
+          "100000": 397,
+          "200000": 697
+        }
       }
     ],
-
-    timeMin: 2, timeMax: null,
-    newsTrading: true,
-    maxLeverage: '1:50',
-    commissionFree: [],
-    avgPayout: 1700,
-    robotsAllowed: false,
-    mobileApp: true,
-    platforms: ['NinjaTrader', 'TradingView', 'Tradovate'],
-    foundedYear: 2012,
-    webLanguages: ['EN'],
-    supportLanguages: ['EN'],
-    restrictedCountries: ['Severní Korea', 'Írán', 'Kuba'],
-    paymentMethods: ['Wire', 'Karta'],
-    education: 'academy',
-    news: { headline: 'Topstep snižuje cenu $50K Combine na $99 do konce května', date: '18. 5. 2026', tag: 'Akce' }
+    "timeMin": 1,
+    "timeMax": null,
+    "newsTrading": true,
+    "maxLeverage": "1:30",
+    "commissionFree": [
+      "Forex",
+      "Indexy",
+      "Zlato",
+      "Ropa"
+    ],
+    "avgPayout": 2500,
+    "robotsAllowed": true,
+    "mobileApp": true,
+    "platforms": [
+      "MT5",
+      "cTrader",
+      "DXtrade",
+      "TradeLocker"
+    ],
+    "foundedYear": 2022,
+    "webLanguages": [
+      "EN"
+    ],
+    "supportLanguages": [
+      "EN"
+    ],
+    "restrictedCountries": [
+      "Afghánistán",
+      "Bělorusko",
+      "Írán",
+      "KLDR",
+      "Rusko",
+      "Sýrie",
+      "Venezuela"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "Wire",
+      "E-wallet",
+      "Wise"
+    ],
+    "education": "academy",
+    "news": {
+      "headline": "UK-based proprietary trading firm (founded November 2021, London) offering simulated forex/CFD evaluations up to $200K w",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
   },
-
   {
-    id: 'fxcomet',
-    name: 'FX Comet',
-    initials: 'FX',
-    hq: 'Belize',
-    tagline: 'Belize · est. 2024',
-    brand: { from: '#A78BFA', to: '#EC4899' },
-
-    popularity: 38,
-    popularityNote: 'Trustpilot 3.6 (180 recenzí), nový hráč — málo dat',
-    supportRating: 3.6,
-    supportNote: 'Pouze e-mail',
-    campaign: { code: 'LAUNCH40', label: '−40 % launch sale', url: '#', discount: 40 },
-    loyaltyProgram: false,
-
-    challenges: [
+    "id": "fundingpips",
+    "name": "FundingPips",
+    "initials": "FP",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2022",
+    "brand": {
+      "from": "#0EA5E9",
+      "to": "#1FD3DC"
+    },
+    "popularity": 30,
+    "popularityNote": "Trustpilot 4.5 (52 648 recenzí)",
+    "supportRating": 4.5,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "",
+      "label": "Discount codes (e.g. VIBES) provide 20% off any challenge plan",
+      "url": "https://fundingpips.com",
+      "discount": 0
+    },
+    "loyaltyProgram": true,
+    "challenges": [
       {
-        name: 'Launch 1-Step',
-        steps: 1,
-        assets: ['FX', 'Crypto', 'Commodities'],
-        profitTargetP1: 10,
-        profitTargetP2: null,
-        maxDailyDD: 5,
-        maxOverallDD: 12,
-        payoutSplit: 90,
-        payoutFreq: 'Týdně',
-        payoutHours: 120,
-        payoutRaw: 'Do 5 dnů',
-        prices: { 10000: 69, 25000: 119, 50000: 229, 100000: 399, 200000: 679 }
+        "name": "1-Step Challenge",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 3,
+        "maxOverallDD": 6,
+        "payoutSplit": 80,
+        "payoutFreq": "Weekly",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "5000": 59,
+          "10000": 89,
+          "25000": 189,
+          "50000": 299,
+          "100000": 555
+        }
+      },
+      {
+        "name": "2-Step Standard Challenge",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "5000": 36,
+          "10000": 59,
+          "25000": 159,
+          "50000": 289,
+          "100000": 529
+        }
+      },
+      {
+        "name": "2-Step Pro Challenge",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 6,
+        "profitTargetP2": 6,
+        "maxDailyDD": 3,
+        "maxOverallDD": 6,
+        "payoutSplit": 80,
+        "payoutFreq": "Weekly",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "10000": 79,
+          "25000": 199,
+          "50000": 359,
+          "100000": 599,
+          "200000": 998
+        }
+      },
+      {
+        "name": "Zero (Instant Funding)",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 95,
+        "payoutFreq": "On-demand",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "5000": 69,
+          "25000": 199,
+          "50000": 299,
+          "100000": 499,
+          "200000": 998
+        }
       }
     ],
-
-    timeMin: 5, timeMax: 30,
-    newsTrading: true,
-    maxLeverage: '1:200',
-    commissionFree: ['Forex', 'Krypto', 'Komodity'],
-    avgPayout: 900,
-    robotsAllowed: true,
-    mobileApp: false,
-    platforms: ['MT5', 'cTrader'],
-    foundedYear: 2024,
-    webLanguages: ['EN'],
-    supportLanguages: ['EN'],
-    restrictedCountries: ['USA', 'Severní Korea', 'Írán'],
-    paymentMethods: ['Krypto', 'Karta'],
-    education: 'none',
-    news: { headline: 'FX Comet ohlašuje partnership s cTrader pro futures', date: '10. 5. 2026', tag: 'Partnerství' }
+    "timeMin": 3,
+    "timeMax": null,
+    "newsTrading": false,
+    "maxLeverage": "1:100",
+    "commissionFree": [
+      "Indexy",
+      "Krypto"
+    ],
+    "avgPayout": 2500,
+    "robotsAllowed": false,
+    "mobileApp": true,
+    "platforms": [
+      "MT5",
+      "cTrader",
+      "Match-Trader"
+    ],
+    "foundedYear": 2022,
+    "webLanguages": [
+      "EN",
+      "AR",
+      "ES",
+      "FR",
+      "HI",
+      "NL",
+      "UR"
+    ],
+    "supportLanguages": [
+      "EN",
+      "AR",
+      "ES",
+      "FR",
+      "HI",
+      "NL",
+      "UR"
+    ],
+    "restrictedCountries": [
+      "USA",
+      "Írán",
+      "AE",
+      "VN",
+      "KLDR",
+      "Sýrie",
+      "Kuba"
+    ],
+    "paymentMethods": [
+      "Krypto",
+      "E-wallet"
+    ],
+    "education": "academy",
+    "news": {
+      "headline": "Dubai-based prop trading firm founded in 2022 by Khaled Ayesh under FP Funding LLC / Funding Pips Services Ltd. Reports ",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
+  },
+  {
+    "id": "top-one-trader",
+    "name": "Top One Trader",
+    "initials": "TO",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2023",
+    "brand": {
+      "from": "#1F2937",
+      "to": "#475569"
+    },
+    "popularity": 30,
+    "popularityNote": "Trustpilot 4.5 (3 149 recenzí)",
+    "supportRating": 4.5,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "PRO",
+      "label": "Sleva 0 %",
+      "url": "https://www.toponetrader.com/",
+      "discount": 0
+    },
+    "loyaltyProgram": false,
+    "challenges": [
+      {
+        "name": "Flash 1-Step",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 4,
+        "maxOverallDD": 7,
+        "payoutSplit": 90,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 2,
+        "payoutRaw": "Do 2 h",
+        "prices": {
+          "5000": 19,
+          "10000": 43,
+          "25000": 99,
+          "50000": 179,
+          "100000": 299,
+          "200000": 539
+        }
+      },
+      {
+        "name": "Pro 2-Step",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 5,
+        "maxDailyDD": 4,
+        "maxOverallDD": 9,
+        "payoutSplit": 90,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 2,
+        "payoutRaw": "Do 2 h",
+        "prices": {
+          "5000": 23,
+          "10000": 45,
+          "25000": 119,
+          "50000": 209,
+          "100000": 499,
+          "150000": 699
+        }
+      },
+      {
+        "name": "Instant Funding",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 90,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 2,
+        "payoutRaw": "Do 2 h",
+        "prices": {
+          "5000": 41,
+          "10000": 79,
+          "25000": 199,
+          "50000": 319,
+          "100000": 571,
+          "200000": 1268
+        }
+      },
+      {
+        "name": "Instant Prime",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 100,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 2,
+        "payoutRaw": "Do 2 h",
+        "prices": {
+          "5000": 28,
+          "10000": 55,
+          "25000": 139,
+          "50000": 239,
+          "100000": 449,
+          "200000": 888
+        }
+      },
+      {
+        "name": "Nova Challenge",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 100,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 2,
+        "payoutRaw": "Do 2 h",
+        "prices": {
+          "25000": 7
+        }
+      }
+    ],
+    "timeMin": 0,
+    "timeMax": null,
+    "newsTrading": true,
+    "maxLeverage": "1:10",
+    "commissionFree": [],
+    "avgPayout": 2500,
+    "robotsAllowed": true,
+    "mobileApp": true,
+    "platforms": [
+      "MT5",
+      "cTrader",
+      "Match-Trader",
+      "TradeLocker",
+      "TradingView"
+    ],
+    "foundedYear": 2023,
+    "webLanguages": [
+      "EN"
+    ],
+    "supportLanguages": [
+      "EN"
+    ],
+    "restrictedCountries": [
+      "Afghánistán",
+      "AL",
+      "DZ",
+      "AM",
+      "AZ",
+      "Bělorusko",
+      "Kuba",
+      "HT",
+      "Írán",
+      "Irák",
+      "KZ",
+      "KW"
+    ],
+    "paymentMethods": [
+      "Krypto",
+      "Wire",
+      "E-wallet",
+      "PayPal"
+    ],
+    "education": "academy",
+    "news": {
+      "headline": "US-based proprietary trading firm founded in 2023, headquartered in Sheridan, Wyoming. Known for ultra-fast payouts (ave",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
+  },
+  {
+    "id": "e8-markets",
+    "name": "E8 Markets",
+    "initials": "EM",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2021",
+    "brand": {
+      "from": "#F97316",
+      "to": "#EA580C"
+    },
+    "popularity": 29,
+    "popularityNote": "Trustpilot 4.4 (3 227 recenzí)",
+    "supportRating": 4.4,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "TRUSTED",
+      "label": "Sleva 0 %",
+      "url": "https://e8markets.com",
+      "discount": 0
+    },
+    "loyaltyProgram": false,
+    "challenges": [
+      {
+        "name": "E8 One",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 9,
+        "profitTargetP2": null,
+        "maxDailyDD": 4,
+        "maxOverallDD": 6,
+        "payoutSplit": 80,
+        "payoutFreq": "On-demand",
+        "payoutHours": 72,
+        "payoutRaw": "Do týdne",
+        "prices": {
+          "5000": 40,
+          "10000": 78,
+          "25000": 158,
+          "50000": 250,
+          "100000": 398,
+          "200000": 798,
+          "500000": 1998
+        }
+      },
+      {
+        "name": "E8 Signature",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 6,
+        "profitTargetP2": null,
+        "maxDailyDD": 3,
+        "maxOverallDD": 4,
+        "payoutSplit": 80,
+        "payoutFreq": "On-demand",
+        "payoutHours": 72,
+        "payoutRaw": "Do týdne",
+        "prices": {
+          "25000": 110,
+          "50000": 150,
+          "100000": 260,
+          "150000": 390
+        }
+      },
+      {
+        "name": "E8 Track",
+        "steps": 3,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 4,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "On-demand",
+        "payoutHours": 72,
+        "payoutRaw": "Do týdne",
+        "prices": {
+          "10000": 54,
+          "25000": 128,
+          "50000": 288,
+          "100000": 588,
+          "200000": 1188,
+          "400000": 2357
+        }
+      },
+      {
+        "name": "E8 Classic",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 4,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "On-demand",
+        "payoutHours": 72,
+        "payoutRaw": "Do týdne",
+        "prices": {
+          "5000": 48,
+          "25000": 158,
+          "50000": 298,
+          "100000": 498,
+          "200000": 998
+        }
+      }
+    ],
+    "timeMin": 0,
+    "timeMax": null,
+    "newsTrading": true,
+    "maxLeverage": "1:30",
+    "commissionFree": [],
+    "avgPayout": 2500,
+    "robotsAllowed": true,
+    "mobileApp": true,
+    "platforms": [
+      "MT5",
+      "cTrader",
+      "Match-Trader",
+      "TradeLocker",
+      "NinjaTrader",
+      "TradingView"
+    ],
+    "foundedYear": 2021,
+    "webLanguages": [
+      "EN",
+      "ES",
+      "PT",
+      "AR",
+      "TR",
+      "FR",
+      "DE",
+      "ID",
+      "VI",
+      "HI",
+      "JA",
+      "NL",
+      "IT",
+      "KO",
+      "PL",
+      "ZH",
+      "MS",
+      "TH",
+      "CS",
+      "RU",
+      "UK",
+      "HU",
+      "RO"
+    ],
+    "supportLanguages": [
+      "EN",
+      "ES",
+      "PT",
+      "AR",
+      "TR",
+      "FR",
+      "DE",
+      "ID",
+      "VI",
+      "HI",
+      "JA",
+      "NL",
+      "IT",
+      "KO",
+      "PL",
+      "ZH",
+      "MS",
+      "TH",
+      "CS",
+      "RU",
+      "UK",
+      "HU",
+      "RO"
+    ],
+    "restrictedCountries": [
+      "Afghánistán",
+      "AL",
+      "DZ",
+      "Bělorusko",
+      "BI",
+      "CF",
+      "CG",
+      "DR Kongo",
+      "Kuba",
+      "ET",
+      "HK",
+      "Írán"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "Krypto",
+      "Wire"
+    ],
+    "education": "videos",
+    "news": {
+      "headline": "E8 Markets (formerly E8 Funding) is a US-headquartered prop trading firm founded in 2021, offering multi-asset simulated",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
+  },
+  {
+    "id": "fundednext",
+    "name": "FundedNext",
+    "initials": "FN",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2022",
+    "brand": {
+      "from": "#22C55E",
+      "to": "#0EA5E9"
+    },
+    "popularity": 29,
+    "popularityNote": "Trustpilot 4.5 (62 711 recenzí)",
+    "supportRating": 4.5,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "",
+      "label": "Payout processed within 24 hours or FundedNext pays $1,000 extra",
+      "url": "https://fundednext.com",
+      "discount": 0
+    },
+    "loyaltyProgram": false,
+    "challenges": [
+      {
+        "name": "Stellar 2-Step",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "6000": 59.99,
+          "15000": 119.99,
+          "25000": 199.99,
+          "50000": 299.99,
+          "100000": 549.99,
+          "200000": 1099.99
+        }
+      },
+      {
+        "name": "Stellar 1-Step",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 3,
+        "maxOverallDD": 6,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "6000": 59.99,
+          "15000": 119.99,
+          "25000": 199.99,
+          "50000": 299.99,
+          "100000": 549.99,
+          "200000": 1099.99
+        }
+      },
+      {
+        "name": "Stellar Lite",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 4,
+        "profitTargetP2": 4,
+        "maxDailyDD": 4,
+        "maxOverallDD": 8,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "5000": 32.99,
+          "10000": 59.99,
+          "25000": 139.99,
+          "50000": 229.99,
+          "100000": 399.99,
+          "200000": 798.99
+        }
+      },
+      {
+        "name": "Stellar Instant",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 70,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "2000": 59,
+          "5000": 149,
+          "10000": 299,
+          "20000": 599
+        }
+      }
+    ],
+    "timeMin": 5,
+    "timeMax": null,
+    "newsTrading": true,
+    "maxLeverage": "1:100",
+    "commissionFree": [],
+    "avgPayout": 2500,
+    "robotsAllowed": true,
+    "mobileApp": true,
+    "platforms": [
+      "MT4",
+      "MT5",
+      "cTrader",
+      "Match-Trader",
+      "TradingView",
+      "Tradovate"
+    ],
+    "foundedYear": 2022,
+    "webLanguages": [
+      "EN"
+    ],
+    "supportLanguages": [
+      "EN"
+    ],
+    "restrictedCountries": [
+      "USA",
+      "Bangladéš",
+      "Myanmar",
+      "Bělorusko",
+      "KLDR",
+      "Sýrie",
+      "GD",
+      "TD",
+      "MY",
+      "BZ",
+      "AG",
+      "CV"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "PayPal",
+      "Krypto"
+    ],
+    "education": "videos",
+    "news": {
+      "headline": "FundedNext is a UAE-based proprietary trading firm founded in 2022 offering challenge-based simulated funded accounts on",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
+  },
+  {
+    "id": "rebelsfunding",
+    "name": "RebelsFunding",
+    "initials": "RF",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2023",
+    "brand": {
+      "from": "#DC2626",
+      "to": "#EF4444"
+    },
+    "popularity": 29,
+    "popularityNote": "Trustpilot 4.4 (2 300 recenzí)",
+    "supportRating": 4.4,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "",
+      "label": "Promotional discount displayed on homepage for new traders' first challenge purc",
+      "url": "https://www.rebelsfunding.com/",
+      "discount": 30
+    },
+    "loyaltyProgram": false,
+    "challenges": [
+      {
+        "name": "RF Copper",
+        "steps": 4,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 5,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "On-demand",
+        "payoutHours": 12,
+        "payoutRaw": "Do 12 h",
+        "prices": {
+          "5000": 25,
+          "10000": 49,
+          "25000": 119,
+          "50000": 229,
+          "100000": 399,
+          "200000": 649,
+          "320000": 890
+        }
+      },
+      {
+        "name": "RF Bronze",
+        "steps": 3,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 5,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 90,
+        "payoutFreq": "On-demand",
+        "payoutHours": 12,
+        "payoutRaw": "Do 12 h",
+        "prices": {
+          "5000": 40,
+          "10000": 70,
+          "25000": 150,
+          "50000": 280,
+          "100000": 480,
+          "160000": 660
+        }
+      },
+      {
+        "name": "RF Silver",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 90,
+        "payoutFreq": "On-demand",
+        "payoutHours": 12,
+        "payoutRaw": "Do 12 h",
+        "prices": {
+          "2500": 35,
+          "5000": 55,
+          "10000": 85,
+          "25000": 155,
+          "40000": 230
+        }
+      },
+      {
+        "name": "RF Gold",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 4,
+        "maxOverallDD": 6,
+        "payoutSplit": 90,
+        "payoutFreq": "On-demand",
+        "payoutHours": 12,
+        "payoutRaw": "Do 12 h",
+        "prices": {
+          "2500": 50,
+          "5000": 75,
+          "10000": 110,
+          "25000": 190,
+          "40000": 280
+        }
+      },
+      {
+        "name": "RF Diamond",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 0,
+        "maxOverallDD": 5,
+        "payoutSplit": 75,
+        "payoutFreq": "On-demand",
+        "payoutHours": 12,
+        "payoutRaw": "Do 12 h",
+        "prices": {
+          "1000": 50,
+          "5000": 100,
+          "10000": 150,
+          "25000": 250,
+          "50000": 350,
+          "100000": 500,
+          "200000": 700,
+          "320000": 890
+        }
+      }
+    ],
+    "timeMin": 5,
+    "timeMax": 999,
+    "newsTrading": true,
+    "maxLeverage": "1:200",
+    "commissionFree": [],
+    "avgPayout": 2500,
+    "robotsAllowed": false,
+    "mobileApp": true,
+    "platforms": [
+      "RF-Trader",
+      "TradingView"
+    ],
+    "foundedYear": 2023,
+    "webLanguages": [
+      "EN"
+    ],
+    "supportLanguages": [
+      "EN"
+    ],
+    "restrictedCountries": [
+      "Írán",
+      "KLDR",
+      "Sýrie",
+      "Pákistán"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "Krypto",
+      "Wire",
+      "E-wallet"
+    ],
+    "education": "academy",
+    "news": {
+      "headline": "Slovakia-based proprietary trading firm (RIFM, s.r.o., Bratislava) launched in 2023, offering five evaluation programs (",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
+  },
+  {
+    "id": "fortraders",
+    "name": "For Traders",
+    "initials": "FT",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2023",
+    "brand": {
+      "from": "#EC4899",
+      "to": "#F472B6"
+    },
+    "popularity": 28,
+    "popularityNote": "Trustpilot 4.4 (1 000 recenzí)",
+    "supportRating": 4.4,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "MAYBOGO",
+      "label": "Buy one challenge, get a second free plus 30% off",
+      "url": "https://www.fortraders.com",
+      "discount": 0
+    },
+    "loyaltyProgram": false,
+    "challenges": [
+      {
+        "name": "Fast Challenge (1-Step) -",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 9,
+        "profitTargetP2": null,
+        "maxDailyDD": 4,
+        "maxOverallDD": 8,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "6000": 49,
+          "15000": 99,
+          "25000": 179,
+          "50000": 249,
+          "100000": 469
+        }
+      },
+      {
+        "name": "Classic Challenge (2-Step) -",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 5,
+        "maxDailyDD": 4,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {}
+      },
+      {
+        "name": "Strike Challenge (3-Step) -",
+        "steps": 3,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 4,
+        "profitTargetP2": 4,
+        "maxDailyDD": 3,
+        "maxOverallDD": 5,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {}
+      },
+      {
+        "name": "Instant Funding -",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 70,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {}
+      }
+    ],
+    "timeMin": 3,
+    "timeMax": null,
+    "newsTrading": false,
+    "maxLeverage": "1:125",
+    "commissionFree": [],
+    "avgPayout": 2500,
+    "robotsAllowed": false,
+    "mobileApp": true,
+    "platforms": [
+      "MT5",
+      "cTrader",
+      "TradeLocker"
+    ],
+    "foundedYear": 2023,
+    "webLanguages": [
+      "EN",
+      "ES",
+      "CS"
+    ],
+    "supportLanguages": [
+      "EN",
+      "ES",
+      "CS"
+    ],
+    "restrictedCountries": [
+      "Pákistán",
+      "Írán",
+      "Sýrie",
+      "Myanmar",
+      "Bangladéš",
+      "KLDR",
+      "Rusko",
+      "Bělorusko",
+      "Kuba",
+      "LB",
+      "Libye",
+      "Súdán"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "Krypto"
+    ],
+    "education": "videos",
+    "news": {
+      "headline": "Dubai-based proprietary trading firm founded in 2023 offering Forex, Futures and Crypto evaluation challenges with up to",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
+  },
+  {
+    "id": "blueberry-funded",
+    "name": "Blueberry Funded",
+    "initials": "BF",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2024",
+    "brand": {
+      "from": "#3B82F6",
+      "to": "#60A5FA"
+    },
+    "popularity": 27,
+    "popularityNote": "Trustpilot 4.2 (1 422 recenzí)",
+    "supportRating": 4.2,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "",
+      "label": "Sleva 0 %",
+      "url": "https://blueberryfunded.com/",
+      "discount": 0
+    },
+    "loyaltyProgram": false,
+    "challenges": [
+      {
+        "name": "1-Step Challenge",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 4,
+        "maxOverallDD": 6,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "5000": 40,
+          "10000": 75,
+          "25000": 150,
+          "50000": 275,
+          "100000": 550,
+          "200000": 1100
+        }
+      },
+      {
+        "name": "2-Step Challenge",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "5000": 40,
+          "10000": 67,
+          "25000": 150,
+          "50000": 300,
+          "100000": 590,
+          "200000": 1180
+        }
+      },
+      {
+        "name": "Prime 2-Step 2.",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 6,
+        "maxDailyDD": 4,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "2500": 30
+        }
+      },
+      {
+        "name": "Prime 2-Step",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 6,
+        "maxDailyDD": 4,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "5000": 55,
+          "10000": 90,
+          "25000": 165,
+          "50000": 325,
+          "100000": 650,
+          "200000": 1170
+        }
+      },
+      {
+        "name": "Rapid 10-Day",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 5,
+        "profitTargetP2": null,
+        "maxDailyDD": 3,
+        "maxOverallDD": 4,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "10000": 50,
+          "25000": 100,
+          "50000": 200,
+          "100000": 300
+        }
+      },
+      {
+        "name": "Synthetic Challenge",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": 5,
+        "maxDailyDD": 4,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "5000": 25,
+          "10000": 50,
+          "25000": 115,
+          "50000": 225,
+          "100000": 450
+        }
+      },
+      {
+        "name": "Instant Elite 2.",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "2500": 100
+        }
+      },
+      {
+        "name": "Instant Elite",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "5000": 200,
+          "10000": 400,
+          "25000": 800,
+          "50000": 1500
+        }
+      },
+      {
+        "name": "Instant Lite 1.",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "1250": 42
+        }
+      },
+      {
+        "name": "Instant Lite 2.",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "2500": 65
+        }
+      },
+      {
+        "name": "Instant Lite",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 48,
+        "payoutRaw": "Do 48 h",
+        "prices": {
+          "5000": 95,
+          "10000": 145,
+          "25000": 215,
+          "50000": 420,
+          "100000": 850
+        }
+      }
+    ],
+    "timeMin": 3,
+    "timeMax": null,
+    "newsTrading": false,
+    "maxLeverage": "1:50",
+    "commissionFree": [
+      "Indexy",
+      "Ropa",
+      "Krypto"
+    ],
+    "avgPayout": 2500,
+    "robotsAllowed": true,
+    "mobileApp": true,
+    "platforms": [
+      "MT4",
+      "MT5",
+      "DXtrade",
+      "TradeLocker"
+    ],
+    "foundedYear": 2024,
+    "webLanguages": [
+      "EN"
+    ],
+    "supportLanguages": [
+      "EN"
+    ],
+    "restrictedCountries": [
+      "USA",
+      "AU",
+      "AE",
+      "Rusko",
+      "Kuba",
+      "Írán",
+      "Irák",
+      "Myanmar",
+      "KLDR",
+      "Somálsko",
+      "Sýrie",
+      "Jemen"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "Krypto",
+      "Wire",
+      "E-wallet"
+    ],
+    "education": "videos",
+    "news": {
+      "headline": "Broker-backed prop firm launched in 2024 by Blueberry Markets (ASIC-regulated parent broker), registered in St. Vincent ",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
+  },
+  {
+    "id": "eightcap-markets",
+    "name": "Eightcap Challenges",
+    "initials": "EC",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2025",
+    "brand": {
+      "from": "#0F766E",
+      "to": "#14B8A6"
+    },
+    "popularity": 27,
+    "popularityNote": "Trustpilot 4.0 (3 429 recenzí)",
+    "supportRating": 4.0,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "PROPINDER20",
+      "label": "Sleva 0 %",
+      "url": "https://challenges.eightcap.com/",
+      "discount": 0
+    },
+    "loyaltyProgram": false,
+    "challenges": [
+      {
+        "name": "1-Phase Challenge",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 4,
+        "maxOverallDD": 8,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "5000": 69,
+          "10000": 119,
+          "25000": 259,
+          "50000": 429,
+          "100000": 659,
+          "200000": 1299
+        }
+      },
+      {
+        "name": "2-Phase Challenge",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": 8,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "5000": 59,
+          "10000": 99,
+          "25000": 219,
+          "50000": 389,
+          "100000": 599,
+          "200000": 1199
+        }
+      }
+    ],
+    "timeMin": 5,
+    "timeMax": null,
+    "newsTrading": false,
+    "maxLeverage": "1:100",
+    "commissionFree": [
+      "Krypto"
+    ],
+    "avgPayout": 2500,
+    "robotsAllowed": true,
+    "mobileApp": true,
+    "platforms": [
+      "MT4",
+      "MT5",
+      "TradeLocker"
+    ],
+    "foundedYear": 2025,
+    "webLanguages": [
+      "EN"
+    ],
+    "supportLanguages": [
+      "EN"
+    ],
+    "restrictedCountries": [
+      "USA",
+      "AU",
+      "Kuba",
+      "Írán",
+      "Irák",
+      "KLDR",
+      "Myanmar",
+      "Rusko",
+      "Somálsko",
+      "Sýrie",
+      "CF",
+      "DR Kongo"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "Krypto",
+      "Wire"
+    ],
+    "education": "academy",
+    "news": {
+      "headline": "Broker-backed prop arm of Eightcap (multi-regulated CFD broker, FCA/ASIC/CySEC/SCB). Relaunched in November 2025 as 'Eig",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
+  },
+  {
+    "id": "think-capital",
+    "name": "ThinkCapital",
+    "initials": "TC",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2024",
+    "brand": {
+      "from": "#0891B2",
+      "to": "#06B6D4"
+    },
+    "popularity": 27,
+    "popularityNote": "Trustpilot 4.0 (608 recenzí)",
+    "supportRating": 4.0,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "",
+      "label": "Bolt instant funding accounts available without a challenge, starting from $49.",
+      "url": "https://www.thinkcapital.com",
+      "discount": 0
+    },
+    "loyaltyProgram": false,
+    "challenges": [
+      {
+        "name": "Lightning 1-Step",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 3,
+        "maxOverallDD": 6,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 336,
+        "payoutRaw": "Do 14 dnů",
+        "prices": {
+          "5000": 59,
+          "10000": 99,
+          "25000": 199,
+          "50000": 299,
+          "100000": 499,
+          "200000": 1099
+        }
+      },
+      {
+        "name": "Dual Step 2-Step",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 9,
+        "profitTargetP2": 5,
+        "maxDailyDD": 4,
+        "maxOverallDD": 7,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 336,
+        "payoutRaw": "Do 14 dnů",
+        "prices": {
+          "5000": 59,
+          "10000": 99,
+          "25000": 199,
+          "50000": 299,
+          "100000": 499,
+          "200000": 1099
+        }
+      },
+      {
+        "name": "Nexus 3-Step",
+        "steps": 3,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 7,
+        "profitTargetP2": 6,
+        "maxDailyDD": 4,
+        "maxOverallDD": 8,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 336,
+        "payoutRaw": "Do 14 dnů",
+        "prices": {
+          "5000": 39,
+          "10000": 79,
+          "25000": 139,
+          "50000": 199,
+          "100000": 349,
+          "200000": 749
+        }
+      },
+      {
+        "name": "Bolt Instant Funding",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Bi-weekly",
+        "payoutHours": 336,
+        "payoutRaw": "Do 14 dnů",
+        "prices": {}
+      }
+    ],
+    "timeMin": 3,
+    "timeMax": null,
+    "newsTrading": false,
+    "maxLeverage": "1:30",
+    "commissionFree": [],
+    "avgPayout": 2500,
+    "robotsAllowed": true,
+    "mobileApp": true,
+    "platforms": [
+      "MT5",
+      "TradingView"
+    ],
+    "foundedYear": 2024,
+    "webLanguages": [
+      "EN",
+      "ES",
+      "JA",
+      "DE",
+      "ZH"
+    ],
+    "supportLanguages": [
+      "EN",
+      "ES",
+      "JA",
+      "DE",
+      "ZH"
+    ],
+    "restrictedCountries": [
+      "Afghánistán",
+      "AL",
+      "AU",
+      "Myanmar",
+      "BI",
+      "CF",
+      "Kuba",
+      "CY",
+      "Írán",
+      "XK",
+      "LB",
+      "Libye"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "Krypto"
+    ],
+    "education": "blog",
+    "news": {
+      "headline": "Broker-backed prop trading firm launched in 2024 and powered by ThinkMarkets, offering 1-step (Lightning), 2-step (Dual ",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
+  },
+  {
+    "id": "instant-funding",
+    "name": "Instant Funding",
+    "initials": "IF",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2021",
+    "brand": {
+      "from": "#FCD34D",
+      "to": "#F59E0B"
+    },
+    "popularity": 22,
+    "popularityNote": "Trustpilot 4.6 (4 634 recenzí)",
+    "supportRating": 4.6,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "",
+      "label": "Promo codes LEGEND20/LEGEND25 offering 20-35% off challenge fees",
+      "url": "https://instantfunding.com",
+      "discount": 0
+    },
+    "loyaltyProgram": true,
+    "challenges": [
+      {
+        "name": "Instant Funding",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 0,
+        "profitTargetP2": null,
+        "maxDailyDD": 0,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "Weekly",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "625": 44,
+          "1250": 79,
+          "2500": 159,
+          "5000": 299,
+          "10000": 549,
+          "20000": 999,
+          "40000": 1899,
+          "80000": 3460,
+          "120000": 5499
+        }
+      },
+      {
+        "name": "One-Phase Challenge",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 3,
+        "maxOverallDD": 8,
+        "payoutSplit": 80,
+        "payoutFreq": "On-demand",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "5000": 49,
+          "10000": 89,
+          "25000": 199,
+          "50000": 349,
+          "100000": 599,
+          "200000": 1199
+        }
+      },
+      {
+        "name": "Two-Phase Challenge",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 8,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "On-demand",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "5000": 39,
+          "10000": 79,
+          "25000": 169,
+          "50000": 289,
+          "100000": 499,
+          "200000": 999
+        }
+      }
+    ],
+    "timeMin": 0,
+    "timeMax": null,
+    "newsTrading": false,
+    "maxLeverage": "1:100",
+    "commissionFree": [],
+    "avgPayout": 2500,
+    "robotsAllowed": false,
+    "mobileApp": true,
+    "platforms": [
+      "MT5",
+      "cTrader",
+      "Match-Trader",
+      "DXtrade"
+    ],
+    "foundedYear": 2021,
+    "webLanguages": [
+      "EN",
+      "FR",
+      "IT",
+      "ES",
+      "NL",
+      "PT",
+      "DE",
+      "HI",
+      "JA",
+      "MS"
+    ],
+    "supportLanguages": [
+      "EN",
+      "FR",
+      "IT",
+      "ES",
+      "NL",
+      "PT",
+      "DE",
+      "HI",
+      "JA",
+      "MS"
+    ],
+    "restrictedCountries": [
+      "USA",
+      "Afghánistán",
+      "KLDR",
+      "Írán"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "Krypto",
+      "Wire",
+      "E-wallet"
+    ],
+    "education": "videos",
+    "news": {
+      "headline": "UK-based no-evaluation prop firm (Acello Ltd, London) founded 2020-2021 that pioneered the 'instant funding' model with ",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
+  },
+  {
+    "id": "goat-funded-trader",
+    "name": "Goat Funded Trader",
+    "initials": "GF",
+    "hq": "Globální",
+    "tagline": "Globální · est. 2023",
+    "brand": {
+      "from": "#F59E0B",
+      "to": "#D97706"
+    },
+    "popularity": 19,
+    "popularityNote": "Trustpilot 3.9 (3 500 recenzí)",
+    "supportRating": 3.9,
+    "supportNote": "24/7 chat",
+    "campaign": {
+      "code": "HBGFT",
+      "label": "Buy one get one plus 50% off promotion",
+      "url": "https://www.goatfundedtrader.com",
+      "discount": 0
+    },
+    "loyaltyProgram": true,
+    "challenges": [
+      {
+        "name": "1-Step Challenge",
+        "steps": 1,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": null,
+        "maxDailyDD": 4,
+        "maxOverallDD": 6,
+        "payoutSplit": 80,
+        "payoutFreq": "On-demand",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "5000": 59,
+          "10000": 89,
+          "25000": 178,
+          "50000": 297,
+          "100000": 519,
+          "200000": 998
+        }
+      },
+      {
+        "name": "2-Step Challenge",
+        "steps": 2,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 10,
+        "profitTargetP2": 5,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 80,
+        "payoutFreq": "On-demand",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "5000": 39,
+          "10000": 69,
+          "25000": 158,
+          "50000": 268,
+          "100000": 598,
+          "200000": 1098
+        }
+      },
+      {
+        "name": "3-Step Challenge",
+        "steps": 3,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": 6,
+        "profitTargetP2": 6,
+        "maxDailyDD": 4,
+        "maxOverallDD": 8,
+        "payoutSplit": 90,
+        "payoutFreq": "On-demand",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "10000": 55,
+          "25000": 119,
+          "50000": 219,
+          "100000": 439,
+          "200000": 819
+        }
+      },
+      {
+        "name": "Instant Funding",
+        "steps": 0,
+        "assets": [
+          "FX",
+          "Crypto",
+          "Indices",
+          "Commodities"
+        ],
+        "profitTargetP1": null,
+        "profitTargetP2": null,
+        "maxDailyDD": 5,
+        "maxOverallDD": 10,
+        "payoutSplit": 50,
+        "payoutFreq": "On-demand",
+        "payoutHours": 24,
+        "payoutRaw": "Do 24 h",
+        "prices": {
+          "5000": 199,
+          "10000": 379,
+          "25000": 899,
+          "50000": 1699,
+          "100000": 3299
+        }
+      }
+    ],
+    "timeMin": 3,
+    "timeMax": null,
+    "newsTrading": true,
+    "maxLeverage": "1:100",
+    "commissionFree": [],
+    "avgPayout": 2180,
+    "robotsAllowed": true,
+    "mobileApp": true,
+    "platforms": [
+      "MT4",
+      "MT5",
+      "cTrader",
+      "TradeLocker",
+      "Match-Trader"
+    ],
+    "foundedYear": 2023,
+    "webLanguages": [
+      "EN",
+      "ES",
+      "DE",
+      "FR",
+      "HI",
+      "IT"
+    ],
+    "supportLanguages": [
+      "EN",
+      "ES",
+      "DE",
+      "FR",
+      "HI",
+      "IT"
+    ],
+    "restrictedCountries": [
+      "USA",
+      "Kuba",
+      "Írán",
+      "JO",
+      "LB",
+      "Libye",
+      "Sýrie",
+      "Bangladéš",
+      "HK",
+      "JP",
+      "MY",
+      "Myanmar"
+    ],
+    "paymentMethods": [
+      "Karta",
+      "PayPal",
+      "Krypto",
+      "E-wallet"
+    ],
+    "education": "academy",
+    "news": {
+      "headline": "Prop trading firm founded in 2023, operating via Wishes Tower International Limited (Hong Kong) and Goat Funded LTD (Sai",
+      "date": "20. 5. 2026",
+      "tag": "Update"
+    }
   }
 ];
+// AUTO-END PROP_FIRMS
 
 
 // ─── Quiz ─────────────────────────────────────────────────────────
