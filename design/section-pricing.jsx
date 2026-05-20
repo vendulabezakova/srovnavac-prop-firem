@@ -1,7 +1,7 @@
 // SECTION — Srovnávač prop firem (challenge-driven model)
 // Firma jako značka = reputační sloupce. Pod ní podřádky per challenge, které prošly filtrem.
 
-function SectionPricing({ accountSize, onAccountSize, answers, onEditQuiz, onTopIds, onReviewsClick }) {
+function SectionPricing({ accountSize, onAccountSize, answers, onEditQuiz, onTopIds, onReviewsClick, onClearAnswer }) {
   const firms = window.PROP_FIRMS;
   const sizes = window.ACCOUNT_SIZES;
   const { FirmAvatar } = window;
@@ -165,6 +165,18 @@ function SectionPricing({ accountSize, onAccountSize, answers, onEditQuiz, onTop
             {answerChips.map((c) =>
           <span key={c.k} className="ac-chip">
                 {c.label}
+                {onClearAnswer && (
+                  <button
+                    type="button"
+                    className="ac-chip-clear"
+                    onClick={() => onClearAnswer(c.k)}
+                    aria-label={`Zrušit prioritu: ${c.label}`}
+                    title="Zrušit tuto prioritu">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                      <path d="M2 2L8 8M8 2L2 8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+                    </svg>
+                  </button>
+                )}
               </span>
           )}
           </div>
