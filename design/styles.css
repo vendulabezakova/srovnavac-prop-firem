@@ -562,24 +562,21 @@ image-slot[id="hero-face"] {
 .cmp-firm-table thead th.col-num   { text-align: right; }
 .cmp-firm-table thead th.col-exp   { width: 50px; }
 
+/* Všechny firm rows mají stejné tmavě fialové pozadí, hover zesvětluje */
 .cmp-firm-table tbody td {
   padding: 18px 14px; vertical-align: middle;
   font-size: 14px; color: #fff;
   border-top: 1px solid rgba(255,255,255,.06);
-  background: rgba(10,0,26,.95);
+  background: #2B0064;
+  transition: background .15s ease;
+}
+.cmp-firm-table tbody tr.firm-row:hover td {
+  background: #3D008F;        /* světlejší fialová pri hoveru */
 }
 .cmp-firm-table tbody tr.firm-row td.col-firm { padding-left: 22px; min-width: 320px; }
 .cmp-firm-table tbody td.col-num { text-align: right; font-variant-numeric: tabular-nums; }
 .cmp-firm-table tbody td.col-exp { text-align: center; padding-right: 14px; padding-left: 4px; }
 
-.cmp-firm-table tbody tr.firm-row.is-top td {
-  background: #2B0064;
-}
-/* col-num cells: žádný gradient, jen tmavě fialová (i v is-top řádku) */
-.cmp-firm-table tbody tr.firm-row td.col-num,
-.cmp-firm-table tbody tr.firm-row.is-top td.col-num {
-  background: #2B0064;
-}
 .cmp-firm-table tbody tr.firm-row.is-top td.col-rank,
 .cmp-firm-table tbody tr.firm-row.is-top td.col-firm {
   box-shadow: inset 3px 0 0 var(--mkt-pink);
