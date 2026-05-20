@@ -80,9 +80,17 @@
             "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
           },
           "supportLevel": "Good",
-          "propFirmMatch": { "score": 4.6, "reviewCount": 5 },
-          "theTrustedProp": { "trustScore": 85, "rating": 4.3 },
-          "tradersUnion": { "score": 7.89 },
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
           "payoutStats": {
             "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
             "avgPayoutEUR": 2545,
@@ -93,26 +101,65 @@
           }
         },
         "currentCampaigns": [
-          { "code": "NEW20", "discountPercentage": 20, "description": "20% sleva na všechny nové challange", "landingPageUrl": "https://www.fintokei.com" }
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
         ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 2, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 },
-          { "phaseNumber": 2, "profitTargetPercentage": 3, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 },
-          { "phaseNumber": 3, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 2,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 3,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          },
+          {
+            "phaseNumber": 3,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          }
         ]
       },
       "details": {
-        "timeLimit": { "minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 180, "noTimeLimitOnFundedAccount": true },
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 180,
+          "noTimeLimitOnFundedAccount": true
+        },
         "newsTradingAllowed": true,
         "maxLeverage": "1:25",
-        "leverageDetail": { "forex_gold_silver": "1:25", "indices": "1:20", "other": "1:10" },
-        "commissionFreeInstruments": { "forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Komise $6 za round lot na všech nástrojích, spreads od 1.5 pips" },
+        "leverageDetail": {
+          "forex_gold_silver": "1:25",
+          "indices": "1:20",
+          "other": "1:10"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích, spreads od 1.5 pips"
+        },
         "averagePayoutUSD": 3881,
         "highestPayoutUSD": 129032,
         "eaRobotsAllowed": true,
         "eaNote": "Pouze vlastní/upravené EA. Komerční plug-and-play boti zakázáni. Copy trading zakázán.",
         "hasMobileApp": true,
-        "platforms": ["TradingView", "MT5", "cTrader"],
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
         "hasLoyaltyProgram": true,
         "loyaltyProgram": {
           "name": "Fintokei Loyalty Program",
@@ -127,8 +174,30 @@
         },
         "origin": "Brno, Czech Republic + Japonsko",
         "parentCompany": "Purple Group (fintech, od 2011)",
-        "languages": ["cs", "en", "ja", "it"],
-        "restrictedCountries": ["US", "IN", "RU", "BY", "KP", "IR", "MM", "SY", "YE", "CU", "VE", "SD", "SS", "AF", "SO", "IQ"],
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
         "yearsInOperation": 3,
         "paymentMethods": [
           "Visa / Mastercard / JCB",
@@ -168,290 +237,3342 @@
       "challengeId": "fintokei-starttrader-20k",
       "name": "StartTrader 20k",
       "primary": {
-        "steps": 3, "capitalUSD": 20000, "priceUSD": 119,
-        "profitSplitPercentage": 50, "profitSplitMax": 100,
+        "steps": 3,
+        "capitalUSD": 20000,
+        "priceUSD": 119,
+        "profitSplitPercentage": 50,
+        "profitSplitMax": 100,
         "profitSplitNote": "Dynamic Performance Reward – roste s konzistencí",
-        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 3,
-        "popularity": { "overallPopularityScore": 81.9, "trustpilot": { "score": 4.5, "reviewCount": 1137, "pct1star": 0.09, "lastUpdated": "2026-05" }, "payoutStats": { "avgPayoutUSD": 3881, "highestPayoutUSD": 129032, "avgApprovalTime": "~2.8 sekund" } },
-        "currentCampaigns": [{ "code": "NEW20", "discountPercentage": 20, "description": "20% sleva na všechny nové challange", "landingPageUrl": "https://www.fintokei.com" }],
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 3,
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
+        "currentCampaigns": [
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
+        ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 2, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 },
-          { "phaseNumber": 2, "profitTargetPercentage": 3, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 },
-          { "phaseNumber": 3, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 2,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 3,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          },
+          {
+            "phaseNumber": 3,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          }
         ]
       },
-      "details": { "timeLimit": { "minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 180, "noTimeLimitOnFundedAccount": true }, "maxLeverage": "1:25", "platforms": ["TradingView", "MT5", "cTrader"], "languages": ["cs", "en", "ja", "it"], "yearsInOperation": 3 }
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 180,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:25",
+        "leverageDetail": {
+          "forex_gold_silver": "1:25",
+          "indices": "1:20",
+          "other": "1:10"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích, spreads od 1.5 pips"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "+25% každé 2 měsíce při 10%+ profitu, max $4M",
+          "maxAllocationScaled": 4000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": true
+        }
+      }
     },
     {
       "challengeId": "fintokei-starttrader-50k",
       "name": "StartTrader 50k",
       "primary": {
-        "steps": 3, "capitalUSD": 50000, "priceUSD": 244,
-        "profitSplitPercentage": 50, "profitSplitMax": 100,
-        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 3,
-        "popularity": { "overallPopularityScore": 81.9, "trustpilot": { "score": 4.5, "reviewCount": 1137 } },
-        "currentCampaigns": [{ "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }],
+        "steps": 3,
+        "capitalUSD": 50000,
+        "priceUSD": 244,
+        "profitSplitPercentage": 50,
+        "profitSplitMax": 100,
+        "profitSplitNote": "Dynamic Performance Reward – roste s konzistencí",
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 3,
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
+        "currentCampaigns": [
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
+        ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 2, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 },
-          { "phaseNumber": 2, "profitTargetPercentage": 3, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 },
-          { "phaseNumber": 3, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 2,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 3,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          },
+          {
+            "phaseNumber": 3,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          }
         ]
       },
-      "details": { "timeLimit": { "minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 180, "noTimeLimitOnFundedAccount": true }, "maxLeverage": "1:25" }
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 180,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:25",
+        "leverageDetail": {
+          "forex_gold_silver": "1:25",
+          "indices": "1:20",
+          "other": "1:10"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích, spreads od 1.5 pips"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "+25% každé 2 měsíce při 10%+ profitu, max $4M",
+          "maxAllocationScaled": 4000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": true
+        }
+      }
     },
     {
       "challengeId": "fintokei-starttrader-100k",
       "name": "StartTrader 100k",
       "primary": {
-        "steps": 3, "capitalUSD": 100000, "priceUSD": 419,
-        "profitSplitPercentage": 50, "profitSplitMax": 100,
-        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 3,
-        "popularity": { "overallPopularityScore": 81.9 },
-        "currentCampaigns": [{ "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }],
+        "steps": 3,
+        "capitalUSD": 100000,
+        "priceUSD": 419,
+        "profitSplitPercentage": 50,
+        "profitSplitMax": 100,
+        "profitSplitNote": "Dynamic Performance Reward – roste s konzistencí",
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 3,
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
+        "currentCampaigns": [
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
+        ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 2, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 },
-          { "phaseNumber": 2, "profitTargetPercentage": 3, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 },
-          { "phaseNumber": 3, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 2,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 3,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          },
+          {
+            "phaseNumber": 3,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          }
         ]
       },
-      "details": { "timeLimit": { "minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 180, "noTimeLimitOnFundedAccount": true }, "maxLeverage": "1:25" }
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 180,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:25",
+        "leverageDetail": {
+          "forex_gold_silver": "1:25",
+          "indices": "1:20",
+          "other": "1:10"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích, spreads od 1.5 pips"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "+25% každé 2 měsíce při 10%+ profitu, max $4M",
+          "maxAllocationScaled": 4000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": true
+        }
+      }
     },
     {
       "challengeId": "fintokei-protrader-10k",
       "name": "ProTrader 10k",
       "primary": {
-        "steps": 2, "capitalUSD": 10000, "priceUSD": 99,
-        "profitSplitPercentage": 80, "profitSplitMax": 80,
-        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 3,
-        "popularity": { "overallPopularityScore": 81.9 },
-        "currentCampaigns": [{ "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }],
+        "steps": 2,
+        "capitalUSD": 10000,
+        "priceUSD": 99,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 3,
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
+        "currentCampaigns": [
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
+        ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 },
-          { "phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
         ]
       },
       "details": {
-        "timeLimit": { "minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true },
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
         "maxLeverage": "1:100",
-        "leverageDetail": { "forex_gold_silver": "1:100", "indices": "1:50", "other": "1:20" },
-        "rules": { "consistencyRule": false, "maxRiskOnOpenTrades": "3%" }
+        "leverageDetail": {
+          "forex_gold_silver": "1:100",
+          "indices": "1:50",
+          "other": "1:20"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích, spreads od 1.5 pips"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "+25% každé 2 měsíce při 10%+ profitu, max €4M",
+          "maxAllocationScaled": 4000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false,
+          "maxRiskOnOpenTrades": "3%"
+        }
       }
     },
     {
       "challengeId": "fintokei-protrader-20k",
       "name": "ProTrader 20k",
       "primary": {
-        "steps": 2, "capitalUSD": 20000, "priceUSD": 159,
-        "profitSplitPercentage": 80, "profitSplitMax": 80,
-        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 3,
+        "steps": 2,
+        "capitalUSD": 20000,
+        "priceUSD": 159,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 3,
         "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
           "overallPopularityScore": 81.9,
-          "trustpilot": { "score": 4.5, "reviewCount": 1137, "pct1star": 0.09, "lastUpdated": "2026-05" },
-          "payoutStats": { "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)", "avgPayoutEUR": 2545, "avgPayoutUSD": 3881, "highestPayoutUSD": 129032, "approvalRate": "99.9% (self-reported)", "avgApprovalTime": "~2.8 sekund" }
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
         },
-        "currentCampaigns": [{ "code": "NEW20", "discountPercentage": 20, "description": "20% sleva na všechny nové challange", "landingPageUrl": "https://www.fintokei.com" }],
+        "currentCampaigns": [
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
+        ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 },
-          { "phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
         ]
       },
       "details": {
-        "timeLimit": { "minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true },
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
         "newsTradingAllowed": true,
         "maxLeverage": "1:100",
-        "leverageDetail": { "forex_gold_silver": "1:100", "indices": "1:50", "other": "1:20" },
-        "commissionFreeInstruments": { "forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Komise $6 za round lot na všech nástrojích" },
+        "leverageDetail": {
+          "forex_gold_silver": "1:100",
+          "indices": "1:50",
+          "other": "1:20"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích"
+        },
         "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
         "eaRobotsAllowed": true,
         "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
         "hasMobileApp": true,
-        "platforms": ["TradingView", "MT5", "cTrader"],
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
         "hasLoyaltyProgram": true,
-        "languages": ["cs", "en", "ja", "it"],
-        "restrictedCountries": ["US", "IN", "RU", "BY", "KP", "IR", "MM", "SY", "YE", "CU", "VE", "SD", "SS", "AF", "SO", "IQ"],
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
         "yearsInOperation": 3,
-        "rules": { "scalingPlan": true, "scalingNote": "+25% každé 2 měsíce při 10%+ profitu, max €4M", "consistencyRule": false }
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "+25% každé 2 měsíce při 10%+ profitu, max €4M",
+          "maxAllocationScaled": 4000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "fintokei-protrader-50k",
+      "name": "ProTrader 50k",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 50000,
+        "priceUSD": 319,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 3,
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
+        "currentCampaigns": [
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
+        ],
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "leverageDetail": {
+          "forex_gold_silver": "1:100",
+          "indices": "1:50",
+          "other": "1:20"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "+25% každé 2 měsíce při 10%+ profitu, max €4M",
+          "maxAllocationScaled": 4000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false
+        }
       }
     },
     {
       "challengeId": "fintokei-protrader-swing-50k",
       "name": "ProTrader Swing 50k",
       "primary": {
-        "steps": 2, "capitalUSD": 50000, "priceUSD": 319,
-        "profitSplitPercentage": 80, "profitSplitMax": 80,
-        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 3,
-        "popularity": { "overallPopularityScore": 81.9 },
-        "currentCampaigns": [{ "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }],
+        "steps": 2,
+        "capitalUSD": 50000,
+        "priceUSD": 319,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 3,
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
+        "currentCampaigns": [
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
+        ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "dailyLossType": "balance-based", "dailyLossNote": "Počítáno z balance (closed trades), NE z equity" },
-          { "phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "dailyLossType": "balance-based", "dailyLossNote": "Počítáno z balance (closed trades), NE z equity" }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10,
+            "dailyLossType": "balance-based",
+            "dailyLossNote": "Počítáno z balance (closed trades), NE z equity"
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10,
+            "dailyLossType": "balance-based",
+            "dailyLossNote": "Počítáno z balance (closed trades), NE z equity"
+          }
         ]
       },
-      "details": { "maxLeverage": "1:100", "rules": { "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "consistencyRule": false } }
-    },
-    {
-      "challengeId": "fintokei-protrader-50k",
-      "name": "ProTrader 50k",
-      "primary": {
-        "steps": 2, "capitalUSD": 50000, "priceUSD": 319,
-        "profitSplitPercentage": 80, "profitSplitMax": 80,
-        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 3,
-        "popularity": { "overallPopularityScore": 81.9 },
-        "currentCampaigns": [{ "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }],
-        "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 },
-          { "phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 }
-        ]
-      },
-      "details": { "maxLeverage": "1:100", "rules": { "consistencyRule": false } }
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "leverageDetail": {
+          "forex_gold_silver": "1:100",
+          "indices": "1:50",
+          "other": "1:20"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "+25% každé 2 měsíce při 10%+ profitu, max €4M",
+          "maxAllocationScaled": 4000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false
+        }
+      }
     },
     {
       "challengeId": "fintokei-protrader-100k",
       "name": "ProTrader 100k",
       "primary": {
-        "steps": 2, "capitalUSD": 100000, "priceUSD": 529,
-        "profitSplitPercentage": 80, "profitSplitMax": 80,
-        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 3,
-        "popularity": { "overallPopularityScore": 81.9 },
-        "currentCampaigns": [{ "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }],
+        "steps": 2,
+        "capitalUSD": 100000,
+        "priceUSD": 529,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 3,
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
+        "currentCampaigns": [
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
+        ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 },
-          { "phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
         ]
       },
-      "details": { "maxLeverage": "1:100", "rules": { "consistencyRule": false } }
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "leverageDetail": {
+          "forex_gold_silver": "1:100",
+          "indices": "1:50",
+          "other": "1:20"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "+25% každé 2 měsíce při 10%+ profitu, max €4M",
+          "maxAllocationScaled": 4000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false
+        }
+      }
     },
     {
       "challengeId": "fintokei-protrader-200k",
       "name": "ProTrader 200k",
       "primary": {
-        "steps": 2, "capitalUSD": 200000, "priceUSD": 1149,
-        "profitSplitPercentage": 80, "profitSplitMax": 80,
-        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 3,
-        "popularity": { "overallPopularityScore": 81.9 },
-        "currentCampaigns": [{ "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }],
+        "steps": 2,
+        "capitalUSD": 200000,
+        "priceUSD": 1149,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 3,
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
+        "currentCampaigns": [
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
+        ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 },
-          { "phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
         ]
       },
-      "details": { "maxLeverage": "1:100", "rules": { "consistencyRule": false } }
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "leverageDetail": {
+          "forex_gold_silver": "1:100",
+          "indices": "1:50",
+          "other": "1:20"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "+25% každé 2 měsíce při 10%+ profitu, max €4M",
+          "maxAllocationScaled": 4000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false
+        }
+      }
     },
     {
       "challengeId": "fintokei-protrader-400k",
       "name": "ProTrader 400k",
       "primary": {
-        "steps": 2, "capitalUSD": 400000, "priceUSD": 2399,
-        "profitSplitPercentage": 80, "profitSplitMax": 80,
-        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 3,
-        "popularity": { "overallPopularityScore": 81.9 },
-        "currentCampaigns": [{ "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }],
+        "steps": 2,
+        "capitalUSD": 400000,
+        "priceUSD": 2399,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 3,
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
+        "currentCampaigns": [
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
+        ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 },
-          { "phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
         ]
       },
-      "details": { "maxLeverage": "1:100", "rules": { "consistencyRule": false } }
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "leverageDetail": {
+          "forex_gold_silver": "1:100",
+          "indices": "1:50",
+          "other": "1:20"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "+25% každé 2 měsíce při 10%+ profitu, max €4M",
+          "maxAllocationScaled": 4000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false
+        }
+      }
     },
     {
       "challengeId": "fintokei-swifttrader-10k",
       "name": "SwiftTrader 10k",
       "primary": {
-        "steps": 1, "capitalUSD": 10000, "priceUSD": 119,
-        "profitSplitPercentage": 100, "profitSplitMax": 100,
+        "steps": 1,
+        "capitalUSD": 10000,
+        "priceUSD": 119,
+        "profitSplitPercentage": 100,
+        "profitSplitMax": 100,
         "payoutFrequency": "Bi-weekly + min. +3% profit na výplatu",
         "payoutSpeedHours": 0,
         "payoutSpeedNote": "Sub-sekundové schválení (~2.8 sec), peníze next business day",
-        "popularity": { "overallPopularityScore": 81.9 },
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
         "currentCampaigns": [
-          { "code": "RELOAD50", "discountPercentage": 50, "description": "50% sleva na další challenge pokud neprůjdeš", "landingPageUrl": "https://www.fintokei.com" },
-          { "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }
+          {
+            "code": "RELOAD50",
+            "discountPercentage": 50,
+            "description": "50% sleva na další challenge pokud neprůjdeš",
+            "landingPageUrl": "https://www.fintokei.com"
+          },
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
         ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6, "note": "Výplata dostupná ihned po dosažení 10% – ještě v evaluation fázi" }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6,
+            "note": "Výplata dostupná ihned po dosažení 10% – ještě v evaluation fázi"
+          }
         ]
       },
       "details": {
-        "timeLimit": { "minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true },
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
         "maxLeverage": "1:25",
-        "rules": { "scalingPlan": true, "scalingNote": "Od $10K → $200K → $2M. +10% profit za 2 po sobě jdoucí měsíce", "minProfitPerPayout": "3%" }
+        "leverageDetail": {
+          "forex_gold_silver": "1:25",
+          "indices": "1:20",
+          "other": "1:10"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "Od $10K → $200K → $2M. +10% profit za 2 po sobě jdoucí měsíce",
+          "maxAllocationScaled": 2000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false,
+          "minProfitPerPayout": "3%"
+        }
       }
     },
     {
       "challengeId": "fintokei-swifttrader-20k",
       "name": "SwiftTrader 20k",
       "primary": {
-        "steps": 1, "capitalUSD": 20000, "priceUSD": 179,
-        "profitSplitPercentage": 100, "profitSplitMax": 100,
+        "steps": 1,
+        "capitalUSD": 20000,
+        "priceUSD": 179,
+        "profitSplitPercentage": 100,
+        "profitSplitMax": 100,
         "payoutFrequency": "Bi-weekly + min. +3% profit na výplatu",
         "payoutSpeedHours": 0,
-        "popularity": { "overallPopularityScore": 81.9 },
+        "payoutSpeedNote": "Sub-sekundové schválení (~2.8 sec), peníze next business day",
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
         "currentCampaigns": [
-          { "code": "RELOAD50", "discountPercentage": 50, "landingPageUrl": "https://www.fintokei.com" },
-          { "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }
+          {
+            "code": "RELOAD50",
+            "discountPercentage": 50,
+            "description": "50% sleva na další challenge pokud neprůjdeš",
+            "landingPageUrl": "https://www.fintokei.com"
+          },
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
         ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6,
+            "note": "Výplata dostupná ihned po dosažení 10% – ještě v evaluation fázi"
+          }
         ]
       },
-      "details": { "maxLeverage": "1:25", "rules": { "minProfitPerPayout": "3%" } }
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:25",
+        "leverageDetail": {
+          "forex_gold_silver": "1:25",
+          "indices": "1:20",
+          "other": "1:10"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "Od $20K → $200K → $2M. +10% profit za 2 po sobě jdoucí měsíce",
+          "maxAllocationScaled": 2000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false,
+          "minProfitPerPayout": "3%"
+        }
+      }
     },
     {
       "challengeId": "fintokei-swifttrader-50k",
       "name": "SwiftTrader 50k",
       "primary": {
-        "steps": 1, "capitalUSD": 50000, "priceUSD": 369,
-        "profitSplitPercentage": 100, "profitSplitMax": 100,
+        "steps": 1,
+        "capitalUSD": 50000,
+        "priceUSD": 369,
+        "profitSplitPercentage": 100,
+        "profitSplitMax": 100,
         "payoutFrequency": "Bi-weekly + min. +3% profit na výplatu",
         "payoutSpeedHours": 0,
-        "popularity": { "overallPopularityScore": 81.9 },
+        "payoutSpeedNote": "Sub-sekundové schválení (~2.8 sec), peníze next business day",
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
         "currentCampaigns": [
-          { "code": "RELOAD50", "discountPercentage": 50, "landingPageUrl": "https://www.fintokei.com" },
-          { "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }
+          {
+            "code": "RELOAD50",
+            "discountPercentage": 50,
+            "description": "50% sleva na další challenge pokud neprůjdeš",
+            "landingPageUrl": "https://www.fintokei.com"
+          },
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
         ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6,
+            "note": "Výplata dostupná ihned po dosažení 10% – ještě v evaluation fázi"
+          }
         ]
       },
-      "details": { "maxLeverage": "1:25", "rules": { "minProfitPerPayout": "3%" } }
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:25",
+        "leverageDetail": {
+          "forex_gold_silver": "1:25",
+          "indices": "1:20",
+          "other": "1:10"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "Od $50K → $200K → $2M. +10% profit za 2 po sobě jdoucí měsíce",
+          "maxAllocationScaled": 2000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false,
+          "minProfitPerPayout": "3%"
+        }
+      }
     },
     {
       "challengeId": "fintokei-swifttrader-100k",
       "name": "SwiftTrader 100k",
       "primary": {
-        "steps": 1, "capitalUSD": 100000, "priceUSD": 599,
-        "profitSplitPercentage": 100, "profitSplitMax": 100,
+        "steps": 1,
+        "capitalUSD": 100000,
+        "priceUSD": 599,
+        "profitSplitPercentage": 100,
+        "profitSplitMax": 100,
         "payoutFrequency": "Bi-weekly + min. +3% profit na výplatu",
         "payoutSpeedHours": 0,
-        "popularity": { "overallPopularityScore": 81.9 },
+        "payoutSpeedNote": "Sub-sekundové schválení (~2.8 sec), peníze next business day",
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
         "currentCampaigns": [
-          { "code": "RELOAD50", "discountPercentage": 50, "landingPageUrl": "https://www.fintokei.com" },
-          { "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }
+          {
+            "code": "RELOAD50",
+            "discountPercentage": 50,
+            "description": "50% sleva na další challenge pokud neprůjdeš",
+            "landingPageUrl": "https://www.fintokei.com"
+          },
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
         ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6,
+            "note": "Výplata dostupná ihned po dosažení 10% – ještě v evaluation fázi"
+          }
         ]
       },
-      "details": { "maxLeverage": "1:25", "rules": { "minProfitPerPayout": "3%" } }
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:25",
+        "leverageDetail": {
+          "forex_gold_silver": "1:25",
+          "indices": "1:20",
+          "other": "1:10"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "Od $100K → $200K → $2M. +10% profit za 2 po sobě jdoucí měsíce",
+          "maxAllocationScaled": 2000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false,
+          "minProfitPerPayout": "3%"
+        }
+      }
     },
     {
       "challengeId": "fintokei-swifttrader-200k",
       "name": "SwiftTrader 200k",
       "primary": {
-        "steps": 1, "capitalUSD": 200000, "priceUSD": 1299,
-        "profitSplitPercentage": 100, "profitSplitMax": 100,
+        "steps": 1,
+        "capitalUSD": 200000,
+        "priceUSD": 1299,
+        "profitSplitPercentage": 100,
+        "profitSplitMax": 100,
         "payoutFrequency": "Bi-weekly + min. +3% profit na výplatu",
         "payoutSpeedHours": 0,
-        "popularity": { "overallPopularityScore": 81.9 },
+        "payoutSpeedNote": "Sub-sekundové schválení (~2.8 sec), peníze next business day",
+        "popularity": {
+          "scoreFormula": {
+            "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+            "source": "Notion / Poznámky (Hackathon Tým 1)",
+            "inputs": {
+              "TP_score": 4.5,
+              "pct_1star": 0.09,
+              "reddit_score": 0.65,
+              "reddit_score_note": "Odhad z komunitních agregátorů (PropFirmMatch, TheTrustedProp, regionální Trustpilot). Přímý Reddit scraping nebyl dostupný.",
+              "red_flag_penalty": 1,
+              "red_flag_penalty_note": "Red flag: nepředvídatelné permanentní bany bez možnosti odvolání, diskreční aplikace Consistency Rules"
+            },
+            "rawScore": 200.75,
+            "maxScore": 245.0,
+            "normalizedScore": 81.9
+          },
+          "overallPopularityScore": 81.9,
+          "trustpilot": {
+            "score": 4.5,
+            "reviewCount": 1137,
+            "pct1star": 0.09,
+            "lastUpdated": "2026-05",
+            "topPositiveThemes": [
+              "Rychlost vyplat – schvaleni v sekundach, penize do 24h",
+              "Transparentni pravidla bez hidden klauzi",
+              "Rychle vydani funded accountu po pruchodu challenge",
+              "Kvalitni zakaznicka podpora – rychla odpoved",
+              "TradingView integrace pro FX tradery",
+              "Intuitivni dashboard a prehledne sledovani DD",
+              "Vzdelavaci materialy pro zacatecniky"
+            ],
+            "topNegativeThemes": [
+              "Consistency Rules – diskrečni omezeni (leverage 1:10, profit cap +1%, loss cap -1%)",
+              "Permanentni bany bez oduvodneni a moznosti odvolani",
+              "Spreads na XAUUSD (~0.7 pip) sirsi nez u konkurence",
+              "Skolovaci plan omezenejsi vs. FTMO, FundedNext",
+              "Crypto vybery – poplatek 2.5% + fixni fee"
+            ],
+            "verifiedPayoutProof": true,
+            "firmRespondsToReviews": true
+          },
+          "redditSentiment": {
+            "score": 0.65,
+            "sentiment": "pozitivni s vyhradami",
+            "note": "Primy Reddit scraping nebyl dostupny. Odhad z PropFirmMatch, TheTrustedProp a regionalniho Trustpilotu.",
+            "mainPraises": [
+              "Nejrychlejsi vyplaty v FX/CFD segmentu",
+              "Jasna pravidla pro disciplinovane tradery",
+              "Silna japonska komunita",
+              "Loyalty XP program unikatni v oboru"
+            ],
+            "mainComplaints": [
+              "Nepredikovatelna aplikace Consistency Rules",
+              "Permanentni ban bez moznosti odvolani",
+              "Spread na XAUUSD",
+              "Vyssi poplatky u krypto vyber"
+            ]
+          },
+          "redFlagPenalty": {
+            "value": 1,
+            "reason": "Dokumentovane permanentni bany bez transparentniho oduvodneni a moznosti odvolani. Diskrečni aplikace Consistency Rules na zaklade 'interni analyzy'."
+          },
+          "supportLevel": "Good",
+          "propFirmMatch": {
+            "score": 4.6,
+            "reviewCount": 5
+          },
+          "theTrustedProp": {
+            "trustScore": 85,
+            "rating": 4.3
+          },
+          "tradersUnion": {
+            "score": 7.89
+          },
+          "payoutStats": {
+            "totalPaidOut": "EUR 29M+ (poslednich 12 mesicu k 05/2026)",
+            "avgPayoutEUR": 2545,
+            "avgPayoutUSD": 3881,
+            "highestPayoutUSD": 129032,
+            "approvalRate": "99.9% (self-reported)",
+            "avgApprovalTime": "~2.8 sekund"
+          }
+        },
         "currentCampaigns": [
-          { "code": "RELOAD50", "discountPercentage": 50, "landingPageUrl": "https://www.fintokei.com" },
-          { "code": "NEW20", "discountPercentage": 20, "landingPageUrl": "https://www.fintokei.com" }
+          {
+            "code": "RELOAD50",
+            "discountPercentage": 50,
+            "description": "50% sleva na další challenge pokud neprůjdeš",
+            "landingPageUrl": "https://www.fintokei.com"
+          },
+          {
+            "code": "NEW20",
+            "discountPercentage": 20,
+            "description": "20% sleva na všechny nové challange",
+            "landingPageUrl": "https://www.fintokei.com"
+          }
         ],
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6 }
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6,
+            "note": "Výplata dostupná ihned po dosažení 10% – ještě v evaluation fázi"
+          }
         ]
       },
-      "details": { "maxLeverage": "1:25", "rules": { "minProfitPerPayout": "3%" } }
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:25",
+        "leverageDetail": {
+          "forex_gold_silver": "1:25",
+          "indices": "1:20",
+          "other": "1:10"
+        },
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "Komise $6 za round lot na všech nástrojích"
+        },
+        "averagePayoutUSD": 3881,
+        "highestPayoutUSD": 129032,
+        "eaRobotsAllowed": true,
+        "eaNote": "Pouze vlastní/upravené EA. Copy trading zakázán.",
+        "hasMobileApp": true,
+        "platforms": [
+          "TradingView",
+          "MT5",
+          "cTrader"
+        ],
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": {
+          "name": "Fintokei Loyalty Program",
+          "type": "XP-based",
+          "benefits": [
+            "25% navýšení trading kapitálu",
+            "Boost performance reward ratio",
+            "Free challange účty (až $100K ProTrader zdarma)",
+            "Missions pro akceleraci XP",
+            "XP sbíráš i za neúspěšné challange"
+          ]
+        },
+        "origin": "Brno, Czech Republic + Japonsko",
+        "parentCompany": "Purple Group (fintech, od 2011)",
+        "languages": [
+          "cs",
+          "en",
+          "ja",
+          "it"
+        ],
+        "restrictedCountries": [
+          "US",
+          "IN",
+          "RU",
+          "BY",
+          "KP",
+          "IR",
+          "MM",
+          "SY",
+          "YE",
+          "CU",
+          "VE",
+          "SD",
+          "SS",
+          "AF",
+          "SO",
+          "IQ"
+        ],
+        "yearsInOperation": 3,
+        "paymentMethods": [
+          "Visa / Mastercard / JCB",
+          "Apple Pay",
+          "Google Pay",
+          "Crypto (BTC, USDT, SOL a další)",
+          "SEPA bank transfer",
+          "Domestic bank transfer (JPY)",
+          "E-wallet (Walletory)"
+        ],
+        "education": {
+          "hasEducationForBeginners": true,
+          "features": [
+            "100+ vzdělávacích videí",
+            "Denní zpravodajství",
+            "Trading kalkulačky",
+            "Certifikáty pro funded tradery",
+            "Rozhovory s certified pro tradery (blog)",
+            "Free trial účet"
+          ]
+        },
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "Max $2M. +10% profit za 2 po sobě jdoucí měsíce",
+          "maxAllocationScaled": 2000000,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "dcaAllowed": true,
+          "consistencyRule": false,
+          "minProfitPerPayout": "3%"
+        }
+      }
     }
   ]
 }

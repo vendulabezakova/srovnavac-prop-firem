@@ -23,7 +23,10 @@ function SectionHero({ answers, topFirm }) {
             </h1>
 
             <p className="hero-sub">
-              Sestavili jsme žebříček z 8 ověřených prop firem na základě tvých {answeredCount} odpovědí.
+              {answeredCount > 0
+                ? <>Sestavili jsme žebříček z 8 ověřených prop firem na základě tvých {answeredCount} odpovědí.</>
+                : <>Srovnání 8 ověřených prop firem. Pro personalizaci žebříčku otevři krátký dotazník v horní liště (<em>Upravit dotazník</em>).</>
+              }
               <strong style={{ color: '#fff' }}> Žádné affiliate odkazy, žádné placené ranky </strong>—
               jen surová data o cenách, payoutu a podmínkách.
             </p>

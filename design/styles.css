@@ -483,7 +483,7 @@ image-slot[id="hero-face"] {
 }
 .hero-testimonial {
   position: absolute;
-  right: -80px; bottom: -24px;
+  right: -80px; bottom: -120px;
   width: 280px;
   padding: 16px 18px;
   background: linear-gradient(180deg, rgba(43,0,100,.95), rgba(19,0,46,.92));
@@ -874,6 +874,30 @@ image-slot[id="hero-face"] {
   display: flex; flex-direction: column;
   max-height: calc(100vh - 64px);
   overflow: hidden;
+}
+
+/* X — close/skip button v pravém horním rohu quiz karty */
+.quiz-close-x {
+  position: absolute; top: 16px; right: 16px;
+  width: 36px; height: 36px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  color: rgba(255,255,255,.7);
+  cursor: pointer;
+  transition: background .15s, border-color .15s, color .15s, transform .15s var(--ease-out-expo);
+  z-index: 5;
+}
+.quiz-close-x:hover {
+  background: rgba(248,21,179,.18);
+  border-color: rgba(248,21,179,.55);
+  color: #fff;
+  transform: scale(1.05);
+}
+.quiz-close-x:focus-visible {
+  outline: 2px solid var(--mkt-pink);
+  outline-offset: 2px;
 }
 
 /* Header */
