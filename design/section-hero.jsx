@@ -3,7 +3,7 @@
 
 function SectionHero({ answers, topFirm }) {
   const today = new Date().toLocaleDateString('cs-CZ', { day: 'numeric', month: 'long', year: 'numeric' });
-  const answeredCount = Object.values(answers || {}).filter(v => v !== undefined).length;
+  const answeredCount = Object.values(answers || {}).filter((v) => v !== undefined).length;
 
   return (
     <section id="hero" className="hero-lp" data-screen-label="01 Hero">
@@ -38,7 +38,7 @@ function SectionHero({ answers, topFirm }) {
               <a href="#novinky" className="btn btn-outline btn-lg">PŘEČÍST NOVINKY</a>
             </div>
 
-            <div className="hero-trust">
+            <div className="hero-trust" data-comment-anchor="254769f242-div-38-13">
               <div className="trust-item">
                 <div className="trust-v">12 480+</div>
                 <div className="trust-l">Traderů našlo svou firmu</div>
@@ -71,8 +71,8 @@ function SectionHero({ answers, topFirm }) {
                 shape="circle"
                 src="assets/img/bernd-skorupinski.webp"
                 placeholder="Přetáhni foto trader / CEO"
-                style={{ width: '320px', height: '320px', display: 'block', position: 'relative', zIndex: 2 }}
-              ></image-slot>
+                style={{ width: '320px', height: '320px', display: 'block', position: 'relative', zIndex: 2 }}>
+              </image-slot>
 
               {/* Testimonial card */}
               <div className="hero-testimonial">
@@ -90,8 +90,8 @@ function SectionHero({ answers, topFirm }) {
 
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
 
 window.SectionHero = SectionHero;
