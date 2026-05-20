@@ -10,17 +10,35 @@
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
+  <!-- Mock data (plain JS — populates window.PROP_FIRMS + window.QUIZ + window.scoreFirm) -->
   <script src="design/data.js"></script>
+  <script src="design/image-slot.js"></script>
 </head>
 <body>
+  <template id="__bundler_thumbnail" data-bg-color="#0A001A">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#F815B3"/>
+          <stop offset="1" stop-color="#6B03E5"/>
+        </linearGradient>
+      </defs>
+      <rect x="240" y="200" width="720" height="120" rx="20" fill="url(#tg)" opacity="0.95"/>
+      <rect x="240" y="360" width="720" height="60" rx="14" fill="#2B0064"/>
+      <rect x="240" y="450" width="720" height="60" rx="14" fill="#2B0064"/>
+      <rect x="240" y="540" width="720" height="60" rx="14" fill="#2B0064"/>
+      <path d="M600 110 L625 175 L695 180 L640 222 L656 290 L600 250 L544 290 L560 222 L505 180 L575 175 Z" fill="#1FD3DC"/>
+    </svg>
+  </template>
   <div id="root"></div>
 
+  <!-- Component files (each exports to window) -->
   <script type="text/babel" data-presets="env,react" src="design/tweaks-panel.jsx"></script>
   <script type="text/babel" data-presets="env,react" src="design/common.jsx"></script>
-  <script type="text/babel" data-presets="env,react" src="design/header.jsx"></script>
-  <script type="text/babel" data-presets="env,react" src="design/section-news.jsx"></script>
+  <script type="text/babel" data-presets="env,react" src="design/quiz.jsx"></script>
+  <script type="text/babel" data-presets="env,react" src="design/section-hero.jsx"></script>
   <script type="text/babel" data-presets="env,react" src="design/section-pricing.jsx"></script>
-  <script type="text/babel" data-presets="env,react" src="design/section-attributes.jsx"></script>
+  <script type="text/babel" data-presets="env,react" src="design/section-news.jsx"></script>
   <script type="text/babel" data-presets="env,react" src="design/app.jsx"></script>
 </body>
 </html>
