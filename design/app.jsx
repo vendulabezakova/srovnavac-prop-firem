@@ -5,7 +5,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 }/*EDITMODE-END*/;
 
 function App() {
-  const { SectionHero, SectionPricing, SectionNews, Quiz } = window;
+  const { SectionHero, SectionPricing, SectionReviews, SectionNews, Quiz } = window;
   const { useTweaks, TweaksPanel, TweakSection, TweakSelect, TweakButton } = window;
 
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
@@ -14,12 +14,13 @@ function App() {
   const [answers, setAnswers] = React.useState(() => window.loadQuiz());
   const [quizOpen, setQuizOpen] = React.useState(() => !window.loadQuiz());
   const [topIds, setTopIds] = React.useState([]);
+  const [reviewsFirm, setReviewsFirm] = React.useState(null);
 
   // Scroll-spy for anchor nav
   const [activeAnchor, setActiveAnchor] = React.useState('hero');
   React.useEffect(() => {
     function onScroll() {
-      const anchors = ['hero', 'srovnani', 'novinky'];
+      const anchors = ['hero', 'srovnani', 'recenze', 'novinky'];
       const offsets = anchors.map(id => {
         const el = document.getElementById(id);
         return el ? { id, top: el.getBoundingClientRect().top } : null;
@@ -60,6 +61,14 @@ function App() {
     setQuizOpen(false);
   }
 
+  function handleReviewsClick(firmId) {
+    setReviewsFirm(firmId);
+    setTimeout(() => {
+      const el = document.getElementById('recenze');
+      if (el) window.scrollTo({ top: el.offsetTop - 60, behavior: 'smooth' });
+    }, 50);
+  }
+
   const sizeOptions = window.ACCOUNT_SIZES.map(s => ({ value: s, label: `$${(s/1000)}K` }));
 
   return (
@@ -90,7 +99,8 @@ function App() {
                 {[
                   ['hero',     '01', 'Tvůj výběr'],
                   ['srovnani', '02', 'Srovnání'],
-                  ['novinky',  '03', 'Novinky']
+                  ['recenze',  '03', 'Recenze'],
+                  ['novinky',  '04', 'Novinky']
                 ].map(([id, num, label]) => (
                   <a key={id} href={'#' + id} className={activeAnchor === id ? 'is-on' : ''}>
                     <span className="an-num">{num}</span>
@@ -120,6 +130,12 @@ function App() {
                   answers={answers}
                   onEditQuiz={handleEditQuiz}
                   onTopIds={setTopIds}
+                  onReviewsClick={handleReviewsClick}
+                />
+                <SectionReviews
+                  topIds={topIds}
+                  selectedFirmId={reviewsFirm}
+                  onSelectFirm={setReviewsFirm}
                 />
                 <SectionNews topIds={topIds} />
               </React.Fragment>

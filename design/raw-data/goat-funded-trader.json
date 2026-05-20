@@ -1,0 +1,550 @@
+{
+  "id": "goat-funded-trader",
+  "name": "GOAT Funded Trader",
+  "url": "https://www.goatfundedtrader.com/",
+  "isFk": false,
+  "comment": "GOAT Funded Trader (GFT) is a proprietary trading firm founded in May 2023, operating through Wishes Tower International Limited (Hong Kong) and Goat Funded LTD (Saint Lucia). It offers a wide range of evaluation models (1-Step, 2-Step GOAT/Standard/PRO, 3-Step, Instant, Pay Later) with profit splits up to 100% via add-ons.",
+  "yearsInOperation": 3,
+  "hasMobileApp": true,
+  "languages": ["en"],
+  "restrictedCountries": [
+    "US", "AF", "BD", "BY", "BG", "CF", "CL", "CU", "CD", "HK", "IR", "IL", "JP", "JO", "LB", "LY", "MY", "ML", "MM", "KP", "RU", "SN", "SG", "SO", "KR", "SS", "LK", "SD", "SY", "TH", "TG", "VE", "VN", "YE", "ZW"
+  ],
+  "platforms": ["MT5", "cTrader", "Match-Trader", "TradeLocker", "Volumetrica"],
+  "paymentMethods": ["Credit Card", "Debit Card", "Cryptocurrency", "PayPal"],
+  "education": {
+    "hasEducationForBeginners": false,
+    "features": [
+      "Blog with general prop firm topics",
+      "Active Discord community",
+      "FAQ help center",
+      "Free trading competition"
+    ]
+  },
+  "popularity": {
+    "scoreFormula": {
+      "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+      "inputs": {
+        "TP_score": 3.4,
+        "pct_1star": 0.23,
+        "reddit_score": 0.55,
+        "reddit_score_note": "Estimated from community aggregators - direct Reddit scraping unavailable. Mixed sentiment due to documented payout disputes and copy-trading flag controversies.",
+        "red_flag_penalty": 1,
+        "red_flag_penalty_note": "Trustpilot flagged the firm for guideline breaches with fake reviews removed; multiple documented payout denials citing copy-trading allegations without clear appeal process; April 2026 TradeXMastery absorption left unpaid payouts unresolved."
+      },
+      "rawScore": 161.25,
+      "maxScore": 245.0,
+      "normalizedScore": 65.82
+    },
+    "overallPopularityScore": 65.82,
+    "trustpilot": {
+      "score": 3.4,
+      "reviewCount": 3574,
+      "pct1star": 0.23,
+      "lastUpdated": "2026-05",
+      "topPositiveThemes": [
+        "Affordable challenge pricing",
+        "Fast payouts (24-72 hours) when approved",
+        "User-friendly dashboard and MT5 platform",
+        "Wide variety of account models",
+        "Responsive customer support"
+      ],
+      "topNegativeThemes": [
+        "Payout denials citing copy-trading without clear evidence",
+        "Goat Guard auto-close cutting splits from 80% to 50%",
+        "First two payouts capped at 6% of starting balance or $10,000",
+        "$3,000 daily profit cap deducted from account",
+        "Multi-day support response delays on disputes"
+      ],
+      "verifiedPayoutProof": true,
+      "firmRespondsToReviews": true
+    },
+    "redFlagPenalty": {
+      "value": 1,
+      "reason": "Trustpilot guideline-breach flag with fake reviews removed; documented payout denials citing copy-trading without effective appeal; TradeXMastery acquisition left unpaid payouts as of May 2026."
+    },
+    "supportLevel": "Average",
+    "payoutStats": {
+      "totalPaidOut": "$14M+ (firm-claimed) / $11.2M (Payout Junction verified)",
+      "avgPayoutUSD": null,
+      "highestPayoutUSD": null,
+      "approvalRate": null,
+      "avgApprovalTime": "24-48 hours when approved (with $500 compensation promised for delays over 2 business days)"
+    }
+  },
+  "currentCampaigns": [
+    {
+      "code": "FIRSTGFT",
+      "discount": "50% OFF",
+      "description": "50% off first account for new customers"
+    },
+    {
+      "code": "BOGO40",
+      "discount": "40% OFF + Buy One Get One",
+      "description": "40% off plus BOGO promotion"
+    },
+    {
+      "code": "BOGO35",
+      "discount": "35% OFF + BOGO",
+      "description": "Pay Later challenge promotion"
+    }
+  ],
+  "challenges": [
+    {
+      "challengeId": "goat-funded-trader-2step-goat-10k",
+      "name": "2-Step GOAT Model 10K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 10000,
+        "priceUSD": 54,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": true,
+          "gold": false,
+          "oil": true,
+          "crypto": true,
+          "note": "$2.50/lot round-turn commission on forex and metals; indices, commodities and crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "goat-funded-trader-2step-goat-25k",
+      "name": "2-Step GOAT Model 25K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 25000,
+        "priceUSD": 144,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": true,
+          "gold": false,
+          "oil": true,
+          "crypto": true,
+          "note": "$2.50/lot round-turn on forex and metals; indices, commodities, crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "goat-funded-trader-2step-goat-50k",
+      "name": "2-Step GOAT Model 50K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 50000,
+        "priceUSD": 238,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": true,
+          "gold": false,
+          "oil": true,
+          "crypto": true,
+          "note": "$2.50/lot round-turn on forex and metals; indices, commodities, crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "goat-funded-trader-2step-goat-100k",
+      "name": "2-Step GOAT Model 100K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 100000,
+        "priceUSD": 438,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": true,
+          "gold": false,
+          "oil": true,
+          "crypto": true,
+          "note": "$2.50/lot round-turn on forex and metals; indices, commodities, crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "goat-funded-trader-2step-pro-200k",
+      "name": "2-Step PRO Model 200K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 200000,
+        "priceUSD": 1098,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": true,
+          "gold": false,
+          "oil": true,
+          "crypto": true,
+          "note": "$2.50/lot round-turn on forex and metals; indices, commodities, crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "goat-funded-trader-1step-100k",
+      "name": "1-Step No Time Limit 100K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 100000,
+        "priceUSD": 590,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 6
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": true,
+          "gold": false,
+          "oil": true,
+          "crypto": true,
+          "note": "$2.50/lot round-turn on forex and metals; indices, commodities, crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "goat-funded-trader-3step-100k",
+      "name": "3-Step Model 100K",
+      "primary": {
+        "steps": 3,
+        "capitalUSD": 100000,
+        "priceUSD": 263,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
+          },
+          {
+            "phaseNumber": 3,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": true,
+          "gold": false,
+          "oil": true,
+          "crypto": true,
+          "note": "$2.50/lot round-turn on forex and metals; indices, commodities, crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "goat-funded-trader-instant-100k",
+      "name": "Instant Pro 100K (No Evaluation)",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 100000,
+        "priceUSD": 858,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Triple Payday (5th, 15th, 25th)",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 0,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 6
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": true,
+          "gold": false,
+          "oil": true,
+          "crypto": true,
+          "note": "$2.50/lot round-turn on forex and metals; Goat Guard does NOT apply to Instant accounts"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "goat-funded-trader-paylater-100k",
+      "name": "Pay Later 100K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 100000,
+        "priceUSD": 598,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 4,
+            "dailyDrawdownPercentage": 0,
+            "maxDrawdownPercentage": 8
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 1,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": true,
+          "gold": false,
+          "oil": true,
+          "crypto": true,
+          "note": "$5 entry fee at signup, full fee due upon passing; 8% trailing max drawdown during evaluation"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    }
+  ]
+}

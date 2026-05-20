@@ -1,0 +1,251 @@
+{
+  "id": "ftmo",
+  "name": "FTMO",
+  "url": "https://ftmo.com",
+  "isFk": false,
+  "comment": "Nejstarší a nejdůvěryhodnejší prop firma na trhu, founded 2015 Praha. $500M+ vyplaceno, 40K+ Trustpilot recenzí, od 12/2025 vlastní OANDA. Přísnější pravidla ale nejvyšší kredibilita v oboru.",
+  "yearsInOperation": 11,
+  "hasMobileApp": true,
+  "languages": ["cs", "en", "de", "fr", "es", "it", "pl", "pt", "ru", "tr", "ar", "zh", "ja", "ko", "hu", "ro", "nl"],
+  "restrictedCountries": ["US", "RU", "IR", "KP", "SY", "BY"],
+  "platforms": ["MT4", "MT5", "cTrader", "DXtrade"],
+  "paymentMethods": ["Credit Card", "Crypto", "Bank Transfer", "Skrill"],
+  "education": {
+    "hasEducationForBeginners": true,
+    "features": ["FTMO Academy", "Webinars", "Workshops", "Performance Coach", "Trading Journal", "Statistical App", "Equity Simulator", "Mentor App"]
+  },
+  "popularity": {
+    "scoreFormula": {
+      "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+      "inputs": {
+        "TP_score": 4.8,
+        "pct_1star": 0.03,
+        "reddit_score": 0.85,
+        "reddit_score_note": "Estimated from community aggregators - direct Reddit scraping unavailable. FTMO consistently praised on r/Forex and r/PropFirms",
+        "red_flag_penalty": 0,
+        "red_flag_penalty_note": ""
+      },
+      "rawScore": 215.25,
+      "maxScore": 245.0,
+      "normalizedScore": 87.9
+    },
+    "overallPopularityScore": 87.9,
+    "trustpilot": {
+      "score": 4.8,
+      "reviewCount": 40000,
+      "pct1star": 0.03,
+      "lastUpdated": "2026-05",
+      "topPositiveThemes": ["Fast payouts", "Clear rules", "Fee refund on first payout", "MetriX dashboard", "Responsive support"],
+      "topNegativeThemes": ["Strict news trading restrictions", "Account breach disputes", "Not cheapest option", "Support slow during high volume"],
+      "verifiedPayoutProof": true,
+      "firmRespondsToReviews": true
+    },
+    "redFlagPenalty": {
+      "value": 0,
+      "reason": ""
+    },
+    "supportLevel": "Excellent",
+    "propFirmMatch": { "score": 4.8, "reviewCount": null },
+    "payoutStats": {
+      "totalPaidOut": "$500M+",
+      "avgPayoutUSD": null,
+      "highestPayoutUSD": null,
+      "approvalRate": null,
+      "avgApprovalTime": "1-3 business days"
+    }
+  },
+  "currentCampaigns": [],
+  "challenges": [
+    {
+      "challengeId": "ftmo-2step-10k",
+      "name": "FTMO Challenge 2-Step 10k",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 10000,
+        "priceUSD": 89,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 90,
+        "profitSplitNote": "Scales to 90% via Scaling Plan after 10% net profit over 4 months",
+        "payoutFrequency": "On-demand after 14 days",
+        "payoutSpeedHours": 72,
+        "phases": [
+          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 4, "maxTradingDays": null },
+          { "phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 4, "maxTradingDays": null }
+        ]
+      },
+      "details": {
+        "timeLimit": { "minTradingDaysPerPhase": 4, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true },
+        "newsTradingAllowed": false,
+        "newsTradingNote": "Restricted ±2 min around high-impact news on Standard funded account. No restriction during evaluation. Swing account has no news restrictions.",
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": { "forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on all instruments" },
+        "averagePayoutUSD": null,
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": true,
+        "loyaltyProgram": { "name": "FTMO Points", "type": "Points", "benefits": ["1 FTMO Point = $1.15 purchasing power for future challenges"] },
+        "origin": "Praha, Czech Republic",
+        "parentCompany": "FTMO (owns OANDA from Dec 2025)",
+        "languages": ["cs", "en", "de", "fr", "es", "it", "pl", "pt", "ru", "tr", "ar", "zh", "ja", "ko", "hu", "ro", "nl"],
+        "restrictedCountries": ["US", "RU", "IR", "KP", "SY", "BY"],
+        "yearsInOperation": 11,
+        "paymentMethods": ["Credit Card", "Crypto", "Bank Transfer", "Skrill"],
+        "rules": {
+          "scalingPlan": true,
+          "scalingNote": "25% capital increase every 4 months if 10% net profit achieved. Scales up to $2M.",
+          "maxAllocationScaled": 2000000,
+          "weekendHoldingAllowed": false,
+          "weekendHoldingNote": "Standard account must close trades over weekend. Swing account allows weekend holding.",
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "latencyArbitrageAllowed": false,
+          "consistencyRule": false,
+          "feeRefund": true,
+          "feeRefundNote": "Challenge fee refunded with first payout after passing 2-Step evaluation"
+        }
+      }
+    },
+    {
+      "challengeId": "ftmo-2step-25k",
+      "name": "FTMO Challenge 2-Step 25k",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 25000,
+        "priceUSD": 250,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 90,
+        "payoutFrequency": "On-demand after 14 days",
+        "payoutSpeedHours": 72,
+        "phases": [
+          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 4, "maxTradingDays": null },
+          { "phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 4, "maxTradingDays": null }
+        ]
+      }
+    },
+    {
+      "challengeId": "ftmo-2step-50k",
+      "name": "FTMO Challenge 2-Step 50k",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 50000,
+        "priceUSD": 345,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 90,
+        "payoutFrequency": "On-demand after 14 days",
+        "payoutSpeedHours": 72,
+        "phases": [
+          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 4, "maxTradingDays": null },
+          { "phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 4, "maxTradingDays": null }
+        ]
+      }
+    },
+    {
+      "challengeId": "ftmo-2step-100k",
+      "name": "FTMO Challenge 2-Step 100k",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 100000,
+        "priceUSD": 540,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 90,
+        "payoutFrequency": "On-demand after 14 days",
+        "payoutSpeedHours": 72,
+        "phases": [
+          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 4, "maxTradingDays": null },
+          { "phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 4, "maxTradingDays": null }
+        ]
+      }
+    },
+    {
+      "challengeId": "ftmo-2step-200k",
+      "name": "FTMO Challenge 2-Step 200k",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 200000,
+        "priceUSD": 1080,
+        "profitSplitPercentage": 80,
+        "profitSplitMax": 90,
+        "payoutFrequency": "On-demand after 14 days",
+        "payoutSpeedHours": 72,
+        "phases": [
+          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 4, "maxTradingDays": null },
+          { "phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 4, "maxTradingDays": null }
+        ]
+      }
+    },
+    {
+      "challengeId": "ftmo-1step-10k",
+      "name": "FTMO Challenge 1-Step 10k",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 10000,
+        "priceUSD": 79,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand after 14 days",
+        "payoutSpeedHours": 72,
+        "phases": [
+          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 10, "minTradingDays": null, "maxTradingDays": null }
+        ]
+      }
+    },
+    {
+      "challengeId": "ftmo-1step-25k",
+      "name": "FTMO Challenge 1-Step 25k",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 25000,
+        "priceUSD": null,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand after 14 days",
+        "payoutSpeedHours": 72,
+        "phases": [
+          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 10, "minTradingDays": null, "maxTradingDays": null }
+        ]
+      }
+    },
+    {
+      "challengeId": "ftmo-1step-50k",
+      "name": "FTMO Challenge 1-Step 50k",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 50000,
+        "priceUSD": null,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand after 14 days",
+        "payoutSpeedHours": 72,
+        "phases": [
+          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 10, "minTradingDays": null, "maxTradingDays": null }
+        ]
+      }
+    },
+    {
+      "challengeId": "ftmo-1step-100k",
+      "name": "FTMO Challenge 1-Step 100k",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 100000,
+        "priceUSD": null,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand after 14 days",
+        "payoutSpeedHours": 72,
+        "phases": [
+          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 10, "minTradingDays": null, "maxTradingDays": null }
+        ]
+      }
+    },
+    {
+      "challengeId": "ftmo-1step-200k",
+      "name": "FTMO Challenge 1-Step 200k",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 200000,
+        "priceUSD": 999,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "On-demand after 14 days",
+        "payoutSpeedHours": 72,
+        "phases": [
+          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 10, "minTradingDays": null, "maxTradingDays": null }
+        ]
+      }
+    }
+  ]
+}

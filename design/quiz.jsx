@@ -111,7 +111,7 @@ function Quiz({ initialAnswers, onComplete, onClose }) {
           </div>
         </div>
 
-        {/* Footer — back + skip link */}
+        {/* Footer — back button only */}
         <div className="quiz-footer">
           <button
             className="quiz-back"
