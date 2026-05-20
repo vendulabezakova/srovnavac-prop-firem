@@ -47,6 +47,18 @@ function App() {
     setQuizOpen(true);
     window.scrollTo({ top: 0 });
   }
+  // X v quizu: pokud user ještě nic nevyplnil, uložíme prázdné {} aby se obsah
+  // mohl vyrenderovat s nepersonalizovaným žebříčkem. Revisit (už něco vyplnil)
+  // jen zavře overlay a původní odpovědi zůstanou. Skip-out je trvalý design
+  // požadavek — viz memory `feedback-skippable-quiz`.
+  function handleSkipQuiz() {
+    if (!answers) {
+      const empty = {};
+      window.saveQuiz(empty);
+      setAnswers(empty);
+    }
+    setQuizOpen(false);
+  }
 
   const sizeOptions = window.ACCOUNT_SIZES.map(s => ({ value: s, label: `$${(s/1000)}K` }));
 
@@ -139,12 +151,12 @@ function App() {
           </footer>
         )}
 
-        {/* Quiz overlay */}
+        {/* Quiz overlay — onClose vždy předán, viz handleSkipQuiz */}
         {quizOpen && (
           <Quiz
             initialAnswers={answers || {}}
             onComplete={handleComplete}
-            onClose={answers ? () => setQuizOpen(false) : null}
+            onClose={handleSkipQuiz}
           />
         )}
 

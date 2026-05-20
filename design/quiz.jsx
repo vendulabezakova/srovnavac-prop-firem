@@ -1,6 +1,7 @@
-// Quiz — 7-otázkový onboarding overlay který se nedá přeskočit.
-// Po dokončení posílá answers do parent přes onComplete(answers).
-// Stav přežije refresh přes localStorage.
+// Quiz — onboarding overlay. Po dokončení posílá answers do parent přes onComplete(answers).
+// X v pravém horním rohu umožňuje quiz PŘESKOČIT (žebříček není personalizovaný, ale
+// user se dostane na obsah). Skip-out je trvalý design požadavek — neodstraňovat ani
+// při redesignu, viz memory `feedback-skippable-quiz`. Stav přežije refresh přes localStorage.
 
 const QUIZ_STORAGE = 'srovnavac_quiz_v1';
 
@@ -59,7 +60,21 @@ function Quiz({ initialAnswers, onComplete, onClose }) {
 
       <div className="quiz-card">
 
-        {/* Header — progress + close */}
+        {/* X — vždy viditelné, umožňuje quiz přeskočit / zavřít. */}
+        {onClose && (
+          <button
+            className="quiz-close-x"
+            onClick={onClose}
+            aria-label="Zavřít / přeskočit dotazník"
+            type="button"
+          >
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M1 1L13 13M13 1L1 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+          </button>
+        )}
+
+        {/* Header — progress + meta */}
         <div className="quiz-header">
           <div className="quiz-progress-bar">
             {questions.map((_, i) => (
@@ -96,7 +111,7 @@ function Quiz({ initialAnswers, onComplete, onClose }) {
           </div>
         </div>
 
-        {/* Footer — back button only */}
+        {/* Footer — back + skip link */}
         <div className="quiz-footer">
           <button
             className="quiz-back"
@@ -107,15 +122,15 @@ function Quiz({ initialAnswers, onComplete, onClose }) {
             ← Zpět
           </button>
           <div className="quiz-foot-note">
-            Dotazník nelze přeskočit · slouží k seřazení firem podle <strong>tvých</strong> priorit
+            Personalizujeme žebříček podle <strong>tvých</strong> priorit · můžeš ale i přeskočit
           </div>
           {onClose && (
             <button
               className="quiz-close-link"
               onClick={onClose}
-              aria-label="Zavřít dotazník"
+              aria-label={Object.keys(answers).length === total ? 'Zavřít' : 'Přeskočit dotazník'}
             >
-              {Object.keys(answers).length === total ? 'Hotovo' : 'Skrýt'}
+              {Object.keys(answers).length === total ? 'Hotovo' : 'Přeskočit →'}
             </button>
           )}
         </div>
