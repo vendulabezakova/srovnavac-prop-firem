@@ -386,10 +386,6 @@ function ChallengeRow({ firm, challenge, accountSize, chLeaders, isBest }) {
 
       <div className="ch-params">
         <span className="ch-p">
-          <span className="cp-l">Steps</span>
-          <span className="cp-v">{ch.steps === 0 ? 'Instant' : ch.steps}</span>
-        </span>
-        <span className="ch-p">
           <span className="cp-l">P. target</span>
           <span className="cp-v">{targetText}</span>
         </span>
@@ -583,6 +579,18 @@ function DetailPanel({ firm, reasons }) {
 
       <div className="detail-group">
         <div className="detail-h">Trading podmínky (per firma)</div>
+        <div className="detail-row">
+          <span className="dr-label">Počet fází výzev</span>
+          <span className="dr-value">
+            <span className="tag-row">
+              {[...new Set((firm.challenges || []).map((c) => c.steps))]
+                .sort((a, b) => a - b)
+                .map((s) =>
+                  <span key={s} className="t">{s === 0 ? 'Instant' : s === 1 ? '1 Step' : s + ' Steps'}</span>
+                )}
+            </span>
+          </span>
+        </div>
         <div className="detail-row"><span className="dr-label">Time limit (min · max)</span><span className="dr-value">{timeLimit}</span></div>
         <div className="detail-row"><span className="dr-label">News trading</span><span className="dr-value">{yesNo(firm.newsTrading)}</span></div>
         <div className="detail-row"><span className="dr-label">Maximální páka</span><span className="dr-value">{firm.maxLeverage}</span></div>
