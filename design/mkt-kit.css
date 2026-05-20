@@ -36,7 +36,6 @@ a:hover { opacity: .8; }
 .accent-gradient { background: var(--mkt-gradient); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
-@media (max-width: 768px) { .container { padding: 0 16px; } }
 .section { padding: 100px 0; }
 @media (max-width: 768px){ .section { padding: 64px 0; } }
 
