@@ -1,4 +1,5 @@
-// Mock data for prop trading firms — placeholder values until Tým 1 ships real JSON.
+// Prop firm data. Fintokei values are sourced from fintokei-raw.json (Tým 1, 05/2026).
+// Other firms remain mock placeholders.
 
 // Account sizes (USD) available across all firms
 window.ACCOUNT_SIZES = [10000, 25000, 50000, 100000, 200000];
@@ -11,49 +12,52 @@ window.priceFor = function (firm, size) {
 
 window.PROP_FIRMS = [
   {
+    // ── FINTOKEI — data ze zdroje fintokei-raw.json (Tým 1, 05/2026) ──────────
+    // Reprezentativní challenge: ProTrader (2-fázová). Ceny dle dostupných velikostí;
+    // $25k mapováno na nejbližší ProTrader 20k ($159).
     id: 'fintokei',
     name: 'Fintokei',
-    initials: 'FT',
-    tagline: 'by Purple Technology',
+    initials: 'FK',
+    tagline: 'Purple Group · Brno + Tokyo',
     brand: { from: '#6B03E5', to: '#F815B3' },
     // ── Hlavní řádek ───────────────────────────────────────
-    prices:           { 10000: 49,  25000: 99,  50000: 189, 100000: 349, 200000: 599 },
-    challengePrice:   99,        // legacy / fallback (= $25k price)
-    profitTargetP1:   8,         // % phase 1
-    steps:            1,         // počet fází
-    maxDailyDD:       5,         // % daily loss
-    maxOverallDD:     10,        // % overall / max loss
-    payoutSplit:      90,        // %
-    payoutFreq:       'Na vyžádání',
-    firstPayoutDays:  7,         // payout speed (dní od pasování)
-    popularity:       78,        // 0-100
-    supportRating:    4.8,       // /5
-    supportNote:      '24/7 chat · CZ/EN/JP',
-    activeCampaign:   '−25 % na ProTrader (do 31. 5.)',
+    prices:           { 10000: 99, 25000: 159, 50000: 319, 100000: 529, 200000: 1149 },
+    challengePrice:   159,       // ProTrader 20k (nejbližší k $25k)
+    profitTargetP1:   8,         // ProTrader phase 1
+    steps:            2,         // ProTrader = 2-fázová
+    maxDailyDD:       5,
+    maxOverallDD:     10,
+    payoutSplit:      80,        // ProTrader fixed split
+    payoutFreq:       'Bi-weekly',
+    firstPayoutDays:  7,         // bi-weekly, approval ~2.8 sec
+    popularity:       82,        // overallPopularityScore 81.9 (Trustpilot 4.5 · 1137 reviews)
+    supportRating:    4.5,       // Trustpilot score
+    supportNote:      '24/7 chat · CZ/EN/JA/IT',
+    activeCampaign:   '−20 % na vše (kód NEW20)',
     // ── Rozbalovací detail ─────────────────────────────────
-    timeMin:          0,         // min trading days (0 = žádný)
-    timeMax:          null,      // max dní (null = neomezeno)
+    timeMin:          3,         // minTradingDaysPerPhase
+    timeMax:          null,      // noTimeLimitOnFundedAccount
     newsTrading:      true,
-    maxLeverage:      '1:100',
-    avgPayout:        2400,      // USD
-    robotsAllowed:    true,
+    maxLeverage:      '1:100',   // ProTrader forex/gold
+    avgPayout:        3881,      // avgPayoutUSD (payoutStats)
+    robotsAllowed:    true,      // vlastní/upravené EA; komerční a copy trading zakázány
     mobileApp:        true,
-    platforms:        ['MT4', 'MT5', 'cTrader'],
-    loyaltyProgram:   true,
-    foundedYear:      2023,
-    paymentMethods:   ['Karta', 'Krypto', 'Wire', 'Apple Pay'],
-    restrictedCountries: ['USA', 'Severní Korea', 'Írán'],
-    // ── Legacy: pro section-attributes & section-news ──────
-    phases:           1,
-    phasesLabel:      '1-fázová',
-    refundable:       true,
+    platforms:        ['TradingView', 'MT5', 'cTrader'],
+    loyaltyProgram:   true,      // XP-based: +25% kapitál, free challange účty až $100K
+    foundedYear:      2023,      // yearsInOperation: 3
+    paymentMethods:   ['Visa/JCB', 'Apple Pay', 'Google Pay', 'Krypto', 'SEPA', 'JPY transfer', 'Walletory'],
+    restrictedCountries: ['US', 'IN', 'RU', 'BY', 'KP', 'IR', 'MM', 'SY', 'YE', 'CU', 'VE', 'SD', 'SS', 'AF', 'SO', 'IQ'],
+    // ── Pro section-attributes & section-news ──────────────
+    phases:           2,
+    phasesLabel:      '2-fázová',
+    refundable:       false,
     weekendHolding:   true,
-    regions:          'Globální',
-    supportLangs:     8,
+    regions:          'Globální (mimo US/IN/RU)',
+    supportLangs:     4,         // cs, en, ja, it
     sentiment:        'positive',
-    sentimentScore:   78,
-    sentimentSummary: 'Traders chválí rychlé výplaty a japonsky-orientovanou podporu. Diskuse o nových pravidlech ProTrader Swing.',
-    news: { headline: 'Spuštěn ProTrader Swing — držení pozic přes víkend', date: '15. 5. 2026', tag: 'Produkt' }
+    sentimentScore:   82,
+    sentimentSummary: 'Traders chválí sub-sekundové výplaty (€29M+/rok) a XP loyalty program. Výhrady k Consistency Rules a permanentním banům bez odvolání.',
+    news: { headline: 'Spuštěn ProTrader Swing 50k — DD počítán z balance, ne equity', date: '15. 5. 2026', tag: 'Produkt' }
   },
   {
     id: 'ftmo',
