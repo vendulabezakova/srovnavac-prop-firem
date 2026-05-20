@@ -27,47 +27,50 @@ window.formatPayoutSpeed = function (firm) {
 
 window.PROP_FIRMS = [
   {
+    // ── FINTOKEI — hodnoty ze design/fintokei-raw.json (Tým 1, 05/2026) ──────
+    // Reprezentativní challenge: ProTrader (2-fázová). Pro $25k mapujeme na
+    // nejbližší dostupný PT 20k ($159). Surová data zůstávají v sidecar JSONu.
     id: 'fintokei',
     name: 'Fintokei',
-    initials: 'FT',
-    hq: 'Česko',
-    tagline: 'Praha · est. 2023',
+    initials: 'FK',
+    hq: 'Česko/Japonsko',
+    tagline: 'Purple Group · Brno + Tokyo, est. 2023',
     brand: { from: '#6B03E5', to: '#F815B3' },
     // — hlavní řádek —
-    prices:           { 10000: 49,  25000: 99,  50000: 189, 100000: 349, 200000: 599 },
-    challengePrice:   99,
-    profitTargetP1:   8,
-    profitTargetP2:   null,           // 1-fázová
-    steps:            1,
+    prices:           { 10000: 99,  25000: 159, 50000: 319, 100000: 529, 200000: 1149 },
+    challengePrice:   159,            // ProTrader 20k (nejbližší k $25k)
+    profitTargetP1:   8,              // ProTrader phase 1
+    profitTargetP2:   6,              // ProTrader phase 2
+    steps:            2,              // ProTrader = 2-fázová
     maxDailyDD:       5,
     maxOverallDD:     10,
-    payoutSplit:      90,
-    payoutFreq:       'Na vyžádání',
-    payoutHours:      24,             // do 24h od žádosti
-    payoutRaw:        'Do 24 h',
-    popularity:       78,
-    popularityNote:   'Trustpilot 4.7 (520 recenzí), Reddit pozitivní, JP Twitter aktivní',
-    supportRating:    4.8,
-    supportNote:      '24/7 chat',
-    campaign:         { code: 'NEW20', label: '−20 % na první výzvu', url: 'https://fintokei.com/promo/new20', discount: 20 },
+    payoutSplit:      80,             // ProTrader fixed 80 %
+    payoutFreq:       'Bi-weekly',
+    payoutHours:      3,              // payoutSpeedHours per raw JSON
+    payoutRaw:        '~3 h od žádosti',
+    popularity:       82,             // overallPopularityScore 81.9 (Trustpilot 4.5 · 1137 reviews)
+    popularityNote:   'Trustpilot 4.5 (1 137 recenzí), €29M+ vyplaceno za 12 měsíců, sub-sekundové schvalování',
+    supportRating:    4.5,            // Trustpilot score
+    supportNote:      '24/7 chat · CZ/EN/JA/IT',
+    campaign:         { code: 'NEW20', label: '−20 % na všechny nové challenge', url: 'https://www.fintokei.com', discount: 20 },
     // — detail —
-    timeMin:          0,
-    timeMax:          null,
+    timeMin:          3,              // ProTrader: minTradingDaysPerPhase
+    timeMax:          null,           // ProTrader: maxTradingDaysPerPhase: 0 (unlimited)
     newsTrading:      true,
-    maxLeverage:      '1:100',
-    commissionFree:   ['Forex', 'Indexy', 'Krypto'],
-    avgPayout:        2400,
-    robotsAllowed:    true,
+    maxLeverage:      '1:100',        // forex/gold ProTrader; 1:50 indices, 1:20 ostatní
+    commissionFree:   [],             // ProTrader: $6/round-lot komise na všech nástrojích
+    avgPayout:        3881,           // avgPayoutUSD z payoutStats
+    robotsAllowed:    true,           // vlastní/upravené EA; komerční plug-and-play a copy trading zakázány
     mobileApp:        true,
-    platforms:        ['MT4', 'MT5', 'cTrader'],
-    loyaltyProgram:   true,
+    platforms:        ['TradingView', 'MT5', 'cTrader'],
+    loyaltyProgram:   true,           // XP-based: +25 % kapitál, free challenge účty až $100K
     foundedYear:      2023,
-    webLanguages:     ['CS', 'SK', 'EN', 'JP'],
-    supportLanguages: ['CS', 'SK', 'EN', 'JP'],
-    restrictedCountries: ['USA', 'Severní Korea', 'Írán'],
-    paymentMethods:   ['Wire', 'Krypto', 'Wise', 'Karta'],
-    education:        'academy',      // none|blog|videos|academy
-    news: { headline: 'Spuštěn ProTrader Swing — držení pozic přes víkend', date: '15. 5. 2026', tag: 'Produkt' }
+    webLanguages:     ['CS', 'EN', 'JA', 'IT'],
+    supportLanguages: ['CS', 'EN', 'JA', 'IT'],
+    restrictedCountries: ['USA', 'Indie', 'Rusko', 'Bělorusko', 'KLDR', 'Írán', 'Myanmar', 'Sýrie', 'Jemen', 'Kuba', 'Venezuela', 'Súdán', 'Jižní Súdán', 'Afghánistán', 'Somálsko', 'Irák'],
+    paymentMethods:   ['Visa/Mastercard/JCB', 'Apple Pay', 'Google Pay', 'Krypto (BTC, USDT, SOL)', 'SEPA', 'JPY bank transfer', 'Walletory'],
+    education:        'academy',      // 100+ videí, denní zpravodajství, certifikáty, free trial účet
+    news: { headline: 'Spuštěn ProTrader Swing 50k — DD počítán z balance, ne equity', date: '15. 5. 2026', tag: 'Produkt' }
   },
   {
     id: 'ftmo',
