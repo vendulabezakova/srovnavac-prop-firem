@@ -1,42 +1,42 @@
 {
-  "id": "fundingpips",
-  "name": "FundingPips",
-  "url": "https://fundingpips.com",
+  "id": "fortraders",
+  "name": "For Traders",
+  "url": "https://www.fortraders.com",
   "isFk": false,
-  "comment": "Dubai-based prop trading firm founded in 2022 by Khaled Ayesh under FP Funding LLC / Funding Pips Services Ltd. Reports $250M+ paid to 3M traders across 1-Step, 2-Step Standard, 2-Step Pro and Zero (Instant Funding) programs.",
-  "yearsInOperation": 4,
+  "comment": "Dubai-based proprietary trading firm founded in 2023 offering Forex, Futures and Crypto evaluation challenges with up to $100K virtual capital (scaling up to $300K via Premium Program). Notable for its in-house AI Coach, 48-hour payout guarantee and bi-weekly rewards.",
+  "yearsInOperation": 3,
   "hasMobileApp": true,
-  "languages": ["en", "ar", "es", "fr", "hi", "nl", "ur"],
-  "restrictedCountries": ["US", "IR", "AE", "VN", "KP", "SY", "CU"],
-  "platforms": ["MT5", "cTrader", "Match-Trader"],
-  "paymentMethods": ["Crypto", "Rise"],
+  "languages": ["en", "es", "cs"],
+  "restrictedCountries": ["PK", "IR", "SY", "MM", "BD", "KP", "RU", "BY", "CU", "LB", "LY", "SD"],
+  "platforms": ["MT5", "cTrader", "TradeLocker"],
+  "paymentMethods": ["Credit Card", "Crypto"],
   "education": {
     "hasEducationForBeginners": true,
-    "features": ["Blog articles", "Trading guides", "Multilingual 24/7 support", "AI support bot"]
+    "features": ["AI Coach trading journal analysis", "Blog & educational articles", "In-house trading dashboard with insights"]
   },
   "popularity": {
     "scoreFormula": {
       "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
       "inputs": {
-        "TP_score": 0.9,
-        "pct_1star": 0.08,
-        "reddit_score": 0.75,
-        "reddit_score_note": "Estimated from community aggregators (proptradingvibes, propfirmmatch) and search summaries - majority-positive sentiment with frequent payout proofs ($250M+ paid via Rise, sub-24h payouts widely reported); some complaints about rule-based account closures.",
+        "TP_score": 0.88,
+        "pct_1star": 0.13,
+        "reddit_score": 0.55,
+        "reddit_score_note": "Estimated from community aggregator summaries and Trustpilot signal - direct Reddit scraping unavailable. Mixed sentiment: positive payout reports balanced by complaints about KYC-related account terminations after withdrawals.",
         "red_flag_penalty": 0,
-        "red_flag_penalty_note": "No documented regulator warnings or systemic non-payment pattern. Negative reviews concentrate on rule breaches (DLL/max drawdown) rather than scam allegations; firm responds to ~99% of negative reviews."
+        "red_flag_penalty_note": "No regulator action, not on industry blacklists, firm responds to ~94% of negative reviews; complaints exist but no documented systemic non-payment pattern."
       },
-      "rawScore": 74.0,
+      "rawScore": 68.0,
       "maxScore": 245.0,
-      "normalizedScore": 30.2
+      "normalizedScore": 27.7
     },
-    "overallPopularityScore": 30.2,
+    "overallPopularityScore": 27.7,
     "trustpilot": {
-      "score": 4.5,
-      "reviewCount": 52648,
-      "pct1star": 0.08,
+      "score": 4.4,
+      "reviewCount": 1000,
+      "pct1star": 0.13,
       "lastUpdated": "2026-05",
-      "topPositiveThemes": ["fast payouts under 24h", "responsive multilingual support", "clear rule documentation", "broad challenge selection"],
-      "topNegativeThemes": ["account closures over rule breaches", "rule complexity confusion", "KYC delays"],
+      "topPositiveThemes": ["responsive customer support", "fast bi-weekly payouts", "helpful named agents (Juan, Michal, Tony)", "smooth first payout"],
+      "topNegativeThemes": ["account locked after payout request", "KYC verification rejections", "alleged bot-trading accusations", "drawdown recalculation disputes"],
       "verifiedPayoutProof": true,
       "firmRespondsToReviews": true
     },
@@ -44,39 +44,59 @@
       "value": 0,
       "reason": ""
     },
-    "supportLevel": "Excellent",
+    "supportLevel": "Good",
     "payoutStats": {
-      "totalPaidOut": "$250M+",
+      "totalPaidOut": "$9M+",
       "avgPayoutUSD": null,
       "highestPayoutUSD": null,
       "approvalRate": null,
-      "avgApprovalTime": "<24h"
+      "avgApprovalTime": "48 hours"
     }
   },
   "currentCampaigns": [
     {
-      "name": "20% OFF promo code",
-      "description": "Discount codes (e.g. VIBES) provide 20% off any challenge plan",
-      "discount": "20%"
+      "name": "Buy 1 Get 1 Free + 30% Discount",
+      "code": "MAYBOGO",
+      "description": "Buy one challenge, get a second free plus 30% off"
+    },
+    {
+      "name": "50% Discount on Instant Account",
+      "code": "NEWINSTANT",
+      "description": "50% off Instant funding account"
+    },
+    {
+      "name": "New Customer Discount",
+      "code": "NEW20",
+      "description": "20% off for new customers"
+    },
+    {
+      "name": "Existing Customer Discount",
+      "code": "TRADE15",
+      "description": "15% off for existing customers"
+    },
+    {
+      "name": "Euro Trading Cup",
+      "code": null,
+      "description": "Trading competition with prize pool of $5,000 / $3,000 / $2,000"
     }
   ],
   "challenges": [
     {
-      "challengeId": "fundingpips-1step-5k",
-      "name": "1-Step Challenge 5K",
+      "challengeId": "fortraders-1step-6k",
+      "name": "Fast Challenge (1-Step) - $6K",
       "primary": {
         "steps": 1,
-        "capitalUSD": 5000,
-        "priceUSD": 59,
+        "capitalUSD": 6000,
+        "priceUSD": 49,
         "profitSplitPercentage": 80,
-        "payoutFrequency": "Weekly",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
+            "profitTargetPercentage": 9,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
           }
         ]
       },
@@ -87,42 +107,42 @@
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:125",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
-          "consistencyRule": false
+          "consistencyRule": true
         }
       }
     },
     {
-      "challengeId": "fundingpips-1step-10k",
-      "name": "1-Step Challenge 10K",
+      "challengeId": "fortraders-1step-15k",
+      "name": "Fast Challenge (1-Step) - $15K",
       "primary": {
         "steps": 1,
-        "capitalUSD": 10000,
-        "priceUSD": 89,
+        "capitalUSD": 15000,
+        "priceUSD": 99,
         "profitSplitPercentage": 80,
-        "payoutFrequency": "Weekly",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
+            "profitTargetPercentage": 9,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
           }
         ]
       },
@@ -133,42 +153,42 @@
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:125",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
-          "consistencyRule": false
+          "consistencyRule": true
         }
       }
     },
     {
-      "challengeId": "fundingpips-1step-25k",
-      "name": "1-Step Challenge 25K",
+      "challengeId": "fortraders-1step-25k",
+      "name": "Fast Challenge (1-Step) - $25K",
       "primary": {
         "steps": 1,
         "capitalUSD": 25000,
-        "priceUSD": 189,
+        "priceUSD": 179,
         "profitSplitPercentage": 80,
-        "payoutFrequency": "Weekly",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
+            "profitTargetPercentage": 9,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
           }
         ]
       },
@@ -179,42 +199,42 @@
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:125",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
-          "consistencyRule": false
+          "consistencyRule": true
         }
       }
     },
     {
-      "challengeId": "fundingpips-1step-50k",
-      "name": "1-Step Challenge 50K",
+      "challengeId": "fortraders-1step-50k",
+      "name": "Fast Challenge (1-Step) - $50K",
       "primary": {
         "steps": 1,
         "capitalUSD": 50000,
-        "priceUSD": 299,
+        "priceUSD": 249,
         "profitSplitPercentage": 80,
-        "payoutFrequency": "Weekly",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
+            "profitTargetPercentage": 9,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
           }
         ]
       },
@@ -225,42 +245,42 @@
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:125",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
-          "consistencyRule": false
+          "consistencyRule": true
         }
       }
     },
     {
-      "challengeId": "fundingpips-1step-100k",
-      "name": "1-Step Challenge 100K",
+      "challengeId": "fortraders-1step-100k",
+      "name": "Fast Challenge (1-Step) - $100K",
       "primary": {
         "steps": 1,
         "capitalUSD": 100000,
-        "priceUSD": 555,
+        "priceUSD": 469,
         "profitSplitPercentage": 80,
-        "payoutFrequency": "Weekly",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
+            "profitTargetPercentage": 9,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
           }
         ]
       },
@@ -271,47 +291,47 @@
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:125",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
-          "consistencyRule": false
+          "consistencyRule": true
         }
       }
     },
     {
-      "challengeId": "fundingpips-2step-5k",
-      "name": "2-Step Standard Challenge 5K",
+      "challengeId": "fortraders-2step-6k",
+      "name": "Classic Challenge (2-Step) - $6K",
       "primary": {
         "steps": 2,
-        "capitalUSD": 5000,
-        "priceUSD": 36,
+        "capitalUSD": 6000,
+        "priceUSD": null,
         "profitSplitPercentage": 80,
         "payoutFrequency": "Bi-weekly",
-        "payoutSpeedHours": 24,
+        "payoutSpeedHours": 48,
         "phases": [
           {
             "phaseNumber": 1,
             "profitTargetPercentage": 8,
-            "dailyDrawdownPercentage": 5,
+            "dailyDrawdownPercentage": 4,
             "maxDrawdownPercentage": 10
           },
           {
             "phaseNumber": 2,
             "profitTargetPercentage": 5,
-            "dailyDrawdownPercentage": 5,
+            "dailyDrawdownPercentage": 4,
             "maxDrawdownPercentage": 10
           }
         ]
@@ -322,48 +342,48 @@
           "maxTradingDaysPerPhase": null,
           "noTimeLimitOnFundedAccount": true
         },
-        "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:125",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
-          "consistencyRule": false
+          "consistencyRule": true
         }
       }
     },
     {
-      "challengeId": "fundingpips-2step-10k",
-      "name": "2-Step Standard Challenge 10K",
+      "challengeId": "fortraders-2step-15k",
+      "name": "Classic Challenge (2-Step) - $15K",
       "primary": {
         "steps": 2,
-        "capitalUSD": 10000,
-        "priceUSD": 59,
+        "capitalUSD": 15000,
+        "priceUSD": null,
         "profitSplitPercentage": 80,
         "payoutFrequency": "Bi-weekly",
-        "payoutSpeedHours": 24,
+        "payoutSpeedHours": 48,
         "phases": [
           {
             "phaseNumber": 1,
             "profitTargetPercentage": 8,
-            "dailyDrawdownPercentage": 5,
+            "dailyDrawdownPercentage": 4,
             "maxDrawdownPercentage": 10
           },
           {
             "phaseNumber": 2,
             "profitTargetPercentage": 5,
-            "dailyDrawdownPercentage": 5,
+            "dailyDrawdownPercentage": 4,
             "maxDrawdownPercentage": 10
           }
         ]
@@ -374,48 +394,48 @@
           "maxTradingDaysPerPhase": null,
           "noTimeLimitOnFundedAccount": true
         },
-        "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:125",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
-          "consistencyRule": false
+          "consistencyRule": true
         }
       }
     },
     {
-      "challengeId": "fundingpips-2step-25k",
-      "name": "2-Step Standard Challenge 25K",
+      "challengeId": "fortraders-2step-25k",
+      "name": "Classic Challenge (2-Step) - $25K",
       "primary": {
         "steps": 2,
         "capitalUSD": 25000,
-        "priceUSD": 159,
+        "priceUSD": null,
         "profitSplitPercentage": 80,
         "payoutFrequency": "Bi-weekly",
-        "payoutSpeedHours": 24,
+        "payoutSpeedHours": 48,
         "phases": [
           {
             "phaseNumber": 1,
             "profitTargetPercentage": 8,
-            "dailyDrawdownPercentage": 5,
+            "dailyDrawdownPercentage": 4,
             "maxDrawdownPercentage": 10
           },
           {
             "phaseNumber": 2,
             "profitTargetPercentage": 5,
-            "dailyDrawdownPercentage": 5,
+            "dailyDrawdownPercentage": 4,
             "maxDrawdownPercentage": 10
           }
         ]
@@ -426,174 +446,18 @@
           "maxTradingDaysPerPhase": null,
           "noTimeLimitOnFundedAccount": true
         },
-        "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:125",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": false
-        }
-      }
-    },
-    {
-      "challengeId": "fundingpips-2step-50k",
-      "name": "2-Step Standard Challenge 50K",
-      "primary": {
-        "steps": 2,
-        "capitalUSD": 50000,
-        "priceUSD": 289,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "Bi-weekly",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 8,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          },
-          {
-            "phaseNumber": 2,
-            "profitTargetPercentage": 5,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": null,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": true,
-          "gold": false,
-          "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
-        },
-        "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": false
-        }
-      }
-    },
-    {
-      "challengeId": "fundingpips-2step-100k",
-      "name": "2-Step Standard Challenge 100K",
-      "primary": {
-        "steps": 2,
-        "capitalUSD": 100000,
-        "priceUSD": 529,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "Bi-weekly",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 8,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          },
-          {
-            "phaseNumber": 2,
-            "profitTargetPercentage": 5,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": null,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": true,
-          "gold": false,
-          "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
-        },
-        "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": false
-        }
-      }
-    },
-    {
-      "challengeId": "fundingpips-2steppro-10k",
-      "name": "2-Step Pro Challenge 10K",
-      "primary": {
-        "steps": 2,
-        "capitalUSD": 10000,
-        "priceUSD": 79,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "Weekly",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 6,
-            "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
-          },
-          {
-            "phaseNumber": 2,
-            "profitTargetPercentage": 6,
-            "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": null,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": true,
-          "gold": false,
-          "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
-        },
-        "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
@@ -604,48 +468,274 @@
       }
     },
     {
-      "challengeId": "fundingpips-2steppro-25k",
-      "name": "2-Step Pro Challenge 25K",
+      "challengeId": "fortraders-2step-50k",
+      "name": "Classic Challenge (2-Step) - $50K",
       "primary": {
         "steps": 2,
+        "capitalUSD": 50000,
+        "priceUSD": null,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 5,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:125",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "$2 per lot commission applies"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "fortraders-2step-100k",
+      "name": "Classic Challenge (2-Step) - $100K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 100000,
+        "priceUSD": null,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 5,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:125",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "$2 per lot commission applies"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "fortraders-3step-6k",
+      "name": "Strike Challenge (3-Step) - $6K",
+      "primary": {
+        "steps": 3,
+        "capitalUSD": 6000,
+        "priceUSD": null,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 4,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 5
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 4,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 5
+          },
+          {
+            "phaseNumber": 3,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 5
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 60,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:125",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "$2 per lot commission applies"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "fortraders-3step-15k",
+      "name": "Strike Challenge (3-Step) - $15K",
+      "primary": {
+        "steps": 3,
+        "capitalUSD": 15000,
+        "priceUSD": null,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 4,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 5
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 4,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 5
+          },
+          {
+            "phaseNumber": 3,
+            "profitTargetPercentage": 6,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 5
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 60,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:125",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "$2 per lot commission applies"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "fortraders-3step-25k",
+      "name": "Strike Challenge (3-Step) - $25K",
+      "primary": {
+        "steps": 3,
         "capitalUSD": 25000,
-        "priceUSD": 199,
+        "priceUSD": null,
         "profitSplitPercentage": 80,
-        "payoutFrequency": "Weekly",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 4,
             "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
+            "maxDrawdownPercentage": 5
           },
           {
             "phaseNumber": 2,
+            "profitTargetPercentage": 4,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 5
+          },
+          {
+            "phaseNumber": 3,
             "profitTargetPercentage": 6,
             "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
+            "maxDrawdownPercentage": 5
           }
         ]
       },
       "details": {
         "timeLimit": {
           "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": null,
+          "maxTradingDaysPerPhase": 60,
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:125",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
@@ -656,48 +746,54 @@
       }
     },
     {
-      "challengeId": "fundingpips-2steppro-50k",
-      "name": "2-Step Pro Challenge 50K",
+      "challengeId": "fortraders-3step-50k",
+      "name": "Strike Challenge (3-Step) - $50K",
       "primary": {
-        "steps": 2,
+        "steps": 3,
         "capitalUSD": 50000,
-        "priceUSD": 359,
+        "priceUSD": null,
         "profitSplitPercentage": 80,
-        "payoutFrequency": "Weekly",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 4,
             "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
+            "maxDrawdownPercentage": 5
           },
           {
             "phaseNumber": 2,
+            "profitTargetPercentage": 4,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 5
+          },
+          {
+            "phaseNumber": 3,
             "profitTargetPercentage": 6,
             "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
+            "maxDrawdownPercentage": 5
           }
         ]
       },
       "details": {
         "timeLimit": {
           "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": null,
+          "maxTradingDaysPerPhase": 60,
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:125",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
@@ -708,48 +804,54 @@
       }
     },
     {
-      "challengeId": "fundingpips-2steppro-100k",
-      "name": "2-Step Pro Challenge 100K",
+      "challengeId": "fortraders-3step-100k",
+      "name": "Strike Challenge (3-Step) - $100K",
       "primary": {
-        "steps": 2,
+        "steps": 3,
         "capitalUSD": 100000,
-        "priceUSD": 599,
+        "priceUSD": null,
         "profitSplitPercentage": 80,
-        "payoutFrequency": "Weekly",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 4,
             "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
+            "maxDrawdownPercentage": 5
           },
           {
             "phaseNumber": 2,
+            "profitTargetPercentage": 4,
+            "dailyDrawdownPercentage": 3,
+            "maxDrawdownPercentage": 5
+          },
+          {
+            "phaseNumber": 3,
             "profitTargetPercentage": 6,
             "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
+            "maxDrawdownPercentage": 5
           }
         ]
       },
       "details": {
         "timeLimit": {
           "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": null,
+          "maxTradingDaysPerPhase": 60,
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:125",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
@@ -760,252 +862,199 @@
       }
     },
     {
-      "challengeId": "fundingpips-2steppro-200k",
-      "name": "2-Step Pro Challenge 200K",
-      "primary": {
-        "steps": 2,
-        "capitalUSD": 200000,
-        "priceUSD": 998,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "Weekly",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 6,
-            "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
-          },
-          {
-            "phaseNumber": 2,
-            "profitTargetPercentage": 6,
-            "dailyDrawdownPercentage": 3,
-            "maxDrawdownPercentage": 6
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": null,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": true,
-          "gold": false,
-          "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
-        },
-        "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "fundingpips-zero-5k",
-      "name": "Zero (Instant Funding) 5K",
+      "challengeId": "fortraders-instant-6k",
+      "name": "Instant Funding - $6K",
       "primary": {
         "steps": 0,
-        "capitalUSD": 5000,
-        "priceUSD": 69,
-        "profitSplitPercentage": 95,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "capitalUSD": 6000,
+        "priceUSD": null,
+        "profitSplitPercentage": 70,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": []
       },
       "details": {
         "timeLimit": {
-          "minTradingDaysPerPhase": null,
+          "minTradingDaysPerPhase": 3,
           "maxTradingDaysPerPhase": null,
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:30",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies; profit split scales 70%->90% with consecutive payouts"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
-          "consistencyRule": false
+          "consistencyRule": true
         }
       }
     },
     {
-      "challengeId": "fundingpips-zero-25k",
-      "name": "Zero (Instant Funding) 25K",
+      "challengeId": "fortraders-instant-15k",
+      "name": "Instant Funding - $15K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 15000,
+        "priceUSD": null,
+        "profitSplitPercentage": 70,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": null,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:30",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": "$2 per lot commission applies; profit split scales 70%->90% with consecutive payouts"
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "fortraders-instant-25k",
+      "name": "Instant Funding - $25K",
       "primary": {
         "steps": 0,
         "capitalUSD": 25000,
-        "priceUSD": 199,
-        "profitSplitPercentage": 95,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "priceUSD": null,
+        "profitSplitPercentage": 70,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": []
       },
       "details": {
         "timeLimit": {
-          "minTradingDaysPerPhase": null,
+          "minTradingDaysPerPhase": 3,
           "maxTradingDaysPerPhase": null,
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:30",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies; profit split scales 70%->90% with consecutive payouts"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
-          "consistencyRule": false
+          "consistencyRule": true
         }
       }
     },
     {
-      "challengeId": "fundingpips-zero-50k",
-      "name": "Zero (Instant Funding) 50K",
+      "challengeId": "fortraders-instant-50k",
+      "name": "Instant Funding - $50K",
       "primary": {
         "steps": 0,
         "capitalUSD": 50000,
-        "priceUSD": 299,
-        "profitSplitPercentage": 95,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "priceUSD": null,
+        "profitSplitPercentage": 70,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": []
       },
       "details": {
         "timeLimit": {
-          "minTradingDaysPerPhase": null,
+          "minTradingDaysPerPhase": 3,
           "maxTradingDaysPerPhase": null,
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:30",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies; profit split scales 70%->90% with consecutive payouts"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
-          "consistencyRule": false
+          "consistencyRule": true
         }
       }
     },
     {
-      "challengeId": "fundingpips-zero-100k",
-      "name": "Zero (Instant Funding) 100K",
+      "challengeId": "fortraders-instant-100k",
+      "name": "Instant Funding - $100K",
       "primary": {
         "steps": 0,
         "capitalUSD": 100000,
-        "priceUSD": 499,
-        "profitSplitPercentage": 95,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "priceUSD": null,
+        "profitSplitPercentage": 70,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
         "phases": []
       },
       "details": {
         "timeLimit": {
-          "minTradingDaysPerPhase": null,
+          "minTradingDaysPerPhase": 3,
           "maxTradingDaysPerPhase": null,
           "noTimeLimitOnFundedAccount": true
         },
         "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
+        "maxLeverage": "1:30",
         "commissionFreeInstruments": {
           "forex": false,
-          "indices": true,
+          "indices": false,
           "gold": false,
           "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
+          "crypto": false,
+          "note": "$2 per lot commission applies; profit split scales 70%->90% with consecutive payouts"
         },
         "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
-          "consistencyRule": false
-        }
-      }
-    },
-    {
-      "challengeId": "fundingpips-zero-200k",
-      "name": "Zero (Instant Funding) 200K",
-      "primary": {
-        "steps": 0,
-        "capitalUSD": 200000,
-        "priceUSD": 998,
-        "profitSplitPercentage": 95,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": []
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": null,
-          "maxTradingDaysPerPhase": null,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": false,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": true,
-          "gold": false,
-          "oil": false,
-          "crypto": true,
-          "note": "Forex/metals charge $2.50–$7 per lot; crypto and indices commission-free"
-        },
-        "eaRobotsAllowed": false,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": false
+          "consistencyRule": true
         }
       }
     }
-  ],
-  "lastUpdated": "2026-05"
+  ]
 }

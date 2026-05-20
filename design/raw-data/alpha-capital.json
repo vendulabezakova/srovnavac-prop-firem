@@ -1,0 +1,726 @@
+{
+  "id": "alpha-capital",
+  "name": "Alpha Capital Group",
+  "url": "https://alphacapitalgroup.uk",
+  "isFk": false,
+  "comment": "UK-based proprietary trading firm (founded November 2021, London) offering simulated forex/CFD evaluations up to $200K with multi-step challenges, an 80% performance fee and on-demand payouts.",
+  "yearsInOperation": 4,
+  "hasMobileApp": null,
+  "languages": ["en"],
+  "restrictedCountries": ["AF", "BY", "IR", "KP", "RU", "SY", "VE"],
+  "platforms": ["MT5", "cTrader", "DXtrade", "TradeLocker"],
+  "paymentMethods": ["Credit Card", "Bank Transfer", "Rise", "Wise"],
+  "education": {
+    "hasEducationForBeginners": true,
+    "features": ["Resources hub", "Trading interviews", "Community events", "1-on-1 risk reviews"]
+  },
+  "popularity": {
+    "scoreFormula": {
+      "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+      "inputs": {
+        "TP_score": 0.94,
+        "pct_1star": 0.08,
+        "reddit_score": 0.6,
+        "reddit_score_note": "Estimated from aggregator summaries — direct Reddit scraping unavailable; mixed sentiment with payout proofs but recurring complaints about sudden account closures and payout denials in 1-star reviews",
+        "red_flag_penalty": 0,
+        "red_flag_penalty_note": "Recurring 1-star complaints about denied payouts and account closures exist but no regulator action and verified payouts ($48M+ via Payout Junction, $120M+ claimed total) preclude penalty"
+      },
+      "rawScore": 72.6,
+      "maxScore": 245.0,
+      "normalizedScore": 29.6
+    },
+    "overallPopularityScore": 29.6,
+    "trustpilot": {
+      "score": 4.7,
+      "reviewCount": 19000,
+      "pct1star": 0.08,
+      "lastUpdated": "2026-05",
+      "topPositiveThemes": ["fast payouts", "responsive support", "smooth onboarding", "wide platform choice"],
+      "topNegativeThemes": ["sudden account closures", "denied payouts", "post-challenge KYC issues", "risk-interview disqualifications"],
+      "verifiedPayoutProof": true,
+      "firmRespondsToReviews": true
+    },
+    "redFlagPenalty": {
+      "value": 0,
+      "reason": ""
+    },
+    "supportLevel": "Good",
+    "payoutStats": {
+      "totalPaidOut": "$120M+ claimed; $48M+ verified via Payout Junction",
+      "avgPayoutUSD": null,
+      "highestPayoutUSD": 109000,
+      "approvalRate": null,
+      "avgApprovalTime": "2 business days"
+    }
+  },
+  "currentCampaigns": [
+    {
+      "name": "TRUSTED 15% discount",
+      "code": "TRUSTED",
+      "discountPercent": 15
+    }
+  ],
+  "challenges": [
+    {
+      "challengeId": "alpha-capital-1step-5k",
+      "name": "Alpha One $5K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 5000,
+        "priceUSD": 50,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 1, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets; crypto availability not confirmed"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": false, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-1step-10k",
+      "name": "Alpha One $10K",
+      "primary": {
+        "steps": 1, "capitalUSD": 10000, "priceUSD": 97, "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand", "payoutSpeedHours": 48,
+        "phases": [{"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 1, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": false, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-1step-25k",
+      "name": "Alpha One $25K",
+      "primary": {
+        "steps": 1, "capitalUSD": 25000, "priceUSD": 197, "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand", "payoutSpeedHours": 48,
+        "phases": [{"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 1, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": false, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-1step-50k",
+      "name": "Alpha One $50K",
+      "primary": {
+        "steps": 1, "capitalUSD": 50000, "priceUSD": 297, "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand", "payoutSpeedHours": 48,
+        "phases": [{"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 1, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": false, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-1step-100k",
+      "name": "Alpha One $100K",
+      "primary": {
+        "steps": 1, "capitalUSD": 100000, "priceUSD": 497, "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand", "payoutSpeedHours": 48,
+        "phases": [{"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 1, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": false, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-1step-200k",
+      "name": "Alpha One $200K",
+      "primary": {
+        "steps": 1, "capitalUSD": 200000, "priceUSD": 997, "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand", "payoutSpeedHours": 48,
+        "phases": [{"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 1, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": false, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro6-5k",
+      "name": "Alpha Pro 6% $5K",
+      "primary": {
+        "steps": 2, "capitalUSD": 5000, "priceUSD": 40, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro6-10k",
+      "name": "Alpha Pro 6% $10K",
+      "primary": {
+        "steps": 2, "capitalUSD": 10000, "priceUSD": 77, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro6-25k",
+      "name": "Alpha Pro 6% $25K",
+      "primary": {
+        "steps": 2, "capitalUSD": 25000, "priceUSD": 167, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro6-50k",
+      "name": "Alpha Pro 6% $50K",
+      "primary": {
+        "steps": 2, "capitalUSD": 50000, "priceUSD": 257, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro6-100k",
+      "name": "Alpha Pro 6% $100K",
+      "primary": {
+        "steps": 2, "capitalUSD": 100000, "priceUSD": 427, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro6-200k",
+      "name": "Alpha Pro 6% $200K",
+      "primary": {
+        "steps": 2, "capitalUSD": 200000, "priceUSD": 847, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro8-5k",
+      "name": "Alpha Pro 8% $5K",
+      "primary": {
+        "steps": 2, "capitalUSD": 5000, "priceUSD": 77, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro8-10k",
+      "name": "Alpha Pro 8% $10K",
+      "primary": {
+        "steps": 2, "capitalUSD": 10000, "priceUSD": 97, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro8-25k",
+      "name": "Alpha Pro 8% $25K",
+      "primary": {
+        "steps": 2, "capitalUSD": 25000, "priceUSD": 197, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro8-50k",
+      "name": "Alpha Pro 8% $50K",
+      "primary": {
+        "steps": 2, "capitalUSD": 50000, "priceUSD": 297, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro8-100k",
+      "name": "Alpha Pro 8% $100K",
+      "primary": {
+        "steps": 2, "capitalUSD": 100000, "priceUSD": 547, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro8-200k",
+      "name": "Alpha Pro 8% $200K",
+      "primary": {
+        "steps": 2, "capitalUSD": 200000, "priceUSD": 1097, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro10-5k",
+      "name": "Alpha Pro 10% $5K",
+      "primary": {
+        "steps": 2, "capitalUSD": 5000, "priceUSD": 50, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro10-10k",
+      "name": "Alpha Pro 10% $10K",
+      "primary": {
+        "steps": 2, "capitalUSD": 10000, "priceUSD": 97, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro10-25k",
+      "name": "Alpha Pro 10% $25K",
+      "primary": {
+        "steps": 2, "capitalUSD": 25000, "priceUSD": 197, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro10-50k",
+      "name": "Alpha Pro 10% $50K",
+      "primary": {
+        "steps": 2, "capitalUSD": 50000, "priceUSD": 297, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro10-100k",
+      "name": "Alpha Pro 10% $100K",
+      "primary": {
+        "steps": 2, "capitalUSD": 100000, "priceUSD": 497, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-2step-pro10-200k",
+      "name": "Alpha Pro 10% $200K",
+      "primary": {
+        "steps": 2, "capitalUSD": 200000, "priceUSD": 997, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission across listed CFD assets"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-swing-5k",
+      "name": "Alpha Swing $5K",
+      "primary": {
+        "steps": 2, "capitalUSD": 5000, "priceUSD": 70, "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Swing-optimized, weekend holding permitted"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-swing-10k",
+      "name": "Alpha Swing $10K",
+      "primary": {
+        "steps": 2, "capitalUSD": 10000, "priceUSD": 127, "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Swing-optimized"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-swing-25k",
+      "name": "Alpha Swing $25K",
+      "primary": {
+        "steps": 2, "capitalUSD": 25000, "priceUSD": 227, "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Swing-optimized"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-swing-50k",
+      "name": "Alpha Swing $50K",
+      "primary": {
+        "steps": 2, "capitalUSD": 50000, "priceUSD": 327, "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Swing-optimized"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-swing-100k",
+      "name": "Alpha Swing $100K",
+      "primary": {
+        "steps": 2, "capitalUSD": 100000, "priceUSD": 577, "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Swing-optimized"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-swing-200k",
+      "name": "Alpha Swing $200K",
+      "primary": {
+        "steps": 2, "capitalUSD": 200000, "priceUSD": 1097, "profitSplitPercentage": 80,
+        "payoutFrequency": "On-demand", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:30",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Swing-optimized"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-3step-10k",
+      "name": "Alpha Three $10K",
+      "primary": {
+        "steps": 3, "capitalUSD": 10000, "priceUSD": 67, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 3, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission; 10-min news window on funded"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-3step-25k",
+      "name": "Alpha Three $25K",
+      "primary": {
+        "steps": 3, "capitalUSD": 25000, "priceUSD": 157, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 3, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission; 10-min news window on funded"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-3step-50k",
+      "name": "Alpha Three $50K",
+      "primary": {
+        "steps": 3, "capitalUSD": 50000, "priceUSD": 247, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 3, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission; 10-min news window on funded"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-3step-100k",
+      "name": "Alpha Three $100K",
+      "primary": {
+        "steps": 3, "capitalUSD": 100000, "priceUSD": 397, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 3, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission; 10-min news window on funded"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    },
+    {
+      "challengeId": "alpha-capital-3step-200k",
+      "name": "Alpha Three $200K",
+      "primary": {
+        "steps": 3, "capitalUSD": 200000, "priceUSD": 697, "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly", "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6},
+          {"phaseNumber": 3, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true, "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": false, "note": "Zero commission; 10-min news window on funded"},
+        "eaRobotsAllowed": true, "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": true}
+      }
+    }
+  ],
+  "lastUpdated": "2026-05"
+}

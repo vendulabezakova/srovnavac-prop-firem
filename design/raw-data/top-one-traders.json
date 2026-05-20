@@ -1,698 +1,382 @@
 {
-  "id": "goat-funded-trader",
-  "name": "Goat Funded Trader",
-  "url": "https://www.goatfundedtrader.com",
+  "id": "top-one-trader",
+  "name": "Top One Trader",
+  "url": "https://www.toponetrader.com/",
   "isFk": false,
-  "comment": "Prop trading firm founded in 2023, operating via Wishes Tower International Limited (Hong Kong) and Goat Funded LTD (Saint Lucia). Offers 1-step, 2-step, 3-step, instant funding and other models with up to 100% profit split and on-demand payouts.",
+  "comment": "US-based proprietary trading firm founded in 2023, headquartered in Sheridan, Wyoming. Known for ultra-fast payouts (averaging under 2 hours), low entry fees, and multiple challenge formats including 1-step, 2-step, Instant Funding and Instant Prime.",
   "yearsInOperation": 3,
-  "hasMobileApp": true,
-  "languages": ["en", "es", "de", "fr", "hi", "it"],
-  "restrictedCountries": ["US", "CU", "IR", "JO", "LB", "LY", "SY", "BD", "HK", "JP", "MY", "MM", "KP", "SG", "KR", "TH", "VN", "BG", "RU", "SN", "SO", "SD", "TG", "CL", "LK"],
-  "platforms": ["MT4", "MT5", "cTrader", "TradeLocker", "Match-Trader"],
-  "paymentMethods": ["Credit Card", "PayPal", "Crypto", "Skrill", "Rise"],
+  "hasMobileApp": null,
+  "languages": ["en"],
+  "restrictedCountries": ["AF", "AL", "DZ", "AM", "AZ", "BY", "CU", "HT", "IR", "IQ", "KZ", "KW", "LB", "LY", "MK", "MA", "MM", "KP", "PK", "RU", "SO", "SD", "SY", "TR", "UA", "VN"],
+  "platforms": ["MT5", "cTrader", "Match-Trader", "TradeLocker", "TradingView"],
+  "paymentMethods": ["Crypto", "Bank Transfer", "Rise", "PayPal"],
   "education": {
     "hasEducationForBeginners": true,
-    "features": ["Blog", "FAQ knowledge base", "Discord community", "Trading competitions"]
+    "features": [
+      "Top One Trader Blueprint coaching program (20+ videos)",
+      "Near-daily training emails",
+      "Weekly outlook videos",
+      "Market recap videos",
+      "Help Center / FAQ",
+      "Discord community"
+    ]
   },
   "popularity": {
     "scoreFormula": {
       "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
       "inputs": {
-        "TP_score": 0.78,
-        "pct_1star": 0.23,
-        "reddit_score": 0.55,
-        "reddit_score_note": "Estimated from community aggregators (FXEmpire, MyPropGenius, BrokerAnalysis) - direct Reddit scraping unavailable. Mixed sentiment: payout proofs exist but multiple complaints about surprise rules, Goat Guard mechanic, and payout caps.",
-        "red_flag_penalty": 1,
-        "red_flag_penalty_note": "Trustpilot has publicly flagged fake-review guideline breaches against GFT. April 2026 TradeXMastery absorption replaced traders' funded accounts without notice or opt-out. Documented surprise rule enforcement at payout time."
+        "TP_score": 0.9,
+        "pct_1star": 0.08,
+        "reddit_score": 0.75,
+        "reddit_score_note": "Estimated from aggregator summaries and review sites; community consistently posts payout proofs with sub-2h processing, occasional complaints about EA ban on funded accounts and 2% withdrawal fee. Direct Reddit scraping unavailable.",
+        "red_flag_penalty": 0,
+        "red_flag_penalty_note": "No documented regulator warnings, no widespread unpaid-payout pattern, no fake-review allegations on Trustpilot."
       },
-      "rawScore": 46.5,
+      "rawScore": 74.0,
       "maxScore": 245.0,
-      "normalizedScore": 19.0
+      "normalizedScore": 30.2
     },
-    "overallPopularityScore": 19.0,
+    "overallPopularityScore": 30.2,
     "trustpilot": {
-      "score": 3.9,
-      "reviewCount": 3500,
-      "pct1star": 0.23,
+      "score": 4.5,
+      "reviewCount": 3149,
+      "pct1star": 0.08,
       "lastUpdated": "2026-05",
-      "topPositiveThemes": ["fast payouts", "responsive support", "wide platform choice", "promotional discounts"],
-      "topNegativeThemes": ["surprise rule enforcement", "Goat Guard account flags", "news-trading profit caps", "payout denials"],
+      "topPositiveThemes": ["fast payouts", "responsive support", "fee refund on payout", "clear rules"],
+      "topNegativeThemes": ["EA banned on funded accounts", "2% withdrawal fee", "consistency rule tightening"],
       "verifiedPayoutProof": true,
       "firmRespondsToReviews": true
     },
     "redFlagPenalty": {
-      "value": 1,
-      "reason": "Trustpilot guideline-breach flag for fake reviews; TradeXMastery absorption in April 2026 replaced funded accounts without trader opt-out; documented pattern of payout-time surprise rules."
+      "value": 0,
+      "reason": ""
     },
-    "supportLevel": "Good",
+    "supportLevel": "Excellent",
     "payoutStats": {
-      "totalPaidOut": "$20,000,000+",
-      "avgPayoutUSD": 2180,
-      "highestPayoutUSD": 0,
-      "approvalRate": "",
-      "avgApprovalTime": "24-72 hours"
+      "totalPaidOut": "$5,000,000+",
+      "avgPayoutUSD": null,
+      "highestPayoutUSD": null,
+      "approvalRate": null,
+      "avgApprovalTime": "Under 2 hours"
     }
   },
   "currentCampaigns": [
     {
-      "name": "BOGO + 50% OFF",
-      "code": "HBGFT",
-      "description": "Buy one get one plus 50% off promotion"
+      "name": "Sitewide Discount",
+      "discount": "Up to 70% OFF",
+      "code": "PRO"
     },
     {
-      "name": "First Customer Discount",
-      "code": "FIRSTGFT",
-      "description": "50% OFF for new customers"
-    },
-    {
-      "name": "Affiliate Discount",
-      "code": "GFT35",
-      "description": "Affiliate discount code"
+      "name": "Alternative Discount",
+      "discount": "Promotional discount",
+      "code": "CINCO"
     }
   ],
   "challenges": [
     {
-      "challengeId": "goat-funded-trader-1step-5k",
-      "name": "1-Step Challenge 5K",
+      "challengeId": "top-one-trader-1step-5k",
+      "name": "Flash 1-Step $5K",
       "primary": {
         "steps": 1,
         "capitalUSD": 5000,
-        "priceUSD": 59,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 6
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": "Standard commissions apply; not advertised as commission-free"
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-1step-10k",
-      "name": "1-Step Challenge 10K",
-      "primary": {
-        "steps": 1,
-        "capitalUSD": 10000,
-        "priceUSD": 89,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 6
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": ""
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-1step-25k",
-      "name": "1-Step Challenge 25K",
-      "primary": {
-        "steps": 1,
-        "capitalUSD": 25000,
-        "priceUSD": 178,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 6
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": ""
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-1step-50k",
-      "name": "1-Step Challenge 50K",
-      "primary": {
-        "steps": 1,
-        "capitalUSD": 50000,
-        "priceUSD": 297,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 6
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": ""
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-1step-100k",
-      "name": "1-Step Challenge 100K",
-      "primary": {
-        "steps": 1,
-        "capitalUSD": 100000,
-        "priceUSD": 519,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 6
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": ""
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-1step-200k",
-      "name": "1-Step Challenge 200K",
-      "primary": {
-        "steps": 1,
-        "capitalUSD": 200000,
-        "priceUSD": 998,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 6
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": ""
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-2step-5k",
-      "name": "2-Step Challenge 5K",
-      "primary": {
-        "steps": 2,
-        "capitalUSD": 5000,
-        "priceUSD": 39,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          },
-          {
-            "phaseNumber": 2,
-            "profitTargetPercentage": 5,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": ""
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-2step-10k",
-      "name": "2-Step Challenge 10K",
-      "primary": {
-        "steps": 2,
-        "capitalUSD": 10000,
-        "priceUSD": 69,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          },
-          {
-            "phaseNumber": 2,
-            "profitTargetPercentage": 5,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": ""
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-2step-25k",
-      "name": "2-Step Challenge 25K",
-      "primary": {
-        "steps": 2,
-        "capitalUSD": 25000,
-        "priceUSD": 158,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          },
-          {
-            "phaseNumber": 2,
-            "profitTargetPercentage": 5,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": ""
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-2step-50k",
-      "name": "2-Step Challenge 50K",
-      "primary": {
-        "steps": 2,
-        "capitalUSD": 50000,
-        "priceUSD": 268,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          },
-          {
-            "phaseNumber": 2,
-            "profitTargetPercentage": 5,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": ""
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-2step-100k",
-      "name": "2-Step Challenge 100K",
-      "primary": {
-        "steps": 2,
-        "capitalUSD": 100000,
-        "priceUSD": 598,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          },
-          {
-            "phaseNumber": 2,
-            "profitTargetPercentage": 5,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": ""
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-2step-200k",
-      "name": "2-Step Challenge 200K",
-      "primary": {
-        "steps": 2,
-        "capitalUSD": 200000,
-        "priceUSD": 1098,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          {
-            "phaseNumber": 1,
-            "profitTargetPercentage": 10,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          },
-          {
-            "phaseNumber": 2,
-            "profitTargetPercentage": 5,
-            "dailyDrawdownPercentage": 5,
-            "maxDrawdownPercentage": 10
-          }
-        ]
-      },
-      "details": {
-        "timeLimit": {
-          "minTradingDaysPerPhase": 3,
-          "maxTradingDaysPerPhase": 0,
-          "noTimeLimitOnFundedAccount": true
-        },
-        "newsTradingAllowed": true,
-        "maxLeverage": "1:100",
-        "commissionFreeInstruments": {
-          "forex": false,
-          "indices": false,
-          "gold": false,
-          "oil": false,
-          "crypto": false,
-          "note": ""
-        },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
-        "rules": {
-          "scalingPlan": true,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "consistencyRule": true
-        }
-      }
-    },
-    {
-      "challengeId": "goat-funded-trader-3step-10k",
-      "name": "3-Step Challenge 10K",
-      "primary": {
-        "steps": 3,
-        "capitalUSD": 10000,
-        "priceUSD": 55,
+        "priceUSD": 19,
         "profitSplitPercentage": 90,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 10,
             "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
-          },
-          {
-            "phaseNumber": 2,
-            "profitTargetPercentage": 6,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
-          },
-          {
-            "phaseNumber": 3,
-            "profitTargetPercentage": 6,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
+            "maxDrawdownPercentage": 7
           }
         ]
       },
       "details": {
         "timeLimit": {
-          "minTradingDaysPerPhase": 3,
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:10",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-1step-10k",
+      "name": "Flash 1-Step $10K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 10000,
+        "priceUSD": 43,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 7
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:10",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-1step-25k",
+      "name": "Flash 1-Step $25K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 25000,
+        "priceUSD": 99,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 7
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:10",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-1step-50k",
+      "name": "Flash 1-Step $50K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 50000,
+        "priceUSD": 179,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 7
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:10",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-1step-100k",
+      "name": "Flash 1-Step $100K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 100000,
+        "priceUSD": 299,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 7
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:10",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-1step-200k",
+      "name": "Flash 1-Step $200K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 200000,
+        "priceUSD": 539,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 7
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:10",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-2step-5k",
+      "name": "Pro 2-Step $5K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 5000,
+        "priceUSD": 23,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 9
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 5,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 9
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
           "maxTradingDaysPerPhase": 0,
           "noTimeLimitOnFundedAccount": true
         },
@@ -707,7 +391,7 @@
           "note": ""
         },
         "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
@@ -718,39 +402,85 @@
       }
     },
     {
-      "challengeId": "goat-funded-trader-3step-25k",
-      "name": "3-Step Challenge 25K",
+      "challengeId": "top-one-trader-2step-10k",
+      "name": "Pro 2-Step $10K",
       "primary": {
-        "steps": 3,
+        "steps": 2,
+        "capitalUSD": 10000,
+        "priceUSD": 45,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 9
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 5,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 9
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-2step-25k",
+      "name": "Pro 2-Step $25K",
+      "primary": {
+        "steps": 2,
         "capitalUSD": 25000,
         "priceUSD": 119,
         "profitSplitPercentage": 90,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 8,
             "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
+            "maxDrawdownPercentage": 9
           },
           {
             "phaseNumber": 2,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 5,
             "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
-          },
-          {
-            "phaseNumber": 3,
-            "profitTargetPercentage": 6,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
+            "maxDrawdownPercentage": 9
           }
         ]
       },
       "details": {
         "timeLimit": {
-          "minTradingDaysPerPhase": 3,
+          "minTradingDaysPerPhase": 0,
           "maxTradingDaysPerPhase": 0,
           "noTimeLimitOnFundedAccount": true
         },
@@ -765,7 +495,7 @@
           "note": ""
         },
         "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
@@ -776,39 +506,33 @@
       }
     },
     {
-      "challengeId": "goat-funded-trader-3step-50k",
-      "name": "3-Step Challenge 50K",
+      "challengeId": "top-one-trader-2step-50k",
+      "name": "Pro 2-Step $50K",
       "primary": {
-        "steps": 3,
+        "steps": 2,
         "capitalUSD": 50000,
-        "priceUSD": 219,
+        "priceUSD": 209,
         "profitSplitPercentage": 90,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 8,
             "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
+            "maxDrawdownPercentage": 9
           },
           {
             "phaseNumber": 2,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 5,
             "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
-          },
-          {
-            "phaseNumber": 3,
-            "profitTargetPercentage": 6,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
+            "maxDrawdownPercentage": 9
           }
         ]
       },
       "details": {
         "timeLimit": {
-          "minTradingDaysPerPhase": 3,
+          "minTradingDaysPerPhase": 0,
           "maxTradingDaysPerPhase": 0,
           "noTimeLimitOnFundedAccount": true
         },
@@ -823,7 +547,7 @@
           "note": ""
         },
         "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
@@ -834,39 +558,33 @@
       }
     },
     {
-      "challengeId": "goat-funded-trader-3step-100k",
-      "name": "3-Step Challenge 100K",
+      "challengeId": "top-one-trader-2step-100k",
+      "name": "Pro 2-Step $100K",
       "primary": {
-        "steps": 3,
+        "steps": 2,
         "capitalUSD": 100000,
-        "priceUSD": 439,
+        "priceUSD": 499,
         "profitSplitPercentage": 90,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 8,
             "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
+            "maxDrawdownPercentage": 9
           },
           {
             "phaseNumber": 2,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 5,
             "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
-          },
-          {
-            "phaseNumber": 3,
-            "profitTargetPercentage": 6,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
+            "maxDrawdownPercentage": 9
           }
         ]
       },
       "details": {
         "timeLimit": {
-          "minTradingDaysPerPhase": 3,
+          "minTradingDaysPerPhase": 0,
           "maxTradingDaysPerPhase": 0,
           "noTimeLimitOnFundedAccount": true
         },
@@ -881,7 +599,7 @@
           "note": ""
         },
         "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
@@ -892,39 +610,33 @@
       }
     },
     {
-      "challengeId": "goat-funded-trader-3step-200k",
-      "name": "3-Step Challenge 200K",
+      "challengeId": "top-one-trader-2step-150k",
+      "name": "Pro 2-Step $150K",
       "primary": {
-        "steps": 3,
-        "capitalUSD": 200000,
-        "priceUSD": 819,
+        "steps": 2,
+        "capitalUSD": 150000,
+        "priceUSD": 699,
         "profitSplitPercentage": 90,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
         "phases": [
           {
             "phaseNumber": 1,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 8,
             "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
+            "maxDrawdownPercentage": 9
           },
           {
             "phaseNumber": 2,
-            "profitTargetPercentage": 6,
+            "profitTargetPercentage": 5,
             "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
-          },
-          {
-            "phaseNumber": 3,
-            "profitTargetPercentage": 6,
-            "dailyDrawdownPercentage": 4,
-            "maxDrawdownPercentage": 8
+            "maxDrawdownPercentage": 9
           }
         ]
       },
       "details": {
         "timeLimit": {
-          "minTradingDaysPerPhase": 3,
+          "minTradingDaysPerPhase": 0,
           "maxTradingDaysPerPhase": 0,
           "noTimeLimitOnFundedAccount": true
         },
@@ -939,7 +651,7 @@
           "note": ""
         },
         "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
           "weekendHoldingAllowed": true,
@@ -950,15 +662,15 @@
       }
     },
     {
-      "challengeId": "goat-funded-trader-instant-5k",
-      "name": "Instant Funding 5K",
+      "challengeId": "top-one-trader-instant-5k",
+      "name": "Instant Funding $5K",
       "primary": {
         "steps": 0,
         "capitalUSD": 5000,
-        "priceUSD": 199,
-        "profitSplitPercentage": 50,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "priceUSD": 41,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
         "phases": []
       },
       "details": {
@@ -977,11 +689,11 @@
           "crypto": false,
           "note": ""
         },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
-          "weekendHoldingAllowed": true,
+          "weekendHoldingAllowed": false,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
           "consistencyRule": true
@@ -989,15 +701,15 @@
       }
     },
     {
-      "challengeId": "goat-funded-trader-instant-10k",
-      "name": "Instant Funding 10K",
+      "challengeId": "top-one-trader-instant-10k",
+      "name": "Instant Funding $10K",
       "primary": {
         "steps": 0,
         "capitalUSD": 10000,
-        "priceUSD": 379,
-        "profitSplitPercentage": 50,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "priceUSD": 79,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
         "phases": []
       },
       "details": {
@@ -1016,11 +728,11 @@
           "crypto": false,
           "note": ""
         },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
-          "weekendHoldingAllowed": true,
+          "weekendHoldingAllowed": false,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
           "consistencyRule": true
@@ -1028,15 +740,15 @@
       }
     },
     {
-      "challengeId": "goat-funded-trader-instant-25k",
-      "name": "Instant Funding 25K",
+      "challengeId": "top-one-trader-instant-25k",
+      "name": "Instant Funding $25K",
       "primary": {
         "steps": 0,
         "capitalUSD": 25000,
-        "priceUSD": 899,
-        "profitSplitPercentage": 50,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "priceUSD": 199,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
         "phases": []
       },
       "details": {
@@ -1055,11 +767,11 @@
           "crypto": false,
           "note": ""
         },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
-          "weekendHoldingAllowed": true,
+          "weekendHoldingAllowed": false,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
           "consistencyRule": true
@@ -1067,15 +779,15 @@
       }
     },
     {
-      "challengeId": "goat-funded-trader-instant-50k",
-      "name": "Instant Funding 50K",
+      "challengeId": "top-one-trader-instant-50k",
+      "name": "Instant Funding $50K",
       "primary": {
         "steps": 0,
         "capitalUSD": 50000,
-        "priceUSD": 1699,
-        "profitSplitPercentage": 50,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "priceUSD": 319,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
         "phases": []
       },
       "details": {
@@ -1094,11 +806,11 @@
           "crypto": false,
           "note": ""
         },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
-          "weekendHoldingAllowed": true,
+          "weekendHoldingAllowed": false,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
           "consistencyRule": true
@@ -1106,15 +818,15 @@
       }
     },
     {
-      "challengeId": "goat-funded-trader-instant-100k",
-      "name": "Instant Funding 100K",
+      "challengeId": "top-one-trader-instant-100k",
+      "name": "Instant Funding $100K",
       "primary": {
         "steps": 0,
         "capitalUSD": 100000,
-        "priceUSD": 3299,
-        "profitSplitPercentage": 50,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
+        "priceUSD": 571,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
         "phases": []
       },
       "details": {
@@ -1133,16 +845,329 @@
           "crypto": false,
           "note": ""
         },
-        "eaRobotsAllowed": true,
-        "hasLoyaltyProgram": true,
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
         "rules": {
           "scalingPlan": true,
-          "weekendHoldingAllowed": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-instant-200k",
+      "name": "Instant Funding $200K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 200000,
+        "priceUSD": 1268,
+        "profitSplitPercentage": 90,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-instantprime-5k",
+      "name": "Instant Prime $5K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 5000,
+        "priceUSD": 28,
+        "profitSplitPercentage": 100,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-instantprime-10k",
+      "name": "Instant Prime $10K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 10000,
+        "priceUSD": 55,
+        "profitSplitPercentage": 100,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-instantprime-25k",
+      "name": "Instant Prime $25K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 25000,
+        "priceUSD": 139,
+        "profitSplitPercentage": 100,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-instantprime-50k",
+      "name": "Instant Prime $50K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 50000,
+        "priceUSD": 239,
+        "profitSplitPercentage": 100,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-instantprime-100k",
+      "name": "Instant Prime $100K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 100000,
+        "priceUSD": 449,
+        "profitSplitPercentage": 100,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-instantprime-200k",
+      "name": "Instant Prime $200K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 200000,
+        "priceUSD": 888,
+        "profitSplitPercentage": 100,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": true
+        }
+      }
+    },
+    {
+      "challengeId": "top-one-trader-nova-25k",
+      "name": "Nova Challenge $25K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 25000,
+        "priceUSD": 7,
+        "profitSplitPercentage": 100,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 2,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 0,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": false,
+          "note": ""
+        },
+        "eaRobotsAllowed": false,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": true,
+          "weekendHoldingAllowed": false,
           "overnightHoldingAllowed": true,
           "martingaleAllowed": false,
           "consistencyRule": true
         }
       }
     }
-  ]
+  ],
+  "lastUpdated": "2026-05"
 }

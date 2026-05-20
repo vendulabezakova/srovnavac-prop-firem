@@ -1,0 +1,659 @@
+{
+  "id": "eightcap-markets",
+  "name": "Eightcap Challenges",
+  "url": "https://challenges.eightcap.com/",
+  "isFk": false,
+  "comment": "Broker-backed prop arm of Eightcap (multi-regulated CFD broker, FCA/ASIC/CySEC/SCB). Relaunched in November 2025 as 'Eightcap Challenges' with 1-Phase, 2-Phase and innovative Day Trader (1-8h) challenges. Operated from Seychelles entity; uses Eightcap's own liquidity/execution.",
+  "yearsInOperation": 1,
+  "hasMobileApp": true,
+  "languages": ["en"],
+  "restrictedCountries": ["US", "AU", "CU", "IR", "IQ", "KP", "MM", "RU", "SO", "SY", "CF", "CD", "GW", "SD", "SS", "AF", "LB", "YE", "ZW", "LY"],
+  "platforms": ["MT4", "MT5", "TradeLocker"],
+  "paymentMethods": ["Credit Card", "Crypto", "Bank Transfer"],
+  "education": {
+    "hasEducationForBeginners": true,
+    "features": ["Eightcap Labs knowledge hub", "trading guides", "market insights", "risk management content"]
+  },
+  "popularity": {
+    "scoreFormula": {
+      "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+      "inputs": {
+        "TP_score": 0.8,
+        "pct_1star": 0.12,
+        "reddit_score": 0.65,
+        "reddit_score_note": "Estimated from community aggregator coverage (TheTrustedProp, DailyForex, BestPropFirmGuide); firm relaunched Nov 2025 so direct Reddit signal is sparse but generally positive about broker-backed legitimacy and on-demand payouts",
+        "red_flag_penalty": 0,
+        "red_flag_penalty_note": "No regulator warnings, scams or unpaid-payout patterns surfaced; firm declines ~1.74% of withdrawals citing fraud/KYC/gaming per their own disclosure"
+      },
+      "rawScore": 67.0,
+      "maxScore": 245.0,
+      "normalizedScore": 27.3
+    },
+    "overallPopularityScore": 27.3,
+    "trustpilot": {
+      "score": 4.0,
+      "reviewCount": 3429,
+      "pct1star": 0.12,
+      "lastUpdated": "2026-05",
+      "topPositiveThemes": ["professional service", "quick withdrawals", "regulated broker backing", "fast execution"],
+      "topNegativeThemes": ["strict KYC documentation", "withdrawal processing delays"],
+      "verifiedPayoutProof": true,
+      "firmRespondsToReviews": true
+    },
+    "redFlagPenalty": {
+      "value": 0,
+      "reason": ""
+    },
+    "supportLevel": "Good",
+    "payoutStats": {
+      "totalPaidOut": "",
+      "avgPayoutUSD": 0,
+      "highestPayoutUSD": 0,
+      "approvalRate": "98.26%",
+      "avgApprovalTime": "24-48h"
+    }
+  },
+  "currentCampaigns": [
+    {
+      "name": "Propinder partnership discount",
+      "code": "PROPINDER20",
+      "discountPercent": 20
+    },
+    {
+      "name": "TradeLocker promo",
+      "code": "TRADELOCKER15",
+      "discountPercent": 15
+    }
+  ],
+  "challenges": [
+    {
+      "challengeId": "eightcap-markets-1step-5k",
+      "name": "1-Phase Challenge $5K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 5000,
+        "priceUSD": 69,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "eightcap-markets-1step-10k",
+      "name": "1-Phase Challenge $10K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 10000,
+        "priceUSD": 119,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "eightcap-markets-1step-25k",
+      "name": "1-Phase Challenge $25K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 25000,
+        "priceUSD": 259,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "eightcap-markets-1step-50k",
+      "name": "1-Phase Challenge $50K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 50000,
+        "priceUSD": 429,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "eightcap-markets-1step-100k",
+      "name": "1-Phase Challenge $100K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 100000,
+        "priceUSD": 659,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "eightcap-markets-1step-200k",
+      "name": "1-Phase Challenge $200K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 200000,
+        "priceUSD": 1299,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 4,
+            "maxDrawdownPercentage": 8
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 5,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "eightcap-markets-2step-5k",
+      "name": "2-Phase Challenge $5K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 5000,
+        "priceUSD": 59,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "eightcap-markets-2step-10k",
+      "name": "2-Phase Challenge $10K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 10000,
+        "priceUSD": 99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "eightcap-markets-2step-25k",
+      "name": "2-Phase Challenge $25K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 25000,
+        "priceUSD": 219,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "eightcap-markets-2step-50k",
+      "name": "2-Phase Challenge $50K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 50000,
+        "priceUSD": 389,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "eightcap-markets-2step-100k",
+      "name": "2-Phase Challenge $100K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 100000,
+        "priceUSD": 599,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    },
+    {
+      "challengeId": "eightcap-markets-2step-200k",
+      "name": "2-Phase Challenge $200K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 200000,
+        "priceUSD": 1199,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {
+            "phaseNumber": 1,
+            "profitTargetPercentage": 10,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          },
+          {
+            "phaseNumber": 2,
+            "profitTargetPercentage": 8,
+            "dailyDrawdownPercentage": 5,
+            "maxDrawdownPercentage": 10
+          }
+        ]
+      },
+      "details": {
+        "timeLimit": {
+          "minTradingDaysPerPhase": 3,
+          "maxTradingDaysPerPhase": 0,
+          "noTimeLimitOnFundedAccount": true
+        },
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {
+          "forex": false,
+          "indices": false,
+          "gold": false,
+          "oil": false,
+          "crypto": true,
+          "note": "$5 per lot commission on FX/indices/metals; crypto commission-free"
+        },
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {
+          "scalingPlan": false,
+          "weekendHoldingAllowed": true,
+          "overnightHoldingAllowed": true,
+          "martingaleAllowed": false,
+          "consistencyRule": false
+        }
+      }
+    }
+  ],
+  "lastUpdated": "2026-05"
+}

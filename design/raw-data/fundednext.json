@@ -3,40 +3,40 @@
   "name": "FundedNext",
   "url": "https://fundednext.com",
   "isFk": false,
-  "comment": "Velká prop firma se sídlem v Dubaji, založena 2022. Známá pro 15% profit share z challenge fáze, $1000 kompenzaci za pozdní výplaty, scaling až do $4M. Silné zastoupení v Asii, zejména Bangladéši.",
+  "comment": "FundedNext is a UAE-based proprietary trading firm founded in 2022 offering challenge-based simulated funded accounts on CFDs and Futures, with multiple models (Stellar 2-Step, 1-Step, Lite, Instant) and profit splits up to 95%.",
   "yearsInOperation": 4,
-  "hasMobileApp": false,
-  "languages": ["en", "es", "ar", "bn", "vi", "id", "tr"],
-  "restrictedCountries": ["US", "RU", "IR", "KP", "SY"],
-  "platforms": ["MT4", "MT5", "Match-Trader", "cTrader"],
-  "paymentMethods": ["Credit Card", "Crypto", "Bank Transfer"],
+  "hasMobileApp": true,
+  "languages": ["en"],
+  "restrictedCountries": ["US", "BD", "MM", "BY", "KP", "SY", "GD", "TD", "MY", "BZ", "AG", "CV", "TV", "VN", "BV", "BI", "CK", "ER", "KM", "LK", "FJ"],
+  "platforms": ["MT4", "MT5", "cTrader", "Match-Trader", "TradingView", "Tradovate"],
+  "paymentMethods": ["Credit Card", "PayPal", "Apple Pay", "Google Pay", "Skrill", "Neteller", "Crypto"],
   "education": {
     "hasEducationForBeginners": false,
-    "features": ["Help Center", "Trading Blog", "Market Analysis", "Trading News", "Strategy Insights", "Free Trial Account", "Monthly Trading Competition"]
+    "features": ["Discord community", "24/7 support", "AI Assistant 'Fundee'"]
   },
   "popularity": {
     "scoreFormula": {
       "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
       "inputs": {
-        "TP_score": 4.5,
+        "TP_score": 0.9,
         "pct_1star": 0.08,
         "reddit_score": 0.65,
-        "reddit_score_note": "Estimated from community aggregators - mostly positive sentiment but concerns about execution quality and simulated environment",
+        "reddit_score_note": "Estimated from community aggregators (Forex Factory, prop firm review sites). Mixed-positive: payout proofs and fast withdrawals frequently confirmed, but recurring complaints about 3.5% withdrawal fee, prohibited-strategy terminations, and XAUUSD leverage cut.",
         "red_flag_penalty": 0,
-        "red_flag_penalty_note": ""
+        "red_flag_penalty_note": "No documented unpaid-payout pattern, regulator action, or fake-review allegations in last 12 months. Disputes exist but are about rule interpretation rather than non-payment."
       },
-      "rawScore": 216.0,
+      "rawScore": 72.0,
       "maxScore": 245.0,
-      "normalizedScore": 88.2
+      "normalizedScore": 29.4
     },
-    "overallPopularityScore": 88.2,
+    "overallPopularityScore": 29.4,
     "trustpilot": {
       "score": 4.5,
       "reviewCount": 62711,
       "pct1star": 0.08,
       "lastUpdated": "2026-05",
-      "topPositiveThemes": ["15% profit share from challenge phase", "24h payout guarantee", "$1000 compensation for delayed payouts", "Multiple platform support", "Stellar 1-Step flexibility"],
-      "topNegativeThemes": ["40% consistency rule on funded account (Rapid)", "Execution quality concerns", "Complex challenge models", "No structured education"],
+      "topPositiveThemes": ["fast payouts", "high profit split", "multiple platforms", "responsive support"],
+      "topNegativeThemes": ["XAUUSD leverage reduction", "Stellar Instant account termination disputes", "rule interpretation disputes", "support delays during peak hours"],
       "verifiedPayoutProof": true,
       "firmRespondsToReviews": true
     },
@@ -45,191 +45,557 @@
       "reason": ""
     },
     "supportLevel": "Good",
-    "propFirmMatch": { "score": null, "reviewCount": null },
     "payoutStats": {
-      "totalPaidOut": "$284M+",
+      "totalPaidOut": "$284.6M+",
       "avgPayoutUSD": null,
       "highestPayoutUSD": null,
       "approvalRate": null,
-      "avgApprovalTime": "24h guarantee ($1000 compensation if delayed)"
+      "avgApprovalTime": "5 hours"
     }
   },
   "currentCampaigns": [
     {
-      "code": "VIBES",
-      "discountPercentage": 30,
-      "description": "30% sleva na základní challenge fee (neplatí pro add-ons)",
-      "landingPageUrl": "https://fundednext.com",
-      "validUntil": null
+      "name": "24-Hour Payout Guarantee",
+      "description": "Payout processed within 24 hours or FundedNext pays $1,000 extra"
+    },
+    {
+      "name": "FundedNext Futures Launch",
+      "description": "Newly launched futures trading challenges (Bolt, Rapid, Legacy)"
     }
   ],
   "challenges": [
     {
-      "challengeId": "fundednext-stellar-1step-6k",
-      "name": "Stellar 1-Step 6k",
+      "challengeId": "fundednext-2step-6k",
+      "name": "Stellar 2-Step $6K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 6000,
+        "priceUSD": 59.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-2step-15k",
+      "name": "Stellar 2-Step $15K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 15000,
+        "priceUSD": 119.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-2step-25k",
+      "name": "Stellar 2-Step $25K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 25000,
+        "priceUSD": 199.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-2step-50k",
+      "name": "Stellar 2-Step $50K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 50000,
+        "priceUSD": 299.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-2step-100k",
+      "name": "Stellar 2-Step $100K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 100000,
+        "priceUSD": 549.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-2step-200k",
+      "name": "Stellar 2-Step $200K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 200000,
+        "priceUSD": 1099.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-1step-6k",
+      "name": "Stellar 1-Step $6K",
       "primary": {
         "steps": 1,
         "capitalUSD": 6000,
         "priceUSD": 59.99,
-        "profitSplitPercentage": 90,
-        "profitSplitMax": 95,
-        "profitSplitNote": "+15% profit share z challenge fáze po dosažení 10% growth",
-        "payoutFrequency": "On-demand after first 5 trading days",
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
         "payoutSpeedHours": 24,
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6, "minTradingDays": 2, "maxTradingDays": null }
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
         ]
       },
       "details": {
-        "timeLimit": { "minTradingDaysPerPhase": 2, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true },
+        "timeLimit": {"minTradingDaysPerPhase": 2, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
         "newsTradingAllowed": true,
-        "newsTradingNote": "News trading povoleno se 40% profit share z news trades",
         "maxLeverage": "1:100",
-        "commissionFreeInstruments": { "forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Standard commissions apply" },
-        "averagePayoutUSD": null,
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
         "eaRobotsAllowed": true,
-        "eaNote": "EAs povoleny, unique IP required, VPN/VPS doporučeno",
-        "hasLoyaltyProgram": true,
-        "origin": "Dubai, UAE",
-        "parentCompany": "FundedNext",
-        "languages": ["en", "es", "ar", "bn", "vi", "id", "tr"],
-        "restrictedCountries": ["US", "RU", "IR", "KP", "SY"],
-        "yearsInOperation": 4,
-        "paymentMethods": ["Credit Card", "Crypto", "Bank Transfer"],
-        "rules": {
-          "scalingPlan": true,
-          "scalingNote": "Scaling až do $4M kapitálu",
-          "maxAllocationScaled": 4000000,
-          "weekendHoldingAllowed": true,
-          "overnightHoldingAllowed": true,
-          "martingaleAllowed": false,
-          "latencyArbitrageAllowed": false,
-          "copyTradingAllowed": true,
-          "copyTradingNote": "Pouze mezi vlastními FundedNext účty, max $300K alokace, žádné cloud copiers",
-          "consistencyRule": false,
-          "consistencyNote": "Stellar 1-Step nemá consistency rule"
-        }
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
       }
     },
     {
-      "challengeId": "fundednext-stellar-1step-15k",
-      "name": "Stellar 1-Step 15k",
+      "challengeId": "fundednext-1step-15k",
+      "name": "Stellar 1-Step $15K",
       "primary": {
         "steps": 1,
         "capitalUSD": 15000,
         "priceUSD": 119.99,
-        "profitSplitPercentage": 90,
-        "profitSplitMax": 95,
-        "payoutFrequency": "On-demand",
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
         "payoutSpeedHours": 24,
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6, "minTradingDays": 2, "maxTradingDays": null }
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
         ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 2, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
       }
     },
     {
-      "challengeId": "fundednext-stellar-1step-25k",
-      "name": "Stellar 1-Step 25k",
+      "challengeId": "fundednext-1step-25k",
+      "name": "Stellar 1-Step $25K",
       "primary": {
         "steps": 1,
         "capitalUSD": 25000,
         "priceUSD": 199.99,
-        "profitSplitPercentage": 90,
-        "payoutFrequency": "On-demand",
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
         "payoutSpeedHours": 24,
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6, "minTradingDays": 2, "maxTradingDays": null }
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
         ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 2, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
       }
     },
     {
-      "challengeId": "fundednext-stellar-1step-200k",
-      "name": "Stellar 1-Step 200k",
+      "challengeId": "fundednext-1step-50k",
+      "name": "Stellar 1-Step $50K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 50000,
+        "priceUSD": 299.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 2, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-1step-100k",
+      "name": "Stellar 1-Step $100K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 100000,
+        "priceUSD": 549.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 2, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-1step-200k",
+      "name": "Stellar 1-Step $200K",
       "primary": {
         "steps": 1,
         "capitalUSD": 200000,
         "priceUSD": 1099.99,
-        "profitSplitPercentage": 90,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6, "minTradingDays": 2, "maxTradingDays": null }
-        ]
-      }
-    },
-    {
-      "challengeId": "fundednext-stellar-2step-100k",
-      "name": "Stellar 2-Step 100k",
-      "primary": {
-        "steps": 2,
-        "capitalUSD": 100000,
-        "priceUSD": null,
         "profitSplitPercentage": 80,
-        "profitSplitMax": 90,
-        "payoutFrequency": "On-demand after 5 trading days",
+        "payoutFrequency": "Bi-weekly",
         "payoutSpeedHours": 24,
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 5, "maxTradingDays": null },
-          { "phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 5, "maxTradingDays": null }
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 6}
         ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 2, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
       }
     },
     {
-      "challengeId": "fundednext-stellar-lite-5k",
-      "name": "Stellar Lite 5k",
+      "challengeId": "fundednext-lite-5k",
+      "name": "Stellar Lite $5K",
       "primary": {
         "steps": 2,
         "capitalUSD": 5000,
         "priceUSD": 32.99,
         "profitSplitPercentage": 80,
-        "profitSplitMax": 95,
-        "profitSplitNote": "Lifetime 95% dostupné jako add-on (+30%)",
-        "payoutFrequency": "On-demand",
+        "payoutFrequency": "Bi-weekly",
         "payoutSpeedHours": 24,
         "phases": [
-          { "phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 5, "maxTradingDays": null },
-          { "phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10, "minTradingDays": 5, "maxTradingDays": null }
+          {"phaseNumber": 1, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
         ]
-      }
-    },
-    {
-      "challengeId": "fundednext-rapid-futures-100k",
-      "name": "Rapid Futures 100k",
-      "primary": {
-        "steps": 1,
-        "capitalUSD": 100000,
-        "priceUSD": 279,
-        "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
-        "payoutSpeedHours": 24,
-        "phases": []
       },
       "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
         "newsTradingAllowed": true,
-        "rules": {
-          "consistencyRule": true,
-          "consistencyNote": "40% consistency rule on funded account (no consistency rule during challenge)"
-        }
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
       }
     },
     {
-      "challengeId": "fundednext-bolt-futures-50k",
-      "name": "Bolt Futures 50k",
+      "challengeId": "fundednext-lite-10k",
+      "name": "Stellar Lite $10K",
       "primary": {
-        "steps": 1,
-        "capitalUSD": 50000,
-        "priceUSD": 69.99,
+        "steps": 2,
+        "capitalUSD": 10000,
+        "priceUSD": 59.99,
         "profitSplitPercentage": 80,
-        "payoutFrequency": "On-demand",
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-lite-25k",
+      "name": "Stellar Lite $25K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 25000,
+        "priceUSD": 139.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-lite-50k",
+      "name": "Stellar Lite $50K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 50000,
+        "priceUSD": 229.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-lite-100k",
+      "name": "Stellar Lite $100K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 100000,
+        "priceUSD": 399.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-lite-200k",
+      "name": "Stellar Lite $200K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 200000,
+        "priceUSD": 798.99,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8},
+          {"phaseNumber": 2, "profitTargetPercentage": 4, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 8}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:100",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "Commissions apply on forex and commodities"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-instant-2k",
+      "name": "Stellar Instant $2K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 2000,
+        "priceUSD": 59,
+        "profitSplitPercentage": 70,
+        "payoutFrequency": "Bi-weekly",
         "payoutSpeedHours": 24,
         "phases": []
       },
       "details": {
-        "rules": {
-          "consistencyRule": true,
-          "consistencyNote": "Consistency rule in challenge account only, NOT in funded account"
-        }
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "$7/lot forex & commodities, 0.04% crypto, $0 indices"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": false, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-instant-5k",
+      "name": "Stellar Instant $5K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 5000,
+        "priceUSD": 149,
+        "profitSplitPercentage": 70,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "$7/lot forex & commodities, 0.04% crypto, $0 indices"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": false, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-instant-10k",
+      "name": "Stellar Instant $10K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 10000,
+        "priceUSD": 299,
+        "profitSplitPercentage": 70,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "$7/lot forex & commodities, 0.04% crypto, $0 indices"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": false, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "fundednext-instant-20k",
+      "name": "Stellar Instant $20K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 20000,
+        "priceUSD": 599,
+        "profitSplitPercentage": 70,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 24,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": null, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": true,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": false, "gold": false, "oil": false, "crypto": false, "note": "$7/lot forex & commodities, 0.04% crypto, $0 indices"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": false, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
       }
     }
-  ]
+  ],
+  "lastUpdated": "2026-05"
 }

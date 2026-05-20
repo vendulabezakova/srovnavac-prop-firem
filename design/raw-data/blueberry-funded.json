@@ -1,0 +1,1023 @@
+{
+  "id": "blueberry-funded",
+  "name": "Blueberry Funded",
+  "url": "https://blueberryfunded.com/",
+  "isFk": false,
+  "comment": "Broker-backed prop firm launched in 2024 by Blueberry Markets (ASIC-regulated parent broker), registered in St. Vincent and the Grenadines. Offers multiple challenge formats (1-Step, 2-Step, Prime 2-Step, Rapid 10-Day, Synthetic, Instant Elite, Instant Lite) with 80-90% profit splits and bi-weekly payouts.",
+  "yearsInOperation": 2,
+  "hasMobileApp": true,
+  "languages": ["en"],
+  "restrictedCountries": ["US", "AU", "AE", "RU", "CU", "IR", "IQ", "MM", "KP", "SO", "SY", "YE", "AF"],
+  "platforms": ["MT4", "MT5", "DXtrade", "TradeLocker"],
+  "paymentMethods": ["Credit Card", "Crypto", "Bank Transfer", "Rise"],
+  "education": {
+    "hasEducationForBeginners": true,
+    "features": ["Help Center", "Blog articles", "Platform download guides"]
+  },
+  "popularity": {
+    "scoreFormula": {
+      "formula": "Skóre = (TP_score × 40) + (1 - pct_1star) × 25 + reddit_score × 20 + red_flag_penalty × -15",
+      "inputs": {
+        "TP_score": 0.84,
+        "pct_1star": 0.16,
+        "reddit_score": 0.6,
+        "reddit_score_note": "Estimated from community aggregators and Trustpilot review patterns - polarized sentiment with payout proofs visible but cluster of complaints about account closures flagged as 'martingale' or 'excessive leverage' violations contested by traders. Direct Reddit scraping unavailable.",
+        "red_flag_penalty": 0,
+        "red_flag_penalty_note": "No regulator actions found; ASIC-regulated parent broker (Blueberry Markets) provides trust signal; polarized reviews but no documented pattern of systematic unpaid payouts in last 12 months."
+      },
+      "rawScore": 66.6,
+      "maxScore": 245.0,
+      "normalizedScore": 27.2
+    },
+    "overallPopularityScore": 27.2,
+    "trustpilot": {
+      "score": 4.2,
+      "reviewCount": 1422,
+      "pct1star": 0.16,
+      "lastUpdated": "2026-05",
+      "topPositiveThemes": ["fast payouts", "responsive support", "competitive pricing", "broker-backed credibility"],
+      "topNegativeThemes": ["account closures for martingale", "rule interpretation disputes", "payout disputes on profitable accounts"],
+      "verifiedPayoutProof": true,
+      "firmRespondsToReviews": true
+    },
+    "redFlagPenalty": {
+      "value": 0,
+      "reason": ""
+    },
+    "supportLevel": "Good",
+    "payoutStats": {
+      "totalPaidOut": "",
+      "avgPayoutUSD": 0,
+      "highestPayoutUSD": 0,
+      "approvalRate": "",
+      "avgApprovalTime": "1-2 business days"
+    }
+  },
+  "currentCampaigns": [
+    {
+      "name": "BERRY15",
+      "discount": "15% off challenges"
+    },
+    {
+      "name": "WELCOME30",
+      "discount": "Up to 30% off evaluations"
+    }
+  ],
+  "challenges": [
+    {
+      "challengeId": "blueberry-funded-1step-5k",
+      "name": "1-Step Challenge 5K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 5000,
+        "priceUSD": 40,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold; zero commission on indices, commodities, crypto"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-1step-10k",
+      "name": "1-Step Challenge 10K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 10000,
+        "priceUSD": 75,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold; zero commission on indices, commodities, crypto"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-1step-25k",
+      "name": "1-Step Challenge 25K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 25000,
+        "priceUSD": 150,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold; zero commission on indices, commodities, crypto"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-1step-50k",
+      "name": "1-Step Challenge 50K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 50000,
+        "priceUSD": 275,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold; zero commission on indices, commodities, crypto"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-1step-100k",
+      "name": "1-Step Challenge 100K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 100000,
+        "priceUSD": 550,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold; zero commission on indices, commodities, crypto"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-1step-200k",
+      "name": "1-Step Challenge 200K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 200000,
+        "priceUSD": 1100,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 6}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold; zero commission on indices, commodities, crypto"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-2step-5k",
+      "name": "2-Step Challenge 5K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 5000,
+        "priceUSD": 40,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-2step-10k",
+      "name": "2-Step Challenge 10K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 10000,
+        "priceUSD": 67,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-2step-25k",
+      "name": "2-Step Challenge 25K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 25000,
+        "priceUSD": 150,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-2step-50k",
+      "name": "2-Step Challenge 50K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 50000,
+        "priceUSD": 300,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-2step-100k",
+      "name": "2-Step Challenge 100K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 100000,
+        "priceUSD": 590,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-2step-200k",
+      "name": "2-Step Challenge 200K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 200000,
+        "priceUSD": 1180,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 5, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-prime2step-2.5k",
+      "name": "Prime 2-Step 2.5K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 2500,
+        "priceUSD": 30,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-prime2step-5k",
+      "name": "Prime 2-Step 5K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 5000,
+        "priceUSD": 55,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-prime2step-10k",
+      "name": "Prime 2-Step 10K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 10000,
+        "priceUSD": 90,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-prime2step-25k",
+      "name": "Prime 2-Step 25K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 25000,
+        "priceUSD": 165,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-prime2step-50k",
+      "name": "Prime 2-Step 50K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 50000,
+        "priceUSD": 325,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-prime2step-100k",
+      "name": "Prime 2-Step 100K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 100000,
+        "priceUSD": 650,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-prime2step-200k",
+      "name": "Prime 2-Step 200K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 200000,
+        "priceUSD": 1170,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 8, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 6, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 5, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-rapid10day-10k",
+      "name": "Rapid 10-Day 10K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 10000,
+        "priceUSD": 50,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 4}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 7, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-rapid10day-25k",
+      "name": "Rapid 10-Day 25K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 25000,
+        "priceUSD": 100,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 4}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 7, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-rapid10day-50k",
+      "name": "Rapid 10-Day 50K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 50000,
+        "priceUSD": 200,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 4}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 7, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-rapid10day-100k",
+      "name": "Rapid 10-Day 100K",
+      "primary": {
+        "steps": 1,
+        "capitalUSD": 100000,
+        "priceUSD": 300,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 3, "maxDrawdownPercentage": 4}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 7, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "$7 per std lot on FX/Gold"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-synthetic-5k",
+      "name": "Synthetic Challenge 5K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 5000,
+        "priceUSD": 25,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": true, "note": "Synthetic instruments only"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-synthetic-10k",
+      "name": "Synthetic Challenge 10K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 10000,
+        "priceUSD": 50,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": true, "note": "Synthetic instruments only"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-synthetic-25k",
+      "name": "Synthetic Challenge 25K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 25000,
+        "priceUSD": 115,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": true, "note": "Synthetic instruments only"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-synthetic-50k",
+      "name": "Synthetic Challenge 50K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 50000,
+        "priceUSD": 225,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": true, "note": "Synthetic instruments only"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-synthetic-100k",
+      "name": "Synthetic Challenge 100K",
+      "primary": {
+        "steps": 2,
+        "capitalUSD": 100000,
+        "priceUSD": 450,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": [
+          {"phaseNumber": 1, "profitTargetPercentage": 10, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10},
+          {"phaseNumber": 2, "profitTargetPercentage": 5, "dailyDrawdownPercentage": 4, "maxDrawdownPercentage": 10}
+        ]
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 3, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": true, "indices": true, "gold": true, "oil": true, "crypto": true, "note": "Synthetic instruments only"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantelite-2.5k",
+      "name": "Instant Elite 2.5K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 2500,
+        "priceUSD": 100,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 10% max drawdown only"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantelite-5k",
+      "name": "Instant Elite 5K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 5000,
+        "priceUSD": 200,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 10% max drawdown only"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantelite-10k",
+      "name": "Instant Elite 10K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 10000,
+        "priceUSD": 400,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 10% max drawdown only"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantelite-25k",
+      "name": "Instant Elite 25K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 25000,
+        "priceUSD": 800,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 10% max drawdown only"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantelite-50k",
+      "name": "Instant Elite 50K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 50000,
+        "priceUSD": 1500,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 10% max drawdown only"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantlite-1.25k",
+      "name": "Instant Lite 1.25K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 1250,
+        "priceUSD": 42,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 2% daily / 4% max DD"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantlite-2.5k",
+      "name": "Instant Lite 2.5K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 2500,
+        "priceUSD": 65,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 2% daily / 4% max DD"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantlite-5k",
+      "name": "Instant Lite 5K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 5000,
+        "priceUSD": 95,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 2% daily / 4% max DD"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantlite-10k",
+      "name": "Instant Lite 10K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 10000,
+        "priceUSD": 145,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 2% daily / 4% max DD"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantlite-25k",
+      "name": "Instant Lite 25K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 25000,
+        "priceUSD": 215,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 2% daily / 4% max DD"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantlite-50k",
+      "name": "Instant Lite 50K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 50000,
+        "priceUSD": 420,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 2% daily / 4% max DD"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    },
+    {
+      "challengeId": "blueberry-funded-instantlite-100k",
+      "name": "Instant Lite 100K",
+      "primary": {
+        "steps": 0,
+        "capitalUSD": 100000,
+        "priceUSD": 850,
+        "profitSplitPercentage": 80,
+        "payoutFrequency": "Bi-weekly",
+        "payoutSpeedHours": 48,
+        "phases": []
+      },
+      "details": {
+        "timeLimit": {"minTradingDaysPerPhase": 0, "maxTradingDaysPerPhase": 0, "noTimeLimitOnFundedAccount": true},
+        "newsTradingAllowed": false,
+        "maxLeverage": "1:50",
+        "commissionFreeInstruments": {"forex": false, "indices": true, "gold": false, "oil": true, "crypto": true, "note": "No evaluation; 2% daily / 4% max DD"},
+        "eaRobotsAllowed": true,
+        "hasLoyaltyProgram": false,
+        "rules": {"scalingPlan": true, "weekendHoldingAllowed": true, "overnightHoldingAllowed": true, "martingaleAllowed": false, "consistencyRule": false}
+      }
+    }
+  ],
+  "lastUpdated": "2026-05"
+}
