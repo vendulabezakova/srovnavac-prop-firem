@@ -405,3 +405,63 @@ input[type="range"].weight-slider::-moz-range-thumb {
 }
 .chip:hover { border-color: rgba(255,255,255,.25); }
 .chip.is-on { background: var(--mkt-gradient); color: #fff; border-color: transparent; }
+
+/* ── Hero ─────────────────────────────────────────────────── */
+.hero-section { padding-top: 80px; padding-bottom: 60px; position: relative; }
+.hero-sub { margin-top: 22px; max-width: 660px; font-size: 19px; line-height: 1.55; color: rgba(255,255,255,.75); }
+@media (max-width: 768px) {
+  .hero-section { padding-top: 48px; padding-bottom: 40px; }
+  .hero-sub { font-size: 16px; }
+  .btn-lg { padding: 14px 24px; font-size: 14px; }
+}
+
+/* ── Top nav ──────────────────────────────────────────────── */
+.top-nav-inner {
+  display: flex; align-items: center; gap: 32; height: 72px;
+}
+.top-nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: 18px; letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+.nav-links {
+  display: flex; gap: 24px; flex: 1; margin-left: 12px;
+}
+.nav-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+  .nav-login { display: none; }
+  .nav-beta-pill { display: none; }
+  .top-nav-inner { gap: 0; justify-content: space-between; }
+}
+@media (max-width: 480px) {
+  .top-nav-logo span:first-of-type { font-size: 16px; }
+  .btn-sm { padding: 9px 14px; font-size: 12px; }
+}
+
+/* ── Section nav ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .section-nav .container { padding: 8px 12px; gap: 4px; }
+  .section-nav a { padding: 7px 12px; font-size: 12px; }
+  .section-nav a .num { width: 18px; height: 18px; font-size: 10px; }
+}
+
+/* ── Hero stat strip ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .stat-strip { margin-top: 36px; gap: 16px; }
+  .stat-strip .stat .v { font-size: 26px; }
+}
+
+/* ── Pricing table ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .size-picker { padding: 14px 16px; }
+  .size-picker .size-meta { display: none; }
+  .size-picker .size-chip { padding: 8px 14px; font-size: 13px; }
+}
+
+/* ── Attribute ranker ─────────────────────────────────────── */
+@media (max-width: 560px) {
+  .attr-row { gap: 10px; padding: 12px 14px; }
+  .rank-card { padding: 14px 16px; }
+}

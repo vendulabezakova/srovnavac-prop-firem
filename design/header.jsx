@@ -3,9 +3,8 @@
 function TopNav() {
   return (
     <nav style={{ position: 'sticky', top: 0, zIndex: 50, background: 'rgba(10,0,26,.78)', backdropFilter: 'blur(14px)', borderBottom: '1px solid rgba(255,255,255,.06)' }}>
-      <div className="container" style={{ display: 'flex', alignItems: 'center', gap: 32, height: 72 }}>
-        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10, fontWeight: 700, fontSize: 18, letterSpacing: '-0.02em' }}>
-          {/* simplified wordmark — Purple star + 'fintokei.ai' */}
+      <div className="container top-nav-inner">
+        <a href="#" className="top-nav-logo">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
             <path d="M12 2L14.2 8.5L21 9.3L16 13.9L17.4 21L12 17.3L6.6 21L8 13.9L3 9.3L9.8 8.5L12 2Z" fill="url(#g1)"/>
             <defs>
@@ -16,9 +15,9 @@ function TopNav() {
             </defs>
           </svg>
           <span>fintokei<span style={{ color: 'var(--mkt-turquoise)' }}>.ai</span></span>
-          <span className="pill pill-violet" style={{ marginLeft: 6 }}>BETA</span>
+          <span className="pill pill-violet nav-beta-pill">BETA</span>
         </a>
-        <div style={{ display: 'flex', gap: 24, flex: 1, marginLeft: 12 }}>
+        <div className="nav-links">
           {[
             ['Srovnávač', '#'],
             ['Programy', '#'],
@@ -28,8 +27,10 @@ function TopNav() {
             <a key={label} href={href} style={{ fontSize: 14, fontWeight: 500, color: 'rgba(255,255,255,.78)' }}>{label}</a>
           ))}
         </div>
-        <button className="btn btn-outline btn-sm">PŘIHLÁŠENÍ</button>
-        <button className="btn btn-gradient btn-sm">VYZKOUŠET ZDARMA</button>
+        <div className="nav-actions">
+          <button className="btn btn-outline btn-sm nav-login">PŘIHLÁŠENÍ</button>
+          <button className="btn btn-gradient btn-sm">VYZKOUŠET ZDARMA</button>
+        </div>
       </div>
     </nav>
   );
@@ -38,7 +39,7 @@ function TopNav() {
 function Hero() {
   const firms = window.PROP_FIRMS;
   return (
-    <section style={{ paddingTop: 80, paddingBottom: 60, position: 'relative' }}>
+    <section className="hero-section">
       <div className="container" style={{ position: 'relative' }}>
         <div className="h-eyebrow" style={{ marginBottom: 18 }}>
           <span className="pink-glow-dot" style={{ display: 'inline-block', marginRight: 8 }}></span>
@@ -47,7 +48,7 @@ function Hero() {
         <h1 className="h-display" style={{ margin: 0, maxWidth: 1000 }}>
           Najdi prop firmu, která <span className="accent-gradient">opravdu sedí</span> tvému stylu.
         </h1>
-        <p style={{ marginTop: 22, maxWidth: 660, fontSize: 19, lineHeight: 1.55, color: 'rgba(255,255,255,.75)' }}>
+        <p className="hero-sub">
           Porovnej osm největších prop firem podle <strong style={{ color: '#fff' }}>ceny výzvy</strong>, <strong style={{ color: '#fff' }}>payout %</strong> a <strong style={{ color: '#fff' }}>max drawdownu</strong> v jedné tabulce. Pak nastav, co tobě záleží — a uvidíš seřazený žebříček.
         </p>
 
